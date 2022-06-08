@@ -60,9 +60,21 @@ git push
 ```
 
 ### Some Resources:
-[^1]: My reference.
-[^2]: Every new line should be prefixed with 2 spaces.  
-  This allows you to have a footnote with multiple lines.
-[^note]:
-    Named footnotes will still render with numbers instead of the text but allow easier identification and linking.  
-    This footnote also has been made with a different syntax using 4 spaces for new lines.
+Git Workflow for Beginners[^1].
+
+Git Cheatsheet for Beginners[^2].  
+
+Git: The Simple Guide[^3].
+
+Git & Github for Beginners[^4].
+
+How to make Git Bash default on VS Code[^5].
+
+Git Personal Access Token[^6].
+
+[^1]: https://www.codingmadeclear.com/git-github-workflow-for-beginners/
+[^2]: https://www.codingmadeclear.com/git-github-cheat-sheet-for-beginners/
+[^3]: https://rogerdudler.github.io/git-guide/
+[^4]: https://www.youtube.com/watch?v=SWYqp7iY_Tc
+[^5]: https://dev.to/giannellitech/setting-the-default-terminal-in-vs-code-95c
+[^6]: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
