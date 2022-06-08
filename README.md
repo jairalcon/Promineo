@@ -60,17 +60,17 @@ git push
 ```
 
 ### Some Resources:
-Git Workflow for Beginners[^1].
+##### Git Workflow for Beginners[^1].
 
-Git Cheatsheet for Beginners[^2].  
+##### Git Cheatsheet for Beginners[^2].
 
-Git: The Simple Guide[^3].
+##### Git: The Simple Guide[^3].
 
-Git & Github for Beginners[^4].
+##### Git & Github for Beginners[^4].
 
-How to make Git Bash default on VS Code[^5].
+##### How to make Git Bash default on VS Code[^5].
 
-Git Personal Access Token[^6].
+##### Git Personal Access Token[^6].
 
 [^1]: https://www.codingmadeclear.com/git-github-workflow-for-beginners/
 [^2]: https://www.codingmadeclear.com/git-github-cheat-sheet-for-beginners/
