@@ -4,15 +4,23 @@
 The purpose of this repository is to backup all I've been learning in the bootcamp. 
 Having this repository helps me utilize git commands more frequently, which is great.
 
-
-##### Some basic Git commands to get started are:
-
+<details><summary>GIT BASICS</summary>
+<p>
+  
+#### Here are some basic Git commands to get started: 
+  
 - echo "***repository-name***" >> README.md
 - git init
 - git add README.md
 - git commit -m "first commit"
 - ***git remote add origin https://github.com/username/repository-name.git***
 - git push -u origin main
+
+</p>  
+</details>
+
+<details><summary>WALKTHROUGH AFTER SETUP</summary>
+<p>
 
 #### Cloning OR Steps to pull, rebase, commit, push 
 
@@ -58,7 +66,9 @@ git pull --rebase
 ```
 git push
 ```
-
+</p>  
+</details>
+ 
 ### Some Resources:
 ##### Git Workflow for Beginners[^1].
 
