@@ -338,8 +338,8 @@ make it through 100 turns or you reach more than 290 points, whichever comes fir
 /*Check to see if userNumber is between 1 and 100. If it is, 
 create a while loop that prints all integers starting with 
 userNumber to 100. If not, print "Your number was not between 1 and 100." */
-//! SLACKS ANSWER:
-var userNumber = 25;
+//! SLACKS GROUP ANSWER:
+var userNumber = 1;
 //write your code here
 // if (!(userNumber <= 100 && userNumber >= 1)) {
 //     console.log("Your number was not between 1 and 100.");
@@ -350,14 +350,17 @@ var userNumber = 25;
 //         userNumber++;
 //     }
 // }
-//! INSTRUCTORS: (adding variable to hold count "counter")
+//! OPEN CLASS INSTRUCTORS: (adding variable to hold count "counter")
 var counter = userNumber;
-if ( userNumber <= 100 && userNumber >= 1 ) {
-    while ( counter <= 100 ) {
+//* if condition is true, goes to while loop
+//* if not, goes to ELSE statement
+if ( userNumber <= 10 && userNumber >= 1 ) {
+    while ( counter <= 10 ) {
+      //* increment and print & goes back to while loop
         console.log(counter++);
     }
 } else {
-    console.log("Your number was not between 1 and 100.");
+    console.log("Your number was not between 1 and 10.");
 }
 
 //! next example:
@@ -385,7 +388,7 @@ var countDown = 4;
 // }
 // console.log('We have lift off!');
 
-//! INSTRUCTORS:
+//! OPEN CLASS INSTRUCTORS:
 if (countDown <= 10 && countDown >= 3) {
   //* the line below is different with >= 1
   while (countDown >= 1) {
