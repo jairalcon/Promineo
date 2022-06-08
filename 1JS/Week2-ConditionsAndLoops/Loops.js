@@ -394,27 +394,3 @@ if (countDown <= 10 && countDown >= 3) {
   }
 }
 console.log("We have lift off!");
-
-/* Jair Alcon
-
-Week 3 Research Assignment
-
-
-
-What is the difference between == and ===?
-
-== stands for Equality. This is looking at both values to see if they are equal to each other.
-
-=== stand for Identity. This is looking for both values to be the same value as well as the same type.
-
-Both operators are widely used but Identity is used as the rule within the JavaScript community.
-
-
-
-What is your favorite thing you learned this week?
-
-My favorite thing that I learned this week is how Arrays and Functions can be used for a variety of purposes for the purpose of sorting data, changing data, and creating more efficient command lines that minimize the need for long, drawn-out lines of code.
-
-
-
-I will admit that this past week has been challenging at work so I was not able to contribute as much time as previous weeks. I am currently in the process of stepping down from my supervisory role with the intention of dedicating the time I need to this bootcamp.*/
