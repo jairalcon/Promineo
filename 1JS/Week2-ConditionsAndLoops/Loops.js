@@ -378,7 +378,7 @@ to the console is "We have lift off!"
 1…
 We have lift off!*/
 //!Natalie's solution:
-var countDown = 4;
+var countDown = 5;
 //write your code here
 // if((countDown <= 10) && (countDown >= 3)){
 //     while(countDown > 0){
@@ -389,11 +389,22 @@ var countDown = 4;
 // console.log('We have lift off!');
 
 //! OPEN CLASS INSTRUCTORS:
-if (countDown <= 10 && countDown >= 3) {
-  //* the line below is different with >= 1
-  while (countDown >= 1) {
-      console.log(countDown + "...");
-      countDown--;
+// if (countDown <= 10 && countDown >= 3) {
+//   //* the line below is different with >= 1
+//   while (countDown >= 1) {
+//       console.log(countDown + "...");
+//       countDown--;
+//   }
+// }
+// console.log("We have lift off!");
+
+//!SOLUTION FROM OFFICE HOURS
+while (countDown >= 3 && countDown <= 10) {
+  console.log(countDown + "...");
+  countDown--;
+    if (countDown < 3 || countDown > 10) {
+    console.log("We have lift off!");
   }
+
 }
-console.log("We have lift off!");
+// console.log("We have lift off!");
