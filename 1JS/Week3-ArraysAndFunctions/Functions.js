@@ -41,3 +41,128 @@ console.log('Welcome, ' + fullName);
 
 //* names of functions should be VERBS, since they are actions. The JS
 //* community uses this approach as the standard.
+
+//!OPEN CLASS QUESTIONS
+
+/* Create a function called findCircumference that returns 
+the circumference of a circle if given the radius. */
+var a = 7;
+//! MY ANSWER:
+// function findCircumference(a) {
+//     return 2 * Math.PI * a;
+// }
+//! INSTRUCTORS:
+function findCircumference(radius) {
+    return Math.PI * (2 * radius);
+}
+//do not change below, used for testing purposes
+console.log(findCircumference(a));
+
+//! NEXT QUESTION:
+/*Create a function called isBlue. It takes one parameter. Return true 
+if it is passed "blue", otherwise return false.
+
+The passed value can be "blue" with any of the letters capitalized as well. 
+(i.e."Blue", "bLue", "BLUE", etc…) All forms of the word blue should return true. 
+Use toLowerCase() on the passed value to accomplish this. 
+For example, myVariable.toLowerCase() will convert whatever 
+myVariable is to all lowercase. */
+var a = 'blue';
+//write your code below //! MY ANSWER
+function isBlue(a) {
+    return a.toLowerCase() === 'blue';
+}
+//do not change below, used for testing purposes
+console.log(isBlue(a));
+
+
+//! NEXT QUESTION:
+/*Write a function called speakFriend that takes one parameter. 
+Return the string "Access Denied". But, if the passed in value 
+is "Mellon", return "Enter" */
+var a = 'Hello';
+//write your code below //!MY ANSWER
+// function speakFriend(a) {
+//     if (a === 'Mellon') {
+//         return 'Enter';
+//         //* else is not required necessarily in this case.
+//     } else return 'Access Denied';
+// }
+//! INSTRUCTORS:
+function speakFriend(a){
+    if(a == "Mellon"){
+        return "Enter";
+    }
+    //* A function will end once returned. 
+    //* Anything after will be ignored and the function will exit. 
+    return "Access Denied";
+}
+//do not change below
+console.log(speakFriend(a));
+
+//! NEXT QUESTION:
+/* Create a function named returnSum that accepts 3 integer variables 
+named num1, num2, and num3. Return the sum of the three variables.
+ */
+var a = 1;
+var b = 2;
+var c = 3;
+//write your code below //!MY ANSWER
+function returnSum(num1, num2, num3){
+    return num1 + num2 + num3;
+}
+//do not change below, used for testing purposes
+console.log(returnSum(a,b,c));
+
+//! NEXT QUESTION:
+/*Create a function named checkout that accepts 2 variables 
+named cardBalance and price. If the price is more than the 
+card balance, return false. Otherwise, return the new card balance.*/
+var cardBalance = 11;
+var price = 7;
+//write your code below //!MY ANSWER
+//*JavaScript allows infinite arguments to be passed.
+function checkout(cardBalance, price) {
+    if (price > cardBalance) {
+        return false;
+    } return cardBalance - price;
+}
+//! INSTRUCTORS
+// function checkout(cardBalance, price){
+//     if(price > cardBalance) { return false; }
+//     else { return cardBalance - price; }
+// }
+//do not change below, used for testing purposes
+console.log(checkout(cardBalance, price));
+
+//! NEXT QUESTION:
+/*Write a function called sumOfTwo that takes two numbers as 
+parameters and returns the sum. */
+var a = 22;
+var b = 22;
+
+//write your code below //! MY ANSWER
+function sumOfTwo (a, b) {
+    return a + b;
+}
+//do not change. Used for Testing purposes
+//* if only one parameter is passed = NaN
+console.log(sumOfTwo(a, b));
+
+//! NEXT QUESTION:
+/*Write a function called loopUntilX that takes one parameter. 
+Within the function, write a loop that loops as many times as 
+the passed in value, starting at 0. Within the loop, print the 
+number of iterations to the console. Once the loop is done, return true. */
+var x = 10;
+//write your code below //! MY ANSWER
+function loopUntilX(x) {
+    for (let i = 0; i < x; i++) {
+    console.log(i);
+    } return true;
+}
+
+//do not change below, used for testing purposes
+//* if string 'testing' were passed instead of number...
+//* true would be returned
+console.log(loopUntilX(x));

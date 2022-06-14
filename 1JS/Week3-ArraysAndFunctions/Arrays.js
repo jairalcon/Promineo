@@ -43,4 +43,3 @@ for(name of customerNames) {
 
 //*access first elements in array
 // console.log(customerNames[1]);
-
