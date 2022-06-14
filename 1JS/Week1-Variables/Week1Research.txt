@@ -1,0 +1,18 @@
+Jair Alcon
+
+Week 1 Research Assignment
+
+What is git? Why is it useful? What is the git workflow?
+
+Git is a System Management Controller that is free to use. Git uses minimal resources, which allows fast performance. It is convenient to use and allows multiple workflows while keeping security via cryptography to maintain workflow integrity within a workgroup. Git workflow is one that is distributed, meaning that a “clone” of the repository can be made without affecting the current source code. This also means that since there are multiple workflows that have been cloned, the code can be replaced if a system crash were to happen on a specific machine. There are three main types of workflow: subversion-style, integration manager, and dictator and lieutenant workflow. However, there are endless workflow possibilities that can be used due to the nature of branching and merging within git.
+
+https://git-scm.com/about
+
+ 
+What data types do we have access to in JavaScript? What makes them each unique? What values can they hold?
+
+The data types we have access to in JavaScript are numbers, strings, and booleans. Number data types hold numbers and can include decimal points. Extremely large or small numbers can be written with scientific/exponential notation. Strings are written with quotes or double quotes which contain characters. It is possible to use quotes within quotes ensuring they are different. Booleans can only have a value of true or false, which are often used in conditional testing.
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#number_type
+
+https://www.w3schools.com/js/js_datatypes.asp

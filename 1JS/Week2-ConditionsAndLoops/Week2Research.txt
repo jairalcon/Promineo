@@ -1,0 +1,51 @@
+Jair Alcon
+
+Week 2 Research Assignment
+
+What are the different loops JavaScript provides us?
+
+JavaScript provides us with the following loops; for, do...while, while, for...in, and for...of. Loops have the goal of doing something repeatedly until a  specified condition is met. There are different methods of initiating the start and end of each loop. The main reason there are several loops is not all loops are as efficient under similar circumstances.
+
+Website: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration
+
+
+
+What is the syntax of one of the loops in your above answer? How and when should you use this loop? Give an example.
+
+The syntax for the "for loop" is:
+
+for ([initialization]; [condition]; [final expression])
+
+statement
+
+The most common use of the for loop is when wanting to count a certain number of iterations to repeat a statement. Such as
+
+for (let i = 2; i < 10; i++) {
+
+console.log(i);
+
+}
+
+output:
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+
+
+websites: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for
+
+https://www.freecodecamp.org/news/javascript-loops-explained-for-loop-for/
