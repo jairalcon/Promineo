@@ -82,12 +82,13 @@ as an argument. Within the function, reverse the array.
 Return the reversed array.
 
 You must use a method of the Array object. */
+var input = [1, 2, 3, 4];
 //write your code here//!MY ANSWER
 // function reverseArray() {
 //     return input.reverse();
 // }
 //! INSTRUCTORS:
-var input = [1, 2, 3, 4];
+
 function reverseArray(array){
     return array.reverse();
 }

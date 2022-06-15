@@ -45,14 +45,25 @@ console.log(ourTodoList);
 
 // create a function called reverse that takes in parameter
 // this function will return the opposite of whatever is passed in
+function reverse(par1) {
+    
+}
 // if its a boolean, return the opposite
+
 // if its a number, or a string, return the reverse (i.e. 1234 becomes 4321, Name becomes emaN)
+
 // if its an array, return the reversed array with each element reversed
+
+
+
+
 
 
 // create a function called addingMachine that will add all passed numbers and return the total
 // Note: you don't know how many numbers will be passed
+function addingMachine() {
 
+}
 
 
 // You just signed a contract as an estimator for a restoration company. 
