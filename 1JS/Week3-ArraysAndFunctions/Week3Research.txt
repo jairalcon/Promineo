@@ -34,8 +34,3 @@ Answer:
 Both operators are widely used but identity/strict equality is used as the rule within the JavaScript Development community.
 
 source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness
-
-Quote "Someone who asks a question is a fool for a minute, 
-but someone who doesn't ask is a fool for a lifetime."
-
-
