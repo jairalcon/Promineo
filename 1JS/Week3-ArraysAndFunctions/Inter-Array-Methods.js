@@ -37,6 +37,7 @@ let lengths = names.map(function(element) {
 //* log lengths array to see lengths of strings
 console.log(lengths);
 
+//!REDUCE
 //* accumulator (first parameter passed into reduce method) is whatever was returned by previous execution
 //* currentValue (second parameter) is currentIndex of array and array itself
 //* reduce can take 2nd parameter after function, which is the initial value to start accumulator at, 
@@ -176,5 +177,5 @@ function gradList(graduates){
 console.log(gradList(grads));
 
 //? The lastIndexOf() method returns the last index at which a 
-//?given element can be found in the array, or -1 if it is not present. 
+//? given element can be found in the array, or -1 if it is not present. 
 //* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
