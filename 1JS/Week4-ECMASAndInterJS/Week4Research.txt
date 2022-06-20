@@ -1,0 +1,24 @@
+Jair Alcon
+
+Week 4 Research
+
+What are the difference between var, let, and const?
+
+"var" is declared within a function. var can be defined before it's declaration and this is called hoisting. With var you can reassign the value to the variable. Similarly you can re-declare the variable
+
+"let" is declared within a block scope. let cannot be defined before declaring them. With let you can reassign the value to the variable. Similarly you cannot re-declare the variable.
+
+"const" are declared in the block scope, as well. Const cannot be defined before declaring. With const you cannot reassign the value to the variable because the purpose of const is so that variable is constant through the whole block scope. Similarly const cannot be re-declared.
+
+These are the differences between var, let, and const.
+
+https://www.educative.io/edpresso/difference-between-var-let-and-const-keyword-in-javascript
+
+
+What are the differences between callbacks and promises?
+
+Callbacks are functions that are arguments in other functions in the callback-function scope to ensure available variables can run before the function ends. In other words, the first function runs, evaluates, and passes on info to the second function. The second function then evaluates and runs passed along results within its own function for final result.
+
+Promises are placeholder objects for future available data. When their state changes from "pending" to "resolved", ".then() method is called to make that placeholder data available for the operation to be completed. A simple real-world example can be found in the food industry. You're handed a buzzer after placing your order (pending), which is a promise, once the food is ready, then the promise is resolved and you (then) get to enjoy some tasty food.
+
+https://dev.to/tqbit/what-is-the-difference-between-callback-functions-promises-and-async-await-in-javascript-1c2k
