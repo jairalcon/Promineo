@@ -18,7 +18,7 @@ console.log(myString);
 
 //* Before we would do the following and is more difficult to read.
 //* 
-let anotherString = `Hello\nworl\nmy name\nis Nick.`;
+let anotherString = `Hello\nworld\nmy name\nis Nick.`;
 
 console.log(anotherString);
 
