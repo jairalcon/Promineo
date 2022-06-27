@@ -1,0 +1,32 @@
+Jair Alcon
+
+Week 5 Research
+
+What are the four pillars of Object Oriented Programming? Explain Each Pillar
+
+1. Abstraction. This is the process of showing features of the object that are pertinent to the user while hiding background functions. When these functions are called, the user doesn't have to see what that call is doing. Abstraction is all about re-usability and maintainability. We can find things that are similar throughout the code and provide functions or objects to use in multiple places/reasons.
+
+A good example of this is me logging into my Promineo Tech account to complete my assignment. I need only use my credentials to log in while there are multiple other lines of code and commands running in the background that don't require my input to access the LMS.
+
+2. Encapsulation. This means combining data and member functions into a single unit commonly referred to as a class. This is commonly knows as "data-hiding." The object in the code should be in control of its own state, according to encapsulation. One goal is to limit the code accessing pieces that aren't needed. However, in the process in hiding away data and code we want to achieve modularization and give clear responsibilities while writing object oriented programs. In the end, the goal is to separate functions from each other to keep the code flowing in an efficient and readable manner while hiding data that nothing else needs access to and revealing the code that is needed. In a word, privacy.
+
+3. Inheritance. This means you can create a new class from an existing class. This helps avoid rewriting the same code multiple times. A subclass will use the properties and behavior of a super-class. This efficiency helps when modifying and enhancing the code. In a word, re-usability. Developers have a principle called the "Liskov Substitution Principle." This says that if a developer can use a "parent" type anywhere the developer uses a "child" type, then the test is passed. The way this test would fail is if the "child" type is removing items from the "parent," which would lead to a TypeError. For best practice, developers should keep inheritance chains clean and sensible.
+
+4. Polymorphism. Translated, this means "many forms," but also "the condition of occurring in several different forms." This last pillar deals with types in the same inheritance chain being able to do different things. A subclass can define its own set of behavior and still share the core function of the base class is another way to describe this. The power that polymorphism has is the ability to share behaviors and allowing certain overrides, when needed. However, this works in a one-way manner. The base class cannot be polymorphic in reference to its subclass(es).
+
+https://www.linkedin.com/pulse/4-pillars-object-oriented-programming-pushkar-kumar/
+
+https://www.freecodecamp.org/news/four-pillars-of-object-oriented-programming/
+
+
+
+What is an exception and what are the best practices for handling them?
+
+In JavaScript, an exception is a generic object that can be thrown when the engine throws an error. Error Objects and custom objects are commonly used in these instances. A developer can use the "throw" statement and handle the exception using the "try...catch" statements. Although the most common thrown objects are numbers or strings, it is recommended to utilize an exception type intentionally created for said purpose.
+
+The "try...catch" statements is commonly used to handle error exceptions. Essentially, this statements marks a block of statements to try. If an exception is thrown, then this statement catches it so the code continues to run. Developers want the "try" block to work, but if it happens to not work, the code gives the power to the "catch" block but only if the catch block throws an exception, otherwise the "catch" block is skipped. The "finally" block will execute regardless if the "try..catch" executes. This is best practice so that if the code does error, this exception closes the open connection to the resources it may be utilizing.
+
+
+https://rollbar.com/guides/javascript/how-to-throw-exceptions-in-javascript/#
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#exception_handling_statements
