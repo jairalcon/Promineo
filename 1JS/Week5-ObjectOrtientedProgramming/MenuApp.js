@@ -39,7 +39,7 @@ class Menu {
         while (selection != 0) {
             switch (selection) {
                 case '1':
-                    this.createTeam()
+                    this.createTeam();
                     break;
                 case '2':
                     this.viewTeam();

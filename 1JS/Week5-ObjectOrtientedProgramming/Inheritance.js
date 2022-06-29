@@ -25,7 +25,7 @@ class PromotionSender extends NotificationSender {
         //* super is like "this."
         super(status);
     }
-    //! MOVED TO NotificaitonSender class
+    //! MOVED TO NotificationSender class
     // //* adding method
     // sendNotification(notification) {
     //     console.log('Sending: ' + notification);
@@ -57,7 +57,7 @@ class CollectionsSender extends NotificationSender {
         super(status);
     }
 
-    //! MOVED TO NotificaitonSender class
+    //! MOVED TO NotificationSender class
     // sendNotification(notification) {
     //     console.log('Sending: ' + notification);
     // }
