@@ -1,0 +1,11 @@
+Chrome has Dev Tools that can be useful when troubleshooting.
+
+Inspector has many tools that helps developers.
+These are very useful for debugging and to view what's currently happening in the browser.
+-Device Toggle: enables developer to view different mobile devices
+-Console: see errors printed out, test code
+-Elements: allows us to see DOM (Document Object Model)
+-Sources: shows what's currently loaded on page.
+-Network: shows requests that are being sent.
+    --XHS will be used later in Bootcamp.
+-Application: can look at local storage; caching values/variables for use later on.
