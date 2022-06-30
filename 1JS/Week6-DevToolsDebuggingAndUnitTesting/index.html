@@ -4,19 +4,32 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Intro To JavaScript Lab</title>
+        <link rel="stylesheet" href="node_modules/mocha/mocha.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
         <h1>Intro To JavaScript Labs</h1>
         
+        <div id="mocha"><p><a href=".">Index</a></p></div>
+        <div id="messages"></div>
+        <div id="fixtures"></div>
+        <script src="node_modules/mocha/mocha.js"></script>
+        <script src="node_modules/chai/chai.js"></script>
+        <script src="UnitTest.js"></script>
+        <script>mocha.setup('bdd')</script>
+        <script src="testing.js"></script>        
+        <script>mocha.run();</script>
+
+
         <!-- Uncomment the file you are working on -->
 
-        <!-- <script src="1VariablesAndOperations.js"></script> -->
-        <!-- <script src="1VariableDataTypes.js"></script> -->
-        <script src="ConditionsAndLoops.js"></script>
-        <!-- <script src="3ArraysAndFunctions.js"></script> -->
-        <!-- <script src="4ArrowFunctionsAndCallbacks.js"></script> -->
-        <!-- <script src="5ObjectOriented.js"></script> -->
+        <!-- <script src="VariablesAndOperations.js"></script> -->
+        <!-- <script src="VariableDataTypes.js"></script> -->
+        <!-- <script src="ConditionsAndLoops.js"></script> -->
+        <!-- <script src="ArraysAndFunctions.js"></script> -->
+        <!-- <script src="ArrowFunctionsAndCallbacks.js"></script> -->
+        <!-- <script src="ObjectOriented.js"></script> -->
+        
 
 
     </body>
