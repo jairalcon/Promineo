@@ -107,3 +107,7 @@ class Menu {
 //to start menu in browser
 let menu = new Menu();
 // menu.start();
+
+let test = new Phone('iPhone', 250);
+test.createPhone();
+console.log(test);
