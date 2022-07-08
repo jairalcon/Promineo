@@ -1,0 +1,21 @@
+Jair Alcon
+Week 13 Research
+
+-What is React's virtual DOM, why is it important, and how does it work?
+
+The virtual DOM of React is a representation of the User Interface that's kept in memory and synced with the "real" DOM by a library. By having React's virtual DOM, a developer is able to control that state of the UI and checks to ensure the DOM is in the same state.
+
+The importance of React's virtual DOM is mainly efficiency. Because the frame work of JavaScript updates the DOM much more than it has to, React's virtual DOM allows a developer to change the blueprint of the DOM, virtually first, before the final results are changed on the screen. When making a change via React's virtual DOM, snapshot is taken before changes are made, changes are made and updated are made in the virtual DOM. Then React compares the previous snapshot real DOM with the updated virtual DOM and only updates those changes.
+
+https://reactjs.org/docs/faq-internals.html
+
+https://www.codecademy.com/article/react-virtual-dom
+
+
+-What is Webpack and what problem does it solve?
+
+Webpack bundles modules into manageable output files, which especially helps with Single Page Applications. SPAs are today's standard, which is why Webpack is so helpful. By converting dependecies into modules and bundling them, there will be a tighter and safer scope. Webpack will also be able to manage our dependencies for us. Otherwise, developers would have to manage all the dependencies, which creates too much room for error.
+
+https://webpack.js.org/concepts/
+
+https://blog.ag-grid.com/webpack-tutorial-understanding-how-it-works/#introduction-to-webpack
