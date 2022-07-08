@@ -38,8 +38,9 @@ class Deck {
 			this.cardDeckArray.push([this.cardRankValue[i] + ' of ' + this.suit[x], this.cardValue[i]]);
 			}          
 		}
-        console.log('Building Deck:', this.cardDeckArray);
-        console.log('Indexing into deck to view card value:', this.cardDeckArray[1][1]);
+        // console.log('Building Deck:', this.cardDeckArray);
+        
+        // console.log('Indexing into deck to view card value:', this.cardDeckArray[1][1]);
 	}
     //* this will shuffle the cards so they're not sorted by value, lowest to highest.
     shuffleDeck(){
@@ -66,15 +67,21 @@ class Deck {
 }
 
 //* This will prompt class Deck to create a new Deck and shuffle it for the game.
-const fullDeck = new Deck();
-fullDeck.buildDeck();
-    // console.log('This is a built deck of 52 cards:', fullDeck);
 
-// fullDeck.shuffleDeck();
-    // console.log('This shuffles the deck after building it:', fullDeck);
+
+
+
+const newDeck = new Deck();
+newDeck.buildDeck();
+    console.log('This is a built deck of 52 cards:', newDeck);
+
+// const shuffleDeck = new Deck();
+// shuffleDeck.buildDeck();
+// shuffleDeck.shuffleDeck();
+//     console.log('This shuffles the deck after building it:', shuffleDeck);
     
-// fullDeck.returnDeck();
-    // console.log('This returns all card elements into "cardDeckArray":', fullDeck);
+// shuffleDeck.returnDeck();
+//     console.log(`This returns all card elements into "cardDeckArray": \n ${shuffleDeck.cardDeckArray}`);
 
     
 //* testing to see if the deck would be returned complete and shuffled
@@ -88,6 +95,8 @@ fullDeck.buildDeck();
 
 class Player {
     constructor() {
+        //* placeholder for player name
+        this.name = '';
         //* score will start at 0 for each instance of Player
         this.score = 0;
         //* empty array needing to be deals half the deck
@@ -97,11 +106,13 @@ class Player {
 
 }
 
-
-
-
-
-
 //* Create New Players to split deck between.
 const player1 = new Player();
 const player2 = new Player();
+
+class Game {
+    constructor() {
+        this.player1 = ''
+        this.player2 = ''
+    }
+}
