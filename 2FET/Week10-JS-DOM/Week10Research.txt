@@ -1,0 +1,39 @@
+Jair Alcon
+
+Week 10 Research
+
+-List and explain the JavaScript methods that enable us to select elements from the DOM.
+
+The methods are as follows:
+
+getElementsByTagName() / document.getElementsByTagName()
+This method return all elements that match the defined tag name such as h1, li. Afterwards these tags are returned into an array with their own index if it needs to be selected or modified.
+getElementsByClassName() / document.getElementsByClassName()
+This method is similar to the one above, however the difference is that this method returns all elements that matched the defined class name. This method will also create an array of class names returned with their own index.
+getElementById() / document.getElementById()
+The method is different in that it does not return an array, but rather returns the first instance of the defined Id while ignoring the following Id's that are the same. Also, if we look closely we will notice the word "element" is singular as opposed to the two methods above use "elements", plural.
+querySelector() / document.querySelector()
+This method returns the first instance which an element matches the specified CSS selector in the document. However, unlike the methods above that would use something like getElementsByClassName('className'), querySelector requires using the CSS format such as querySelector('.className')
+quertySelectorAll() / document.quertySelectorAll()
+This method returns all instances that match the CSS selector being called from the document. When called this will return an array of all instances in the document assigned to with their index.
+
+https://blog.bitsrc.io/dom-selectors-explained-70260049aaf0
+
+
+
+
+-What is the document object? What are some other methods available on the document object that don't select elements from the DOM?
+
+The document object is a piece of data that helps create the structure and content of a web document. All document objects can be modified or deleted via the Document Object Model.
+
+Some methods that are available on the document object that don't select elements from the DOM are as follows:
+
+createElement() / document.createElement()
+createTextNode() / document.createTextNode()
+write() / document.write()
+
+https://www.w3schools.com/js/js_htmldom.asp
+
+https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction
+
+https://www.freecodecamp.org/news/dom-explained-everything-you-need-to-know-about-the-document-object-model/

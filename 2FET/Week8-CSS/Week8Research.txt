@@ -1,0 +1,23 @@
+Jair Alcon
+Week 8 Research
+
+1. What is CSS clearfix, how is it used, and why is it helpful?
+
+There's a long history behind how clearfix came to be. It's commonly known as a "coding hack" in the developer community. This was discovered when developers found when internet explorer would not behave in expected manner. Essentially, when using floating elements within a parent element, clearfix allows the encompassing parent element to surround the floating children element(s). The clearfix property is helpful because it helps organize elements aesthetically and the flow of the content makes more sense.
+
+https://www.educative.io/edpresso/what-is-a-clearfix-in-css
+
+https://css-tricks.com/clearfix-a-lesson-in-web-development-evolution/
+
+
+2. What are SaSS and LESS?
+
+It appears just in the same manner what there is preference between community members in any field, SaSS and LESS are no different when it comes to the software development community.
+
+SaSS stands fro Syntactically Awesome Stylesheets. SaSS may require a Ruby install, depending. Macs already ship with Ruby, but Windows machines require Ruby to be installed. SaSS is an extension or preprocessor of CSS which helps reduce repetitions in CSS. SaSS is stable, powerful, and compatiable with other versions of CSS. When writing code, SaSS uses '$' character to assign variables. One of major upsides of using this method is all you need is the symbol and variable as opposed to entering specifications every time. SaSS has the ability to store and share CSS declarations throughout a site. SaSS uses Compass, which has all options available with updates and future support. SaSS ability to report errors is not on part with that of LESS, which can make it frustrating to track down bugs. SaSS's documentation is not as user friendly as LESS and may require above average base knowledge or using a wiki or set-up process to follow along with.
+
+LESS stands for Leaner CSS. LESS was built in Ruby, just like SaSS, however, LESS requires the developer to upload JavaScript files to the server. LESS is a preprocessor of CSS which can help customise, maintain, manage, and reuse stylesheets for a website.  LESS can be wrinned in a cleaner and organized manner. When writing code, LESS uses '@' character to assign variables. Like SaSS, assigning variables requires only the symbol and variable as opposed to entering specification every time. LESS has the ability to store and share CSS declarations throughout a site. LESS has Preboot.less, LESS Mixins, LESS elements, gs, and Frameless. The support for LESS is fragmented, resulting in various uses of variables, which means it might not work the same every time its used. However, LESS does have better error messages than SaSS. Like JavaScit, the error can be displayed exactly where it happened in the code. Lastly, LESS has more user friendly documentation than SaSS. This makes it easier for first-time users, compared to using SaSS.
+
+https://www.thebalancecareers.com/sass-vs-less-2071912
+
+https://www.educba.com/sass-vs-less/

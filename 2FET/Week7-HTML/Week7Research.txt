@@ -1,0 +1,17 @@
+Jair Alcon
+Week 7 Research
+
+-What is your favorite thing you learned this week?
+
+My favorite thing learned this week are forms in HTML. As mentioned in this week's videos, we interact with forms on many websites on a daily basis. Learning the bare bones of building simple forms in HTML has been eye-opening regarding how they work.
+
+
+What are 3 HTML elements not mentioned in any of the videos this week? What do they do and how are they used?
+
+One element not mentioned is <legend>. This element is nested within "<fieldset> and provides a caption for the <fieldset>.
+
+Another element not mentioned in this week's videos is <aside>. This element is used for content that's only indirectly related to the document's main content. <aside>'s are usually call-out boxes or sidebars.
+
+Lastly, <figcaption> element is used to represent a caption or legend while describing the contents of its parent.
+
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element#sectioning_root
