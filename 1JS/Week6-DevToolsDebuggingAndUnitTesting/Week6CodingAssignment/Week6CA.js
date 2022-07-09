@@ -10,7 +10,7 @@ Think about how you would build this project and write your plan down. Consider 
 todo -	Deal 26 Cards to two Players from a Deck. 
 todo -	Iterate through the turns where each Player plays a Card
 todo -	The Player who played the higher card is awarded a point
-todo - Ties result in zero points for either Player
+todo -  Ties result in zero points for either Player
 todo -	After all cards have been played, display the score.
 
 todo Write a Unit Test using Mocha and Chai for at least one of the functions you write.
@@ -66,14 +66,11 @@ class Deck {
     }
 }
 
-//* This will prompt class Deck to create a new Deck and shuffle it for the game.
+//* Testing Below:
 
-
-
-
-const newDeck = new Deck();
-newDeck.buildDeck();
-    console.log('This is a built deck of 52 cards:', newDeck);
+// const newDeck = new Deck();
+// newDeck.buildDeck();
+//     console.log('This is a built deck of 52 cards:', newDeck);
 
 // const shuffleDeck = new Deck();
 // shuffleDeck.buildDeck();
@@ -88,31 +85,154 @@ newDeck.buildDeck();
 // console.log(fullDeck);
 
 
-
-//todo split deck
-//todo deal the deck
-
-
 class Player {
-    constructor() {
-        //* placeholder for player name
-        this.name = '';
+    constructor(name, score, hand) {
+        this.name = name;
         //* score will start at 0 for each instance of Player
         this.score = 0;
         //* empty array needing to be deals half the deck
         this.hand = [];
     }
 
+    //method accepts cards being dealt from deck
+    takeOneCard(card){
+		this.hand.push(card);
+	}
 
+    //method to update cards dealt in player's hand array
+	returnHand(){
+		return this.hand;
+	}
+
+    //method to play 1 card from each player's hand array once loop is initiated, updates hand array
+	playCard(){
+		return this.hand.pop();
+	}
+
+    //method to update score after each round played
+	updatedScore(){
+		this.score++;
+	}
+    
+    //method to display final score at the end of game
+	returnScore(){
+		return this.score;
+	}
 }
 
-//* Create New Players to split deck between.
-const player1 = new Player();
-const player2 = new Player();
 
 class Game {
-    constructor() {
-        this.player1 = ''
-        this.player2 = ''
+    constructor() {        
+        this.players = [];
+        this.selectedPlayer = null;
+    }
+
+    //* entry point to application
+    start() {
+        let selection = this.showMainMenuOptions();
+        while (selection != 0) {
+            switch (selection) {
+                case '1':
+                    this.createPlayers();
+                    break;                
+                case '2':
+                    this.dealDeck();
+                    break;
+                case '3':
+                    this.displayPlayers();
+                    break;
+                case '4':
+                    this.playWar();
+                    break;
+                default:
+                    selection = 0;
+            }
+
+            selection = this.showMainMenuOptions();
+        }
+
+        alert('Goodbye!');
+        console.log(`---Program terminated---`)
+    }
+
+    //showing UI on the screen to receive input 0-3
+    showMainMenuOptions() {
+        return prompt(`
+            0) exit
+            1) create players
+            2) deal deck
+            3) view players
+            4) play game
+        `);
+    }
+
+    // creating 2 players
+    createPlayers() {
+        // const player1 = prompt(`Enter name for Player 1`, this.players.push(new Player()));
+        // const player2 = prompt(`Enter name for Player 2`, this.players.push(new Player()));
+
+        //* need to create instance of new Player fist and then Push to players array
+        const player1 = new Player(prompt(`Enter name for Player 1`));
+        const player2 = new Player(prompt(`Enter name for Player 2`));
+
+        this.players.push(player1);
+        this.players.push(player2);
+
+        console.log(`This is player1:`, typeof player1);
+        console.log(`This is player2:`, typeof player2);
+        console.log(`this is player1's name: ${player1.name}`);
+        console.log(`this is player2's current score: ${player2.score}`);
+
+        console.log(this.players[0]);
+        console.log(this.players[1]);
+
+        //! Didn't work as expected below
+        // const player1 = prompt(`Enter name for Player 1`, this.players.push(new Player(player1)));
+        // const player2 = prompt(`Enter name for Player 2`, this.players.push(new Player(player2)));
+
+        // let p1Name = prompt(`Enter name of new Player 1`);
+        // let p2Name = prompt(`Enter name of new Player 2`);
+        // this.players.push(new Player());
+        // console.log(p1Name);
+        // console.log(p2Name);        
+    }
+
+    dealDeck() {
+        const gameDeck = new Deck();
+        gameDeck.buildDeck();
+        gameDeck.shuffleDeck();
+        gameDeck.returnDeck();
+        console.log(gameDeck.cardDeckArray);
+        //* Deal Cards to Players from Deck class methods, splits deck in half
+        for (let x = 0; x < 26; x++) {
+            this.players[0].takeOneCard(gameDeck.dealACard());
+            this.players[1].takeOneCard(gameDeck.dealACard());
+        }
+        console.log(this.players);
+        console.log(`This was dealt to player1: ${this.players[0].hand}`);
+        console.log(`This was dealt to player2: ${this.players[1].hand}`);
+    }
+
+    
+
+
+    displayPlayers() {
+        // let i = prompt(`Enter the index of the player you wish to view: \n ${Player.name}`);
+
+        let playerHands = [];
+        for (let i = 0; i < this.players.length; i++) {
+            playerHands += `${this.players[i].name}'s HAND) = ${this.players[i].hand} \n \n`;
+        }
+        alert(playerHands);
+        // displays current data that has been added
+        console.log(playerHands);
+    }
+
+    playWar () {
+
     }
 }
+
+
+const game = new Game();
+game.start();
