@@ -7,7 +7,7 @@ Week 6 Coding Assignment: "War" Card Game
 
 For the final project you will be creating an automated version of the classic card game WAR. You do not need to accept any user input, when you run your code, the entire game should play out instantly without any user input. 
 Think about how you would build this project and write your plan down. Consider classes such as Card, Deck, and Player and what fields and methods they might each have. You can implement the game however you'd like (i.e. printing to the console, using alert, or some other way). The completed project should, when ran, do the following:
-todo -	Deal 26 Cards to two Players from a Deck. 
+-	Deal 26 Cards to two Players from a Deck. 
 todo -	Iterate through the turns where each Player plays a Card
 todo -	The Player who played the higher card is awarded a point
 todo -  Ties result in zero points for either Player
@@ -86,7 +86,7 @@ class Deck {
 
 
 class Player {
-    constructor(name, score, hand) {
+    constructor(name) {
         this.name = name;
         //* score will start at 0 for each instance of Player
         this.score = 0;
@@ -117,6 +117,61 @@ class Player {
     //method to display final score at the end of game
 	returnScore(){
 		return this.score;
+	}
+
+    //method to return card values when game is played
+	returnCardValue(card){
+		if (card.startsWith("2")){
+			return 1;
+		}
+
+		else if (card.startsWith("3")){
+			return 2;
+		}
+
+		else if (card.startsWith("4")){
+			return 3;
+		}
+
+		else if (card.startsWith("5")){
+			return 4;
+		}
+
+		else if (card.startsWith("6")){
+			return 5;
+		}
+
+		else if (card.startsWith("7")){
+			return 6;
+		}
+
+		else if (card.startsWith("8")){
+			return 7;
+		}
+
+		else if (card.startsWith("9")){
+			return 8;
+		}
+
+		else if (card.startsWith("10")){
+			return 9;
+		}
+
+		else if (card.startsWith("Jack")){
+			return 10;
+		}
+
+		else if (card.startsWith("Queen")){
+			return 11;
+		}
+
+		else if (card.startsWith("King")){
+			return 12;
+		}
+
+		else if (card.startsWith("Ace")){
+			return 13;
+		}
 	}
 }
 
@@ -178,8 +233,8 @@ class Game {
         this.players.push(player1);
         this.players.push(player2);
 
-        console.log(`This is player1:`, typeof player1);
-        console.log(`This is player2:`, typeof player2);
+        console.log(`This is player1:`, typeof player1, player1);
+        console.log(`This is player2:`, typeof player2, player2);
         console.log(`this is player1's name: ${player1.name}`);
         console.log(`this is player2's current score: ${player2.score}`);
 
@@ -197,28 +252,30 @@ class Game {
         // console.log(p2Name);        
     }
 
+    //* Method to create, shuffle, and deal deck to both players
     dealDeck() {
         const gameDeck = new Deck();
         gameDeck.buildDeck();
         gameDeck.shuffleDeck();
         gameDeck.returnDeck();
-        console.log(gameDeck.cardDeckArray);
+        //testing to confirm that gameDeck was returned complete and shuffled
+        console.log('this is a complete and shuffled card deck', gameDeck.cardDeckArray);
         //* Deal Cards to Players from Deck class methods, splits deck in half
         for (let x = 0; x < 26; x++) {
             this.players[0].takeOneCard(gameDeck.dealACard());
             this.players[1].takeOneCard(gameDeck.dealACard());
         }
         console.log(this.players);
-        console.log(`This was dealt to player1: ${this.players[0].hand}`);
+        
+        //! NEED TO WORK ON
+        //prints the length (26) of the players' card deck
+        console.log(`This was dealt to player1: ${this.players[0].hand.length[[0]]}`);
+        // console.log(`This was dealt to player1: ${this.players[0].hand}`);
         console.log(`This was dealt to player2: ${this.players[1].hand}`);
     }
 
-    
-
-
+    //* 
     displayPlayers() {
-        // let i = prompt(`Enter the index of the player you wish to view: \n ${Player.name}`);
-
         let playerHands = [];
         for (let i = 0; i < this.players.length; i++) {
             playerHands += `${this.players[i].name}'s HAND) = ${this.players[i].hand} \n \n`;
@@ -229,7 +286,34 @@ class Game {
     }
 
     playWar () {
+        for (let x = 0; x < 26; x++){
 
+            let player1Card = this.players[0].playCard();
+            let player2Card = this.players[1].playCard();
+        
+            //testing card being played
+            console.log(`this is the last card in player1's hand: ${player1Card}`);
+            console.log(`this is the last card in player1's hand: ${player2Card}`);
+            console.log();
+            console.log();
+        
+            // //determines if Player 1's card value is greater than Player 2's, if so, point awarded to Player 1
+            // if (this.players[0].returnCardValue(player1Card) > this.players[1].returnCardValue(player2Card)) {
+            //     console.log(`Player one wins this round because ${player1Card} beats ${player2Card}`);
+            //     this.players[0].updatedScore();
+            // }
+        
+            // //determines if Player 1's card value is less than than Player 2's, if so, point awarded to Player 2
+            // else if (this.players[0].returnCardValue(player1Card) < this.players[1].returnCardValue(player2Card)) {
+            //     console.log("Player two wins this round because " + player2Card + " beats " + player1Card);
+            //     this.players[1].updatedScore();
+            // }
+        
+            // //determines if players cards are equal and if so, no point is awarded
+            // else {
+            //     console.log("This round is tied because " + player1Card + " ties with " + player2Card);
+            // }            		
+        }
     }
 }
 
