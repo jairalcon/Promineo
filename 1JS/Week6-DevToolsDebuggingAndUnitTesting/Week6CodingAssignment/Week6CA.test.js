@@ -22,6 +22,5 @@ describe("Player's Hand", function() {
                 expect(testDeck1).to.be.an('object');
             });
         });
-})
-
+    })
 });
