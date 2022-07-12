@@ -4,13 +4,24 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Week 6 Coding Assignment</title>
+        <!-- this helps the errors look better with some CSS -->
+        <link rel="stylesheet" href="../node_modules/mocha/mocha.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
         <h1>Week 6 Coding Assignment</h1>
 
+        <!-- next 3 lines helps organize the test code look pretty -->
+        <div id="mocha"><p><a href=".">Index</a></p></div>
+        <div id="messages"></div>
+        <div id="fixtures"></div>
+        <!-- next 2 lines links to testing JS in node_modules -->
+        <script src="../node_modules/mocha/mocha.js"></script>
+        <script src="../node_modules/chai/chai.js"></script>
         <script src="Week6CA.js"></script>
-        <!-- <script src="Week6CA.test.js"></script> -->
+        <script>mocha.setup('bdd')</script>
+        <script src="Week6CA.test.js"></script>
+        <script>mocha.run();</script>
 
 
     </body>
