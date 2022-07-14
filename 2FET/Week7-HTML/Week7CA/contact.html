@@ -7,41 +7,78 @@
     <title>Week 6 Coding Assignment</title>
 </head>
 <body>
-    <h1>Contact</h1>
 
-    <div>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-    </div>
-    <h2>Jair Alcon - Software Developer</h2>
+    <header>
+        <h1>Contact</h1>
+    </header>
+    <!-- adding navbar for future -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
 
-    <img height="500px" src="https://www.csbtech.dev/wp-content/uploads/2019/02/irvan-smith-563895-unsplash-scaled-1.jpg" alt="image of code on screen">
+        <form>
+            <input type="search" name="q" placeholder="Search query">
+            <input type="submit" value="Go!">
+        </form>
+    </nav>
 
-    <table>
-        <tr>
-            <th>Site</th>
-            <th>Link</th>
-        </tr>
-        <tr>
-            <td>GitHub</td>
-            <td><a href="https://github.com/jairalcon">Check out my GitHub</a></td>
-        </tr>
-        <tr>
-            <td>LinkedIn</td>
-            <td><a href="https://www.linkedin.com/in/jairalcon/">Connect with me on LinkedIn</a></td>
-        </tr>
-    </table>
-
-    <form>
-        <h2>Let's get in touch</h2>
-        <input type="text" name="firstName" placeholder="First Name"><br>
-        <input type="text" name="lastName" placeholder="Last Name"><br>
-        <input type="text" name="phone" placeholder="Phone Number"><br>
-        <input type="text" name="email" placeholder="E-Mail"><br>
-        <input type="submit" value="Submit">
-    </form>
+    <main>
     
-    
+        <h2>Jair Alcon: Front-End Software Developer</h2>
+
+        <img height="250px" src="https://www.csbtech.dev/wp-content/uploads/2019/02/irvan-smith-563895-unsplash-scaled-1.jpg" alt="image of code on screen">
+        
+        <table>
+            <h3>Here's how to interact with me:</h3>
+            <tr>
+                <th>Site</th>
+                <th>Link</th>
+            </tr>
+            <tr>
+                <td>GitHub:</td>
+                <td><a href="https://github.com/jairalcon"><img height="30px" src="./images/github-logo.png" alt="GitHub logo"> </a></td>
+            </tr>
+            <tr>
+                <td>LinkedIn:</td>
+                <td><a href="https://www.linkedin.com/in/jairalcon/"><img height="30px" src="./images/linkedin-logo.png" alt="LinkedIn logo"></a></td>
+            </tr>
+        </table>
+
+        <!-- <a href="/buy/puppies/now">
+            <img src="puppy.jpg" alt="A happy puppy.">
+        </a> -->
+
+        <form>
+            <h3>Let's get in touch</h3>
+            <div>
+                <label for="first-name-input"></label>
+                <input type="text" id="first-name-input" name="first-name" placeholder="First Name">
+
+                <label for="last-name-input"></label>
+                <input type="text" id="last-name-input" name="last-name" placeholder="Last Name">
+
+                <label for="phone-input"></label>
+                <input type="text" id="phone-input" name="phone" placeholder="Phone Number">
+
+                <label for="email-input"></label>
+                <input type="text" id="email-input" name="email" placeholder="E-Mail">
+                <br>
+                <br>
+                <textarea name="comment" id="comment-input" cols="72" rows="5"></textarea>
+                <br>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </div>
+        </form>
+
+    </main>
+
+    <footer>
+        <p>©Copyright 2022 by Jair Alcon. All rights reversed.</p>
+    </footer>
+    <br>
 </body>
 </html>
