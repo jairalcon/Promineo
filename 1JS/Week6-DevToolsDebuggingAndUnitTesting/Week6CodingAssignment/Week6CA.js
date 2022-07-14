@@ -13,7 +13,7 @@ Think about how you would build this project and write your plan down. Consider 
 -   Ties result in zero points for either Player
 -	After all cards have been played, display the score.
 
-todo Write a Unit Test using Mocha and Chai for at least one of the functions you write.
+Write a Unit Test using Mocha and Chai for at least one of the functions you write.
 */
 
 
