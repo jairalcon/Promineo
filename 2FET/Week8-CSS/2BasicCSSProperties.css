@@ -1,0 +1,17 @@
+#example {
+    /** we use key-value pairs */
+    /* color is key, and gray is the value, separated by semicolon*/
+    color: gray;
+    background-color: rgba(6, 32, 198, 0.924);
+    border: dotted;
+    border-width: 3px;
+    border-color: red;
+    border-radius: 5px;
+    height: 500px;
+    text-align: center;
+}
+
+/*! FLOAT example for CSS  */
+img {
+    float: right;
+}

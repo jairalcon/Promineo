@@ -1,0 +1,26 @@
+/*! This is external CSS, the preferred method. */
+
+body {
+    background: rgb(38, 113, 45);
+}
+
+h1 {
+    color: goldenrod;
+}
+
+div {
+    background-color: cornflowerblue; 
+    border-style: solid; 
+    border-color: black; 
+    border-radius: 5px
+}
+
+/* creating CSS class on <p> */
+.shadow-text {
+    text-shadow: gray 1px 1px;
+}
+
+/* uses id tag to target element */
+#large-paragraph {
+    font-size: 30px;
+}

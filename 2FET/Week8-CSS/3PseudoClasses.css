@@ -1,0 +1,29 @@
+/* class */
+.hov {
+    height: 200px;
+    width: 200px;
+    background-color: cornflowerblue;
+}
+
+/* creating pseudo element .hov is pseudo, 
+and hover is the state.
+change properties while element is in this state */
+.hov:hover {
+    background-color: lightcoral;
+}
+
+/* creating pseudo element .every-even li is pseudo, 
+and nth-child(even) is the state.
+change properties while element is in this state */
+/** this is very useful to style elements within elements  */
+.every-even li:nth-child(even) {
+    background-color: lightcoral;
+}
+
+/* creating pseudo element .every-third li is pseudo, 
+and nth-child(3n) is the state.
+change properties while element is in this state */
+/** this is very useful to style elements within elements */
+.every-third li:nth-child(3n) {
+    background-color: cornflowerblue;
+}

@@ -1,0 +1,8 @@
+/* This helps us space things inside our HTML */
+#box-model {
+    padding: 20px;
+    border-style: solid;
+    border-width: 3px;
+    margin: 30px;
+    background-color: cornflowerblue;
+}
