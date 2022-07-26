@@ -15,10 +15,10 @@
         <ul>            
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>            
+            <li class="active-link"><a href="contact.html">Contact</a></li>            
         </ul>
 
-        <form>
+        <form id="nav-search">
             <input type="search" name="q" placeholder="Search query">
             <input type="submit" value="Go!">
         </form>
@@ -28,7 +28,7 @@
     
         <h2>Jair Alcon: Front-End Software Developer</h2>
 
-        <img height="250px" src="https://www.csbtech.dev/wp-content/uploads/2019/02/irvan-smith-563895-unsplash-scaled-1.jpg" alt="image of code on screen">
+        <img id="coding-screen" height="250px" src="https://www.csbtech.dev/wp-content/uploads/2019/02/irvan-smith-563895-unsplash-scaled-1.jpg" alt="image of code on screen">
         
         <table id="site-links">
             <h3>Here's how to interact with me:</h3>
@@ -46,8 +46,7 @@
             </tr>
         </table>
 
-        <!-- <a href="/buy/puppies/now"><img src="puppy.jpg" alt="A happy puppy."></a> -->
-
+        
         <form>
             <h3>Let's get in touch</h3>
             <div>
@@ -64,7 +63,7 @@
                 <input type="text" id="email-input" name="email" placeholder="E-Mail">
                 <br>
                 <br>
-                <textarea name="comment" id="comment-input" cols="72" rows="5"></textarea>
+                <textarea class="contact-text" name="comment" id="comment-input" cols="72" rows="5"></textarea>
                 <br>
                 <input type="submit" value="Submit">
                 <input type="reset" value="Reset">
