@@ -1,10 +1,11 @@
 Jair Alcon
 Week 9 Research
 
--How does the Bootstrap system work?
+How does the Bootstrap system work?
+
 The bootstrap system works by using a series of containers, rows, and columns. This 12-column grid system can be both horizontal or vertical and helps with creating a responsive layout. This grid system is made up of 1 or more containers. If there happen to be more than 12 columns then it starts a new column underneath the 1st column.
 In the dev. community it is said there are 3 rules when it comes to the grid layout of bootstrap:
-"1. Columns must be the immediate child of a row.
+1. Columns must be the immediate child of a row.
 2. Rows are only used to contain columns, nothing else.
 3. Rows should be placed inside a container."
 If these rules are followed when building the grid, this will ensure that the rows and column will work together, as they should.
@@ -12,7 +13,7 @@ The way the grid system determines when it needs to shift the grids is by a comb
 Containers allow their contents to adjust automatically. They have built-in padding to help with this. Containers can be fixed or fluid.
 Rows have negative margins of 15x of each side and help divide the screen horizontally.
 Columns have padding of 15px helps keep contents inside and help divide the screen vertically.
-Nesting are elements within another element. The same can be applied to columns and rows.
+Nesting occurs when elements are within another element. The same can be applied to columns and rows.
 Offsets can be used to help add extra spacing between containers and their contents.
 Push/Pull flips elements from one side of the page to the other, which is what you want in a responsive website.
 Therefore, when "the shift" occurs from a mobile-version to desktop version or reversed, all the built in padding, margins in the containers, rows, columns, nests, and offsets change their layout based off the grid system that has been coded via bootstrap.
@@ -21,8 +22,9 @@ https://opensenselabs.com/blog/tech/how-bootstrap-grid-system-works
 https://uxplanet.org/how-the-bootstrap-4-grid-works-a1b04703a3b7
 
 
--Name 5 different Bootstrap components and describe how they work.
-Navbars are a powerful container that is highly versatile. They require a wrapping for "responsive collapsing and color scheme classes." Thankfully their contents are fluid by default. However, they can be made to have a fixed height, if need be. They are also responsive by default, however, that can be adjusted, as well. There is also built-in support for ".brand, .nav, t.oggler, .text, .navbar-collapse, .scroll." All these allows the navbar to be customized to the developer's needs.
+Name 5 different Bootstrap components and describe how they work.
+
+Navbars are a powerful container that is highly versatile. They require a wrapping for "responsive collapsing and color scheme classes." Thankfully, their contents are fluid by default. However, they can be made to have a fixed height, if need be. They are also responsive by default, however, that can be adjusted, as well. There is also built-in support for ".brand, .nav, .toggler, .text, .navbar-collapse, .scroll." All these allows the navbar to be customized to the developer's needs.
 Accordion helps build "collapsing accordions" by using a build-it collapse code to achieve this.
 Alerts help provide feedback within a context. These Flexible alert messages can hold any length of text as well as an optional button.
 Badges automatically scale to the size of it's immediate parent element "by using relative font sizing." These can be used in headings and mainly used with buttons.
