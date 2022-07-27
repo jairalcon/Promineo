@@ -4,22 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 7 Coding Assignment</title>
+    <title>Week 9 Coding Assignment</title>
+    <!-- Using Bootstrap 4.4.1 -->
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
 </head>
 <body>
 
-    <header>
-        <h1>Contact</h1>
-    </header>
     <!-- adding navbar for future -->
-    <nav>
-        <ul>
+    <nav class="top-navbar">
+        <div class="title">About</div>
+        <ul>            
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li class="active-link"><a href="contact.html">Contact</a></li>            
         </ul>
 
-        <form>
+        <form id="nav-search">
             <input type="search" name="q" placeholder="Search query">
             <input type="submit" value="Go!">
         </form>
@@ -29,9 +29,9 @@
     
         <h2>Jair Alcon: Front-End Software Developer</h2>
 
-        <img height="250px" src="https://www.csbtech.dev/wp-content/uploads/2019/02/irvan-smith-563895-unsplash-scaled-1.jpg" alt="image of code on screen">
+        <img id="coding-screen" height="250px" src="https://www.csbtech.dev/wp-content/uploads/2019/02/irvan-smith-563895-unsplash-scaled-1.jpg" alt="image of code on screen">
         
-        <table>
+        <table id="site-links">
             <h3>Here's how to interact with me:</h3>
             <tr>
                 <th>Site</th>
@@ -47,10 +47,7 @@
             </tr>
         </table>
 
-        <!-- <a href="/buy/puppies/now">
-            <img src="puppy.jpg" alt="A happy puppy.">
-        </a> -->
-
+        
         <form>
             <h3>Let's get in touch</h3>
             <div>
@@ -67,7 +64,7 @@
                 <input type="text" id="email-input" name="email" placeholder="E-Mail">
                 <br>
                 <br>
-                <textarea name="comment" id="comment-input" cols="72" rows="5"></textarea>
+                <textarea class="contact-text" name="comment" id="comment-input" cols="72" rows="5"></textarea>
                 <br>
                 <input type="submit" value="Submit">
                 <input type="reset" value="Reset">
@@ -80,5 +77,8 @@
         <p>©Copyright 2022 by Jair Alcon. All rights reversed.</p>
     </footer>
     <br>
+
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 </body>
 </html>
