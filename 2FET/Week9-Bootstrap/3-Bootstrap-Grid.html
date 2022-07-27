@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Grid</title>
+    <!-- using Bootstrap 4.4.1 -->
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        div {
+            border-style: solid;
+            border-color: black;
+        }
+    </style>
+</head>
+<body>
+    <!-- the content inside is centered and horizontally padded
+        doesn't take up entire screen
+        container-fluid takes up full scree
+    -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                Content (container)
+            </div>
+            <div class="col-lg-4">
+                Content (container)
+            </div>
+            <div class="col-lg-2">
+                Content (container)
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm">
+                Content (container-fluid)
+            </div>
+            <div class="col-sm">
+                Content (container-fluid)
+            </div>
+            <div class="col-sm">
+                <div class="row">
+                    <div class="col-md-8">
+                        Here's my 8
+                    </div>
+                    <div class="col-md-4">
+                        Here's my 4
+                    </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    
+</body>
+</html>
