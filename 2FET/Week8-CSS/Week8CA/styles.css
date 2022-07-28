@@ -29,6 +29,7 @@ body {
     padding: 15px 15px 5px 5px;
 }
 
+/*  */
 .top-navbar, ul {
     flex-grow: 1;
     display: flex;
@@ -70,6 +71,7 @@ main {
     /* display: flexbox; */
 /* } */
 
+/*  */
 #programmer-gif {
     height: auto;
     width: 100%;
@@ -79,18 +81,20 @@ main {
     min-width: 50px;
 }
 
+/*  */
 #headshot {
     height: auto;
     width: 100%;
     min-width: 50px;
 }
 
+/*  */
 #coding-screen {
     height: auto;
     width: 100%;
     min-width: 50px;
 }
-
+/* d */
 @media only screen 
    and (max-width : 1125px) 
    and (max-height : 2001px) {
@@ -142,13 +146,15 @@ form {
     border-collapse: collapse;
 }
 
+/*  */
 .about-table tr{
     display: grid;
-    grid-template-columns: repeat(auto-fill, 200px);
+    grid-template-columns: 1% 20% 17% 12% 12% 12%;
     justify-content: center;
+
 }
 
-
+/*  */
 .about-table th td {
     padding: 8px;
     text-align: left;
@@ -183,6 +189,7 @@ footer, p {
     min-width: 50px;
 }
 
+/* This styles list links in the navbar to increase size and change color when active */
 .active-link a {
     color: rgb(255, 255, 255);
     font-size: 150%;
