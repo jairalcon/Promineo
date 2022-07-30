@@ -8,9 +8,9 @@
     <!-- Using Bootstrap 5.2 -->
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
 </head>
-<body class="container">
+<body class="container p-3 mb-2 bg-light bg-gradient">
     <!-- creating responsive and mobile -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary bg-gradient border border-1 border-light rounded">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Jair Alcon</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTopNav"
@@ -32,20 +32,18 @@
                 </ul>
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
+                    <button class="btn btn-outline-dark" type="submit">Search</button>
                 </form>
             </div>
         </div>
     </nav>
-
-    
-    
+    <br>    
     <!-- todo -->
     <main>
-        <div class="container-lg col-6">
+        <div class="conatiner-lg text-center">
             <h2>Hello, there. I'm Jair Alcon.</h1><br>
 
-            <img src="./images/Jair Alcon.JPEG" alt="image of laptop with coding on screen"> <br>
+            <img src="./images/Jair Alcon.JPEG" class="img-fluid rounded" alt="headshot of Jair"> <br><br>
 
             <h3>Welcome to my portfolio site.</h3><br>
         </div>
@@ -94,9 +92,11 @@
             </button>
         </div>        
     </main>
-    <footer class="conatiner-sm col-6 text-center">
-        <p>©Copyright 2022 by Jair Alcon. All rights reversed.</p>
-    </footer>
+    <div class="conatiner-lg text-center fixed-bottom">
+        <footer>
+            <p>©Copyright 2022 by Jair Alcon. All rights reversed.</p>
+        </footer>
+    </div>
 
     <script src="../node_modules/jquery/dist/jquery.js"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
