@@ -5,39 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Week 9 Coding Assignment</title>
-    <!-- Using Bootstrap 4.4.1 -->
-    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <!-- Using Bootstrap 5.2 -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
 </head>
-<body>
+<body class="container">
 
-    <header>
-        <h1>About</h1>
-    </header>
-    <!-- adding navbar for future -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-
-        <form>
-            <input type="search" name="q" placeholder="Search query">
-            <input type="submit" value="Go!">
-        </form>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Jair Alcon</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
     </nav>
-
+    <!-- todo -->
     <main>
 
         <h2>Jair Alcon: Front-End Software Developer</h2>
 
         <p>My goal in taking the <strong>Promineo Tech Front-End Software Developer Bootcamp</strong> is to seek out new career opportunities that will enable me to grow in the Software Development field. I'm seeking full-remote employment at a company whose values and mission statement resonate with me.</p>    
         <!-- I've added 2 picture already so I thought adding a gif would be neat -->
-        <img height="250" src="./images/programmer.gif" alt="programmer sitting at computer">
+        <img id="programmer-gif" src="./images/programmer.gif" alt="programmer sitting at computer">
         
-        <h4>In the order presented, I have learned up to HTML. I'm currently on Week 7 of 18.</h2>     
-        
-        <table>
+        <h4>In the order presented, I have learned up to HTML. I'm currently on Week 8 of 18.</h2>     
+        <!-- todo  -->
+        <table class="about-table">
             <tr>
                 <th>Week</th>
                 <th>Concepts</th>
@@ -98,6 +108,22 @@
                 <td><img  height="75px" src="https://media-exp1.licdn.com/dms/image/C4D12AQF6-4QGS0Gw2Q/article-cover_image-shrink_720_1280/0/1623147132038?e=1659571200&v=beta&t=QPB1wC06xEjFk0GTYSf-xPYGWwvblxpvP2384PPxJIo" alt="Git banner"></td>
 
             </tr>
+            <tr>
+                <td>8:</td>
+                <td>Cascading Style Sheets (CSS)</td>
+                <td><a href="jairalcon.github.io/week8codingassignment/">Assignment</a></td>
+                <td><img  height="75px" src="https://www.tutorialrepublic.com/lib/images/html-illustration.png" alt="HTML banner"></td>
+                <td><img  height="75px" src="https://www.tutorialrepublic.com/lib/images/css-illustration.png" alt="CSS banner"></td>
+                <td><img  height="75px" src="https://media-exp1.licdn.com/dms/image/C4D12AQF6-4QGS0Gw2Q/article-cover_image-shrink_720_1280/0/1623147132038?e=1659571200&v=beta&t=QPB1wC06xEjFk0GTYSf-xPYGWwvblxpvP2384PPxJIo" alt="Git banner"></td>
+            </tr>
+            <tr>
+                <td>9:</td>
+                <td>Bootstrap 5</td>
+                <td><a href="#">Assignment</a></td>
+                <td><img  height="75px" src="https://www.tutorialrepublic.com/lib/images/html-illustration.png" alt="HTML banner"></td>
+                <td><img  height="75px" src="https://www.tutorialrepublic.com/lib/images/css-illustration.png" alt="CSS banner"></td>
+                <td><img  height="75px" src="https://media-exp1.licdn.com/dms/image/C4D12AQF6-4QGS0Gw2Q/article-cover_image-shrink_720_1280/0/1623147132038?e=1659571200&v=beta&t=QPB1wC06xEjFk0GTYSf-xPYGWwvblxpvP2384PPxJIo" alt="Git banner"></td>
+            </tr>
         </table>
     </main>
 
@@ -106,8 +132,8 @@
     </footer>
     <br>
 
-    <script src="./node_modules/jquery/dist/jquery.js"></script>
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 </body>
 </html>
 

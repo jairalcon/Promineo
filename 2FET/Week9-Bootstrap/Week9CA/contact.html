@@ -5,33 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Week 9 Coding Assignment</title>
-    <!-- Using Bootstrap 4.4.1 -->
-    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <!-- Using Bootstrap 5.2 -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
 </head>
-<body>
+<body class="container">
 
-    <!-- adding navbar for future -->
-    <nav class="top-navbar">
-        <div class="title">About</div>
-        <ul>            
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li class="active-link"><a href="contact.html">Contact</a></li>            
-        </ul>
-
-        <form id="nav-search">
-            <input type="search" name="q" placeholder="Search query">
-            <input type="submit" value="Go!">
-        </form>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Jair Alcon</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
     </nav>
-
+    <!-- todo -->
     <main>
     
         <h2>Jair Alcon: Front-End Software Developer</h2>
 
-        <img id="coding-screen" height="250px" src="https://www.csbtech.dev/wp-content/uploads/2019/02/irvan-smith-563895-unsplash-scaled-1.jpg" alt="image of code on screen">
+        <img height="250px" src="https://www.csbtech.dev/wp-content/uploads/2019/02/irvan-smith-563895-unsplash-scaled-1.jpg" alt="image of code on screen">
         
-        <table id="site-links">
+        <table>
             <h3>Here's how to interact with me:</h3>
             <tr>
                 <th>Site</th>
@@ -47,7 +59,7 @@
             </tr>
         </table>
 
-        
+        <!-- todo -->
         <form>
             <h3>Let's get in touch</h3>
             <div>
@@ -78,7 +90,7 @@
     </footer>
     <br>
 
-    <script src="./node_modules/jquery/dist/jquery.js"></script>
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 </body>
 </html>
