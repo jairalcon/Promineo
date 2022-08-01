@@ -20,8 +20,6 @@ This method returns all instances that match the CSS selector being called from 
 https://blog.bitsrc.io/dom-selectors-explained-70260049aaf0
 
 
-
-
 -What is the document object? What are some other methods available on the document object that don't select elements from the DOM?
 
 The document object is a piece of data that helps create the structure and content of a web document. All document objects can be modified or deleted via the Document Object Model.
