@@ -1,107 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 9 Coding Assignment</title>
-    <!-- Using Bootstrap 5.2 -->
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 9 Coding Assignment</title>
+  <!-- Using Bootstrap 5.2 -->
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
 </head>
+
 <body class="container p-3 mb-2 bg-light bg-gradient">
-    <!-- creating responsive and mobile -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary bg-gradient border border-1 border-light rounded">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Jair Alcon</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTopNav"
-                aria-controls="navbarTopNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+  <!-- creating responsive and mobile -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-secondary bg-gradient border border-1 border-light rounded">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Jair Alcon</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTopNav"
+        aria-controls="navbarTopNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-            <div class="collapse navbar-collapse" id="navbarTopNav">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-dark" type="submit">Search</button>
-                </form>
-            </div>
-        </div>
-    </nav>
-    <br>    
-    <!-- todo -->
-    <main>
-        <div class="conatiner-lg text-center">
-            <h2>Hello, there. I'm Jair Alcon.</h1><br>
-
-            <img src="./images/Jair Alcon.JPEG" class="img-fluid rounded" alt="headshot of Jair"> <br><br>
-
-            <h3>Welcome to my portfolio site.</h3><br>
-        </div>
-        <!-- todo -->
-
-        <div id="homeCarousel" class="container-md col-4 carousel slide carousel-fade" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
-                <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="2000">
-                    <img src="https://media-exp1.licdn.com/dms/image/C4D12AQF6-4QGS0Gw2Q/article-cover_image-shrink_720_1280/0/1623147132038?e=1659571200&v=beta&t=QPB1wC06xEjFk0GTYSf-xPYGWwvblxpvP2384PPxJIo" class="d-block w-100" alt="Git banner">
-                </div>
-                <div class="carousel-item" data-bs-interval="2000">
-                    <img src="https://www.tutorialrepublic.com/lib/images/javascript-illustration.png" class="d-block w-100" alt="JavaScript banner">
-                </div>
-                <div class="carousel-item" data-bs-interval="2000">
-                    <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--vO142fiA--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://thepracticaldev.s3.amazonaws.com/i/02au9dw6ydmjldesu7tn.png" class="d-block w-100" alt="Mocha Chai banner">
-                </div>
-                <div class="carousel-item" data-bs-interval="2000">
-                    <img src="https://www.tutorialrepublic.com/lib/images/html-illustration.png" class="d-block w-100" alt="HTML banner">
-                </div>
-                <div class="carousel-item" data-bs-interval="2000">
-                    <img src="https://www.tutorialrepublic.com/lib/images/css-illustration.png" class="d-block w-100" alt="CSS banner">
-                </div>
-                <div class="carousel-item" data-bs-interval="2000">
-                    <img src="https://www.tutorialrepublic.com/lib/images/bootstrap-5.0-illustration.png" class="d-block w-100" alt="Bootstrap banner">
-                </div>
-                <div class="carousel-item" data-bs-interval="2000">
-                    <img src="https://www.tutorialrepublic.com/lib/images/jquery-illustration.png" class="d-block w-100" alt="JQuery banner">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>        
-    </main>
-    <div class="conatiner-lg text-center fixed-bottom">
-        <footer>
-            <p>©Copyright 2022 by Jair Alcon. All rights reversed.</p>
-        </footer>
+      <div class="collapse navbar-collapse" id="navbarTopNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-dark" type="submit">Search</button>
+        </form>
+      </div>
     </div>
+  </nav>
+  <br>
+  <!-- todo -->
+  <main>
+    <div class="conatiner-lg text-center">
+      <h2>Hello, there. I'm Jair Alcon.</h1><br>
 
-    <script src="../node_modules/jquery/dist/jquery.js"></script>
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+        <img src="./images/Jair Alcon.JPEG" class="img-fluid rounded" alt="headshot of Jair"> <br><br>
+
+        <h3>Welcome to my portfolio site.</h3><br>
+    </div>
+    <!-- todo -->
+
+    <div id="homeCarousel" class="container-md col-4 carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+          aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+        <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
+        <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="7" aria-label="Slide 8"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="2000">
+          <img src="https://media-exp1.licdn.com/dms/image/C4D12AQF6-4QGS0Gw2Q/article-cover_image-shrink_720_1280/0/1623147132038?e=1659571200&v=beta&t=QPB1wC06xEjFk0GTYSf-xPYGWwvblxpvP2384PPxJIo" class="d-block w-100" alt="Git banner">
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="https://www.tutorialrepublic.com/lib/images/javascript-illustration.png" class="d-block w-100" alt="JavaScript banner">
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--vO142fiA--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://thepracticaldev.s3.amazonaws.com/i/02au9dw6ydmjldesu7tn.png" class="d-block w-100" alt="Mocha Chai banner">
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="https://www.tutorialrepublic.com/lib/images/html-illustration.png" class="d-block w-100" alt="HTML banner">
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="https://www.tutorialrepublic.com/lib/images/css-illustration.png" class="d-block w-100" alt="CSS banner">
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="https://www.tutorialrepublic.com/lib/images/bootstrap-5.0-illustration.png" class="d-block w-100" alt="Bootstrap banner">
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="https://www.tutorialrepublic.com/lib/images/jquery-illustration.png" class="d-block w-100" alt="JQuery banner">
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="https://user-images.githubusercontent.com/41876764/94856480-e7b8b200-03e4-11eb-949d-c3a447b43df2.jpeg" class="d-block w-100" alt="REACT banner">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </main>
+  <div class="conatiner-lg text-center fixed-bottom">
+    <footer>
+      <p>©Copyright 2022 by Jair Alcon. All rights reversed.</p>
+    </footer>
+  </div>
+
+  <script src="../node_modules/jquery/dist/jquery.js"></script>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 
 </body>
+
 </html>
 
 <!--! FOR REFERENCE -->

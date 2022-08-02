@@ -1,191 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 9 Coding Assignment</title>
-    <!-- Using Bootstrap 5.2 -->
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 9 Coding Assignment</title>
+  <!-- Using Bootstrap 5.2 -->
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
 </head>
+
 <body class="container p-3 mb-2 bg-light bg-gradient">
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary bg-gradient border border-1 border-light rounded">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Jair Alcon</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="contact.html">Contact</a>
-                    </li>
-                </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-dark" type="submit">Search</button>
-                </form>
-            </div>
-        </div>
-    </nav>
-    <!-- todo -->
-    <main>
-        <div class="text-center">
-            <h2>Jair Alcon: Front-End Software Developer</h2>
-
-            <img src="https://www.csbtech.dev/wp-content/uploads/2019/02/irvan-smith-563895-unsplash-scaled-1.jpg" class="img-fluid col-6 rounded" alt="image of code on screen">
-        </div>
-        
-        <div class="table-responsive-lg text-center col-md-3">
-            <table class="table align-middle table-hover">
-                <h3>My links:</h3>
-                <tr>
-                    <th>Site</th>
-                    <th>Link</th>
-                </tr>
-                <tr>
-                    <td>GitHub:</td>
-                    <td><a href="https://github.com/jairalcon"><img height="30px" src="./images/github-logo.png" alt="GitHub logo"> </a></td>
-                </tr>
-                <tr>
-                    <td>LinkedIn:</td>
-                    <td><a href="https://www.linkedin.com/in/jairalcon/"><img height="30px" src="./images/linkedin-logo.png" alt="LinkedIn logo"></a></td>
-                </tr>
-            </table>
-        </div>
-
-        <!-- todo -->
-              
-        <form class="row g-3 needs-validation" novalidate>
-            <h3>Let's get in touch...</h3>
-            <div class="col-md-4">
-                <label for="validationCustom01" class="form-label">First name</label>
-                <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
-                <div class="valid-feedback">
-                    Looks good!
-                </div>
-            </div>
-            <div class="col-md-4">
-                <label for="validationCustom02" class="form-label">Last name</label>
-                <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
-                <div class="valid-feedback">
-                    Looks good!
-                </div>
-            </div>
-            <div class="col-md-4">
-                <label for="validationCustomUsername" class="form-label">Username</label>
-                <div class="input-group has-validation">
-                    <span class="input-group-text" id="inputGroupPrepend">@</span>
-                    <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend"
-                        required>
-                    <div class="invalid-feedback">
-                        Please choose a username.
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <label for="validationCustom03" class="form-label">City</label>
-                <input type="text" class="form-control" id="validationCustom03" required>
-                <div class="invalid-feedback">
-                    Please provide a valid city.
-                </div>
-            </div>
-            <div class="col-md-3">
-                <label for="validationCustom04" class="form-label">State</label>
-                <select class="form-select" id="validationCustom04" required>
-                    <option selected disabled value="">Choose...</option>
-                    <option value="">N/A</option>
-                    <option value="AK">Alaska</option>
-                    <option value="AL">Alabama</option>
-                    <option value="AR">Arkansas</option>
-                    <option value="AZ">Arizona</option>
-                    <option value="CA">California</option>
-                    <option value="CO">Colorado</option>
-                    <option value="CT">Connecticut</option>
-                    <option value="DC">District of Columbia</option>
-                    <option value="DE">Delaware</option>
-                    <option value="FL">Florida</option>
-                    <option value="GA">Georgia</option>
-                    <option value="HI">Hawaii</option>
-                    <option value="IA">Iowa</option>
-                    <option value="ID">Idaho</option>
-                    <option value="IL">Illinois</option>
-                    <option value="IN">Indiana</option>
-                    <option value="KS">Kansas</option>
-                    <option value="KY">Kentucky</option>
-                    <option value="LA">Louisiana</option>
-                    <option value="MA">Massachusetts</option>
-                    <option value="MD">Maryland</option>
-                    <option value="ME">Maine</option>
-                    <option value="MI">Michigan</option>
-                    <option value="MN">Minnesota</option>
-                    <option value="MO">Missouri</option>
-                    <option value="MS">Mississippi</option>
-                    <option value="MT">Montana</option>
-                    <option value="NC">North Carolina</option>
-                    <option value="ND">North Dakota</option>
-                    <option value="NE">Nebraska</option>
-                    <option value="NH">New Hampshire</option>
-                    <option value="NJ">New Jersey</option>
-                    <option value="NM">New Mexico</option>
-                    <option value="NV">Nevada</option>
-                    <option value="NY">New York</option>
-                    <option value="OH">Ohio</option>
-                    <option value="OK">Oklahoma</option>
-                    <option value="OR">Oregon</option>
-                    <option value="PA">Pennsylvania</option>
-                    <option value="PR">Puerto Rico</option>
-                    <option value="RI">Rhode Island</option>
-                    <option value="SC">South Carolina</option>
-                    <option value="SD">South Dakota</option>
-                    <option value="TN">Tennessee</option>
-                    <option value="TX">Texas</option>
-                    <option value="UT">Utah</option>
-                    <option value="VA">Virginia</option>
-                    <option value="VT">Vermont</option>
-                    <option value="WA">Washington</option>
-                    <option value="WI">Wisconsin</option>
-                    <option value="WV">West Virginia</option>
-                    <option value="WY">Wyoming</option>
-                </select>
-                <div class="invalid-feedback">
-                    Please select a valid state.
-                </div>
-            </div>
-            <div class="col-md-3">
-                <label for="validationCustom05" class="form-label">Zip</label>
-                <input type="text" class="form-control" id="validationCustom05" required>
-                <div class="invalid-feedback">
-                    Please provide a valid zip.
-                </div>
-            </div>
-            <div class="col-12">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                    <label class="form-check-label" for="invalidCheck">
-                        Agree to terms and conditions
-                    </label>
-                    <div class="invalid-feedback">
-                        You must agree before submitting.
-                    </div>
-                </div>
-            </div>
-            <div class="col-12">
-                <button class="btn btn-primary" type="submit">Submit form</button>
-            </div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-secondary bg-gradient border border-1 border-light rounded">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Jair Alcon</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="contact.html">Contact</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-dark" type="submit">Search</button>
         </form>
+      </div>
+    </div>
+  </nav>
+  <!-- todo -->
+  <main class="container">
+    <div class="align-middle text-center">
+      <br>
+      <h2>Jair Alcon: Front-End Software Developer</h2>
+      <br>
+      <img src="https://www.csbtech.dev/wp-content/uploads/2019/02/irvan-smith-563895-unsplash-scaled-1.jpg"
+        class="img-fluid col-6 rounded" alt="image of code on screen">
+    </div>
+    <br>
+    <br>
+
+    <!-- ! Worked with CSS but not with Bootstrap -->
+    <!-- <div class="table-responsive text center">
+      <table class="table align-middle">
+        <h3>My links:</h3>
+        <tr>
+          <th>Site</th>
+          <th>Link</th>
+        </tr>
+        <tr>
+          <td>GitHub:</td>
+          <td><a href="https://github.com/jairalcon"><img height="30px" src="./images/github-logo.png"
+                alt="GitHub logo"> </a></td>
+        </tr>
+        <tr>
+          <td>LinkedIn:</td>
+          <td><a href="https://www.linkedin.com/in/jairalcon/"><img height="30px" src="./images/linkedin-logo.png"
+                alt="LinkedIn logo"></a></td>
+        </tr>
+      </table>
+    </div> -->
+
+    <!-- ! New "Links" cards for contact page -->
+    <div class="row row-cols-1 row-cols-md-2 g-2">
+      <div class="col">
+        <div class="card">
+          <img src="./images/github-logo.png" class="card-img-top img-fluid img-fluid w-25 rounded mx-auto d-block" alt="GitHub logo">
+          <div class="card-body">
+            <h5 class="card-title">GitHub</h5>
+            <p class="card-text">I am currently enrolled in a Front End Development Bootcamp with Promineo Tech, in which I am learning JavaScript,
+            Bootstrap, and React.</p>
+            <a href="https://github.com/jairalcon" class="btn btn-primary">Visit my GitHub</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="./images/linkedin-logo.png" class="card-img-top img-fluid img-fluid w-25 rounded mx-auto d-block" alt="LinkedIn logo">
+          <div class="card-body">
+            <h5 class="card-title">LinkedIn</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+              content. This content is a little bit longer.</p>
+            <a href="https://www.linkedin.com/in/jairalcon/" class="btn btn-primary">Visit my LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <!-- Contact Form that I used from bootstrap Docs -->
+    <!-- https://getbootstrap.com/docs/5.0/forms/validation/ -->
+    <form class="row g-3 needs-validation" novalidate>
+      <h3>Let's get in touch...</h3>
+      <div class="col-md-4">
+        <label for="validationCustom01" class="form-label">First name</label>
+        <input type="text" class="form-control" id="validationCustom01" value="" placeholder="Obi-Wan" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+      <div class="col-md-4">
+        <label for="validationCustom02" class="form-label">Last name</label>
+        <input type="text" class="form-control" id="validationCustom02" value="" placeholder="Kenobi" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+      <div class="col-md-4">
+        <label for="validationCustomUsername" class="form-label">Username</label>
+        <div class="input-group has-validation">
+          <span class="input-group-text" id="inputGroupPrepend">@</span>
+          <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend"
+            required>
+          <div class="invalid-feedback">
+            Please choose a username.
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="validationCustom03" class="form-label">City</label>
+        <input type="text" class="form-control" id="validationCustom03" required>
+        <div class="invalid-feedback">
+          Please provide a valid city.
+        </div>
+      </div>
+      <div class="col-md-3">
+        <label for="validationCustom04" class="form-label">State</label>
+        <select class="form-select" id="validationCustom04" required>
+          <!-- added dropdown values for states -->
+          <!-- found @ https://gist.github.com/RichLogan/9903043 -->
+          <option selected disabled value="">Choose...</option>
+          <option value="">N/A</option>
+          <option value="AK">Alaska</option>
+          <option value="AL">Alabama</option>
+          <option value="AR">Arkansas</option>
+          <option value="AZ">Arizona</option>
+          <option value="CA">California</option>
+          <option value="CO">Colorado</option>
+          <option value="CT">Connecticut</option>
+          <option value="DC">District of Columbia</option>
+          <option value="DE">Delaware</option>
+          <option value="FL">Florida</option>
+          <option value="GA">Georgia</option>
+          <option value="HI">Hawaii</option>
+          <option value="IA">Iowa</option>
+          <option value="ID">Idaho</option>
+          <option value="IL">Illinois</option>
+          <option value="IN">Indiana</option>
+          <option value="KS">Kansas</option>
+          <option value="KY">Kentucky</option>
+          <option value="LA">Louisiana</option>
+          <option value="MA">Massachusetts</option>
+          <option value="MD">Maryland</option>
+          <option value="ME">Maine</option>
+          <option value="MI">Michigan</option>
+          <option value="MN">Minnesota</option>
+          <option value="MO">Missouri</option>
+          <option value="MS">Mississippi</option>
+          <option value="MT">Montana</option>
+          <option value="NC">North Carolina</option>
+          <option value="ND">North Dakota</option>
+          <option value="NE">Nebraska</option>
+          <option value="NH">New Hampshire</option>
+          <option value="NJ">New Jersey</option>
+          <option value="NM">New Mexico</option>
+          <option value="NV">Nevada</option>
+          <option value="NY">New York</option>
+          <option value="OH">Ohio</option>
+          <option value="OK">Oklahoma</option>
+          <option value="OR">Oregon</option>
+          <option value="PA">Pennsylvania</option>
+          <option value="PR">Puerto Rico</option>
+          <option value="RI">Rhode Island</option>
+          <option value="SC">South Carolina</option>
+          <option value="SD">South Dakota</option>
+          <option value="TN">Tennessee</option>
+          <option value="TX">Texas</option>
+          <option value="UT">Utah</option>
+          <option value="VA">Virginia</option>
+          <option value="VT">Vermont</option>
+          <option value="WA">Washington</option>
+          <option value="WI">Wisconsin</option>
+          <option value="WV">West Virginia</option>
+          <option value="WY">Wyoming</option>
+        </select>
+        <div class="invalid-feedback">
+          Please select a valid state.
+        </div>
+      </div>
+      <div class="col-md-3">
+        <label for="validationCustom05" class="form-label">Zip</label>
+        <input type="text" class="form-control" id="validationCustom05" required>
+        <div class="invalid-feedback">
+          Please provide a valid zip.
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+          <label class="form-check-label" for="invalidCheck">
+            Agree to terms and conditions
+          </label>
+          <div class="invalid-feedback">
+            You must agree before submitting.
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <button class="btn btn-primary" type="submit">Submit form</button>
+        <br>
+        <br>
+      </div>
+    </form>
 
 
-        <!-- !This worked for CSS but not with Bootstrap 5 -->
-        <!-- <form class="form-control form-control-sm text-center">
+    <!-- !This worked for CSS but not with Bootstrap 5 -->
+    <!-- <form class="form-control form-control-sm text-center">
             <h3>Let's get in touch</h3>
             <div>
                 <label for="first-name-input"></label>
@@ -216,16 +255,17 @@
             </div>
         </form> -->
 
-    </main>
+  </main>
+  <br>
+  <div class="conatiner-lg text-center">
+    <footer>
+      <p>©Copyright 2022 by Jair Alcon. All rights reversed.</p>
+    </footer>
+  </div>
 
-    <div class="conatiner-lg text-center fixed-bottom">
-        <footer>
-            <p>©Copyright 2022 by Jair Alcon. All rights reversed.</p>
-        </footer>
-    </div>
-
-    <script src="../node_modules/jquery/dist/jquery.js"></script>
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-    <script src="form.js"></script>
+  <script src="../node_modules/jquery/dist/jquery.js"></script>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  <script src="form.js"></script>
 </body>
+
 </html>
