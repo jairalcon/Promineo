@@ -1,3 +1,5 @@
+// Week 10 Codign Assignment
+// Jair Alcon
 let id = 0;
 
 window.addEventListener("keydown", function (event) {
