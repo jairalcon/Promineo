@@ -1,4 +1,4 @@
-// Week	10 Codign	Assignment
+// Week	10 Coding	Assignment
 // Jair	Alcon
 let	id = 0;
 
@@ -21,7 +21,7 @@ document.getElementById('add').addEventListener('click', ()	=> {
 	console.log('This	is adding	another	row	of data	from text	input',	row);
 
 	row.setAttribute('id', `item-${id}`);
-			// console.log('line 11',	row.setAttribute('id', `item-${id}`))
+	// console.log('line 11',	row.setAttribute('id', `item-${id}`))
 	row.insertCell(0).innerHTML	=	document.getElementById('new-vehicle-make').value;
 	// console.log('line 12',	row.insertCell(0).innerHTML	=	document.getElementById('new-vehicle-make').value)
 	row.insertCell(1).innerHTML	=	document.getElementById('new-vehicle-model').value;
