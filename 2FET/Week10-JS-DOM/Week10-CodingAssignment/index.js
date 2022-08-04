@@ -1,65 +1,107 @@
+// Week 10 Assignment
+// Jair Alcon
+
+
 let id = 0;
 
-window.addEventListener("keydown", function (event) {
-    if (event.defaultPrevented) {
-        return console.log('pressing a key'); // Should do nothing if the default action has been cancelled
-    }
+// window.addEventListener("keydown", function (event) {
+// 	if (event.defaultPrevented) {
+// 		return; // Do nothing if the event was already processed
+// 	}
 
-    let handled = false;
-    if (event.key !== undefined) {
-        // Handle the event with KeyboardEvent.key
-        handled = true;
-    } else if (event.keyCode !== undefined) {
-        // Handle the event with KeyboardEvent.keyCode
-        handled = true;
-    }
+// 	switch (event.key) {		
+// 		case "Enter":
+// 			console.log('-----Enter key was pressed-----');
+// 			// Do something for "enter" or "return" key press.
+// 			let createdVehicle = new Text();
+// 			let table = document.getElementById('vehicle-table');
+// 			let row = table.insertRow(1);
+// 			row.setAttribute('id', `item-${id}`);
+// 			row.insertCell(0).innerHTML = document.getElementById('new-vehicle-make').value;
+// 			row.insertCell(1).innerHTML = document.getElementById('new-vehicle-model').value;
+// 			row.insertCell(2).innerHTML = document.getElementById('new-vehicle-year').value;
+// 			let actions = row.insertCell(3);
+// 			actions.appendChild(createDeleteButton(id++));
+// 			document.getElementById('new-vehicle-make').value = '';
+// 			document.getElementById('new-vehicle-model').value = '';
+// 			document.getElementById('new-vehicle-year').value = '';
+// 			break;
+// 		default:
+// 			return; // Quit when this doesn't handle the key event.
+// 	}
 
-    if (handled) {
-        console.log('handled', handled)
-        // Suppress "double action" if event handled
-        event.preventDefault();
-    }
-}, true);
+// 	// Cancel the default action to avoid it being handled twice
+// 	event.preventDefault();
+// }, true);
 
 document.getElementById('add').addEventListener('click', () => {
+	// This assigns a new Text node to the variable createdVehicle
     let createdVehicle = new Text();
+	console.log('variable createdVehicle empty string =', createdVehicle);
     
-    // this essentially stamps out a new container from the input text
-    let table = document.getElementById('list');
-    console.log('This is new container from input', table);
+    // This stamps out a new container from the input text which will include the table header and code below
+    let table = document.getElementById('vehicle-table');
+    console.log('variable table = This is new container from input', table);
 
+	// This is row 1 because row 0 is made above, which includes the th as row 0 
     let row = table.insertRow(1);
-    console.log('This is adding another row of data from text input', row);
+    console.log('variable row = This is adding another row of data from text input', row);
 
+	// This sets row id for the new data, will be referenced by delete button later
     row.setAttribute('id', `item-${id}`);
-        // console.log('line 11', row.setAttribute('id', `item-${id}`))
+	console.log('row.setAttribute: sets new ID to added item', 'id', `item-${id}`)
+
+	// This takes the text from input new-vehicle-make and inserts it into column 0
     row.insertCell(0).innerHTML = document.getElementById('new-vehicle-make').value;
-    // console.log('line 12', row.insertCell(0).innerHTML = document.getElementById('new-vehicle-make').value)
+	console.log('row.insertCell(0) =', document.getElementById('new-vehicle-make').value);
+
+	// This takes the text from input new-vehicle-model and inserts it into column 1
     row.insertCell(1).innerHTML = document.getElementById('new-vehicle-model').value;
+	console.log('row.insertCell(1) =', document.getElementById('new-vehicle-model').value);
+
+	// This takes the text from input new-vehicle-year and inserts it into column 2
     row.insertCell(2).innerHTML = document.getElementById('new-vehicle-year').value;
+	console.log('row.insertCell(2) =', document.getElementById('new-vehicle-year').value);
+
+	// This adds an additional column space for the delete button
     let actions = row.insertCell(3);
-    console.log(actions);
+    console.log('variable "actions" =', actions);
+
+	// This adds the delete button and it's JS functionality into the html code
+	// and increments the id tag assignment
     actions.appendChild(createDeleteButton(id++));
+	console.log('This appendsChild ', createDeleteButton(id++));
+
+	// The 3 lines below reset text input boxes back to empty strings after submitting data
     document.getElementById('new-vehicle-make').value = '';
     document.getElementById('new-vehicle-model').value = '';
     document.getElementById('new-vehicle-year').value = '';
 });
 
 function createDeleteButton(id) {
+	// This creates a new button element
     let btn = document.createElement('button');
+	console.log(document.createElement('button'));
+	// This inserts the class of 'btn btn-danger' into the button element
     btn.className = 'btn btn-danger';
+	console.log(btn.className);
+	// This assigns an id to the button element
     btn.id = id;
+	console.log(btn.id);
+	// This adds the text 'Remove' to the button
     btn.innerHTML = 'Remove';
+	console.log(btn.innerHTML);
+	//
     btn.onclick = () => {
-        console.log(`Deleting row with id: item-${id}`);
-        let elementToDelete = document.getElementById(`item-${id}`);
-        elementToDelete.parentNode.removeChild(elementToDelete);
-    };
-    return btn;
-}
 
-// function onSomethingTyped() {
-//     if (event.keyCode === 13) { // enter key
-        
-//     }
-// }
+		// 
+        let elementToDelete = document.getElementById(`item-${id}`);
+		console.log(`Deleting row with id: item-${id}`);
+		
+		// 
+        elementToDelete.parentNode.removeChild(elementToDelete);
+		console.log(document.getElementById(`item-${id}`));		
+    };
+	console.log(btn);
+    return btn;	
+}
