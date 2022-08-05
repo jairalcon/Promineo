@@ -43,7 +43,7 @@ document.getElementById('add').addEventListener('click', () => {
     let table = document.getElementById('vehicle-table');
     console.log('variable table = This is new container from input', table);
 
-	// This is row 1 because row 0 is made above, which includes the th as row 0 
+	// This is row 1 because row 0 is made above, which includes the th as row 0
     let row = table.insertRow(1);
     console.log('variable row = This is adding another row of data from text input', row);
 
@@ -79,28 +79,33 @@ document.getElementById('add').addEventListener('click', () => {
 });
 
 function createDeleteButton(id) {
+
 	// This creates a new button element
     let btn = document.createElement('button');
 	console.log(document.createElement('button'));
+
 	// This inserts the class of 'btn btn-danger' into the button element
     btn.className = 'btn btn-danger';
 	console.log(btn.className);
+
 	// This assigns an id to the button element
     btn.id = id;
 	console.log(btn.id);
+
 	// This adds the text 'Remove' to the button
     btn.innerHTML = 'Remove';
 	console.log(btn.innerHTML);
+
 	//
     btn.onclick = () => {
 
-		// 
+		// this find the row associated with the button and assigns it to variable elementToDelete
         let elementToDelete = document.getElementById(`item-${id}`);
-		console.log(`Deleting row with id: item-${id}`);
+		console.log(document.getElementById(`item-${id}`));
 		
 		// 
         elementToDelete.parentNode.removeChild(elementToDelete);
-		console.log(document.getElementById(`item-${id}`));		
+		console.log(elementToDelete);
     };
 	console.log(btn);
     return btn;	
