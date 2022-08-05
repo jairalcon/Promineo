@@ -2,37 +2,26 @@
 // Jair Alcon
 
 
+window.addEventListener("keydown", function (event) {
+	if (event.defaultPrevented) {
+		return; // Do nothing if the event was already processed
+	}
+	switch (event.key) {		
+		case "Enter":
+			console.log('-----Enter key was pressed-----');
+			// Do something for "enter" or "return" key press.
+			this.document.getElementsByTagName('label');
+			this.document.getElementById('add').click();
+			break;
+		default:
+			return; // Quit when this doesn't handle the key event.
+	}
+	// Cancel the default action to avoid it being handled twice
+	event.preventDefault();
+}, true);
+
+// creating variable for assignment 
 let id = 0;
-
-// window.addEventListener("keydown", function (event) {
-// 	if (event.defaultPrevented) {
-// 		return; // Do nothing if the event was already processed
-// 	}
-
-// 	switch (event.key) {		
-// 		case "Enter":
-// 			console.log('-----Enter key was pressed-----');
-// 			// Do something for "enter" or "return" key press.
-// 			let createdVehicle = new Text();
-// 			let table = document.getElementById('vehicle-table');
-// 			let row = table.insertRow(1);
-// 			row.setAttribute('id', `item-${id}`);
-// 			row.insertCell(0).innerHTML = document.getElementById('new-vehicle-make').value;
-// 			row.insertCell(1).innerHTML = document.getElementById('new-vehicle-model').value;
-// 			row.insertCell(2).innerHTML = document.getElementById('new-vehicle-year').value;
-// 			let actions = row.insertCell(3);
-// 			actions.appendChild(createDeleteButton(id++));
-// 			document.getElementById('new-vehicle-make').value = '';
-// 			document.getElementById('new-vehicle-model').value = '';
-// 			document.getElementById('new-vehicle-year').value = '';
-// 			break;
-// 		default:
-// 			return; // Quit when this doesn't handle the key event.
-// 	}
-
-// 	// Cancel the default action to avoid it being handled twice
-// 	event.preventDefault();
-// }, true);
 
 document.getElementById('add').addEventListener('click', () => {
 	// This assigns a new Text node to the variable createdVehicle
@@ -101,11 +90,10 @@ function createDeleteButton(id) {
 
 		// this find the row associated with the button and assigns it to variable elementToDelete
         let elementToDelete = document.getElementById(`item-${id}`);
-		console.log(document.getElementById(`item-${id}`));
-		
-		// 
+				
+		// this removes the corresponding row the delete button is inside of
         elementToDelete.parentNode.removeChild(elementToDelete);
-		console.log(elementToDelete);
+		console.log('Deleting :', elementToDelete);
     };
 	console.log(btn);
     return btn;	
