@@ -1,7 +1,12 @@
 // Week 10 Assignment
 // Jair Alcon
 
+// This makes the cursor move to 'new-vehicle-make' text input after submitting current data
+document.getElementById("add").onclick = function () {
+	document.getElementById("new-vehicle-make").focus();
+}
 
+// This allows the "ENTER" key to be used to submit data from text boxes
 window.addEventListener("keydown", function (event) {
 	if (event.defaultPrevented) {
 		return; // Do nothing if the event was already processed
@@ -10,7 +15,9 @@ window.addEventListener("keydown", function (event) {
 		case "Enter":
 			console.log('-----Enter key was pressed-----');
 			// Do something for "enter" or "return" key press.
+			// allows the "Enter" key to submit all HTML elements tags 'label' to submit data
 			this.document.getElementsByTagName('label');
+			// allows the document to create new container that holds the data in the text boxes
 			this.document.getElementById('add').click();
 			break;
 		default:
