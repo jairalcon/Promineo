@@ -2,6 +2,7 @@
 // Jair Alcon
 
 // This makes the cursor move to 'new-vehicle-make' text input after submitting current data
+// found solution here: https://www.techiedelight.com/set-focus-to-input-text-box-javascript/
 document.getElementById("add").onclick = function () {
 	document.getElementById("new-vehicle-make").focus();
 }
