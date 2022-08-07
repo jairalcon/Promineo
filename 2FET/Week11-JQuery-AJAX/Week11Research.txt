@@ -1,12 +1,10 @@
-This assignment is late due to a family member passing away. I contacted Lisa
-
 Jair Alcon
 
 Week 11 Research
 
 -What does the fetch() method do? How can it be used instead of an AJAX call?
 
-The global fetch() method begins the process of fetching resources from the network. If the fetch() method returns an available response then the promise will be fulfilled. Additionally, when using the fetch() method, this allows the developed to use the then() and catch() methods to handle a Promise. If the fetch() fails, the developer can return errors.
+The global fetch() method begins the process of fetching resources from the network. If the fetch() method returns an available response then the promise will be fulfilled. Additionally, when using the fetch() method, this allows the developer to use the then() and catch() methods to handle a promise. If the fetch() fails, the developer can return errors.
 
 https://www.javascripttutorial.net/javascript-fetch-api/
 
@@ -14,7 +12,7 @@ https://developer.mozilla.org/en-US/docs/Web/API/fetch
 
 
 
-In JQuery, what does it mean to "traverse the DOM"?
+-In JQuery, what does it mean to "traverse the DOM"?
 
 Traversing the DOM means to move through the selected HTML elements until you reach the specific element(s) requested. We can use methods such as parent(), parents(), or parentsUnitl() to traverse up the HTML DOM tree. We can use the methods children() and find() to traverse down an HTML DOM tree. We can use the methods siblings(), next(), nextAll(), nextUntil(), prev(), prevAll(), and prevUntil() to traverse sideways in the DOM tree to find elements that share the same parent. Lastly, we can use the methods first(), last(), eq(), filer(), and not() to traverse and find specific elements based on its position in a group of elements or find elements based on them matching or not matching specific criteria.
 
