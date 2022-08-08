@@ -2,70 +2,97 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-    grid-auto-rows: minmax(100px, auto);
+    grid-auto-rows: minmax(110px, auto);
     border: 2px solid rgb(233 171 88);
     color: #d9480f;
 }
 
+.container {
+    /* margin: 10px; */
+    padding: 25px;
+    text-align: center;
+}
+
+/* ! ROW 1 */
 .one {
     grid-column: 1 / 1;
     grid-row: 1;
     background-color: rgba(233 171 88 / .5);
     border: 2px solid rgb(233 171 88);
+    /* top, right, bottom, left  */
+    margin: 10px 0px 0px 10px;
 }
 
 .two {
     grid-column: 2 / 2;
-    grid-row: 1 / 2;
+    grid-row: 1;
     background-color: rgba(233 171 88 / .5);
     border: 2px solid rgb(233 171 88);
+    /* top, right, bottom, left  */
+    margin: 10px 0px 0px 0px;
 }
 
 .three {
     grid-column: 3 / 3;
-    grid-row: 1 / 2;
+    grid-row: 1;
     background-color: rgba(233 171 88 / .5);
     border: 2px solid rgb(233 171 88);
+    /* top, right, bottom, left  */
+    margin: 10px 10px 0px 0px;
 }
 
+/* ! ROW 2 */
 .four {
-    grid-column: 1 / 1;
-    grid-row: 3;
+    grid-column: 1;
+    grid-row: 2;
     background-color: rgba(233 171 88 / .5);
     border: 2px solid rgb(233 171 88);
+    /* top, right, bottom, left  */
+    margin: 0px 0px 0px 10px;
 }
 
 .five {
     grid-column: 2;
-    grid-row: 4;
+    grid-row: 2;
     background-color: rgba(233 171 88 / .5);
     border: 2px solid rgb(233 171 88);
+    /* top, right, bottom, left  */
+    margin: 0px 0px 0px 0px;
 }
 
 .six {
     grid-column: 3;
-    grid-row: 4;
+    grid-row: 2;
     background-color: rgba(233 171 88 / .5);
     border: 2px solid rgb(233 171 88);
+    /* top, right, bottom, left  */
+    margin: 0px 10px 0px 0px;
 }
 
+/* ! ROW 3 */
 .seven {
-    grid-column: 3;
-    grid-row: 4;
+    grid-column: 1;
+    grid-row: 3;
     background-color: rgba(233 171 88 / .5);
     border: 2px solid rgb(233 171 88);
+    /* top, right, bottom, left  */
+    margin: 0px 0px 10px 10px;
 }
 
 .eight {
-    grid-column: 3;
-    grid-row: 4;
+    grid-column: 2 / 3;
+    grid-row: 3;
     background-color: rgba(233 171 88 / .5);
     border: 2px solid rgb(233 171 88);
+    /* top, right, bottom, left  */
+    margin: 0px 0px 10px 0px;
 }
 
 .nine {
-    grid-column: 3;
-    grid-row: 4;
+    grid-column: 3 / 3;
+    grid-row: 3;
     background-color: rgba(233 171 88 / .5);
     border: 2px solid rgb(233 171 88);
+    /* top, right, bottom, left  */
+    margin: 0px 10px 10px 0px;
 }
