@@ -22,22 +22,22 @@
             Player <span class="display-player playerX">X</span>'s turn
         </section>
         <!-- game board with 9 sections -->
-        <section class="container">
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>            
+        <section class="container x" id="container" style="transform: translate(0px);">
+            <div class="tile" data-box=""></div>          
+            <div class="tile" data-box=""></div>          
+            <div class="tile" data-box=""></div>          
+            <div class="tile" data-box=""></div>          
+            <div class="tile" data-box=""></div>          
+            <div class="tile" data-box=""></div>          
+            <div class="tile" data-box=""></div>          
+            <div class="tile" data-box=""></div>          
+            <div class="tile" data-box=""></div>          
         </section>
         <!-- announcing end game state, empty when game starts -->
         <section class="display announcer hide"></section>
         <!-- creating controls to reset game -->
         <section class="controls">
-            <button id="reset">Reset Game</button>
+            <button class="btn" id="reset">Reset Game</button>
         </section> 
     </main>
 </body>
