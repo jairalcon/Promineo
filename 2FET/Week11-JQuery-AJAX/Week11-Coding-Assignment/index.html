@@ -4,31 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week11-Coding-Assignment</title>
+    <title>Week11: Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="Week11.css">
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
 </head>
-<body class="container text-center">
+<body class="container mt-3 p-4 text-center">
     <h1>Week11-Coding-Assignment</h1>
     <h2>Tic-Tac-Toe</h2>
-
-    <div class="row border-bottom d-flex justify-content-center align-items-center" style="height: 50px; background-color: rgba(255,0,0,0.1);">
-        <div class="col-sm-1">1</div>
-        <div class="col-sm-1 border-start">2</div>
-        <div class="col-sm-1 border-start">3</div>
+    <!-- div for displaying turn of current player -->
+    <div class="col-md">
+        <span class="turn lead">It is X's turn</span>
     </div>
-    <div class="row border-bottom d-flex justify-content-center align-items-center" style="height: 50px; background-color: rgba(255,0,0,0.1);">
-        <div class="col-sm-1">4</div>
-        <div class="col-sm-1 border-start">5</div>
-        <div class="col-sm-1 border-start">6</div>
+    <br>
+    <!-- div to hold restart button -->
+    <div class="col-md">
+        <button class="btn btn-dark" id="restart">Restart Game</button>
     </div>
-    <div class="row d-flex justify-content-center align-items-center" style="height: 50px; background-color: rgba(255,0,0,0.1);">
-        <div class="col-sm-1">7</div>
-        <div class="col-sm-1 border-start">8</div>
-        <div class="col-sm-1 border-start">9</div>
+    <br><br>
+    <!-- creating game board with 9 spaces -->
+    <div class="gameboard justify-content-center align-items-center x" id="gameboard" style="transform: translate(0px);">
+        <div class="box" data-box=""></div>
+        <div class="box" data-box=""></div>
+        <div class="box" data-box=""></div>
+        <div class="box" data-box=""></div>
+        <div class="box" data-box=""></div>
+        <div class="box" data-box=""></div>
+        <div class="box" data-box=""></div>
+        <div class="box" data-box=""></div>
+        <div class="box" data-box=""></div>
+    </div>
+    <div class="winning-message" id="winningMessage">
+        <div data-winning-message-text=""></div>
+        <button class="btn btn-dark" id="restartBtn">Play Again</button>
     </div>
     
 
-
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <script src="index.js"></script>
     <script src="../node_modules/jquery/dist/jquery.js"></script>
 </body>
