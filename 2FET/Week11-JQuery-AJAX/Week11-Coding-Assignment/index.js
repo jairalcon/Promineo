@@ -49,6 +49,7 @@ function startGame() {
         // resetting game board
         cell.classList.remove(X_CLASS);
         cell.classList.remove(CIRCLE_CLASS);
+        console.log('Clearing board of both', `${X_CLASS} and ${CIRCLE_CLASS} pieces.`);
         cell.removeEventListener('click', handleClick);
         // every time we click on the cell, only active event listener once
         cell.addEventListener('click', handleClick, { once: true })
