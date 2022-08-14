@@ -1,46 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week11: Tic-Tac-Toe</title>
     <link rel="stylesheet" href="Week11.css">
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <title>Tic Tac Toe</title>
 </head>
 <body class="container mt-3 p-4 text-center">
-    <h1>Week11-Coding-Assignment</h1>
+    <h1>Week11 Coding Assignment</h1>
     <h2>Tic-Tac-Toe</h2>
-    <!-- div for displaying turn of current player -->
-    <div class="col-md">
-        <span class="turn lead">It is X's turn</span>
-    </div>
     <br>
     <!-- div to hold restart button -->
     <div class="col-md">
-        <button class="btn btn-dark" id="restart">Restart Game</button>
+        <button class="btn btn-danger gradient" id="restart">Restart Game</button>
     </div>
-    <br><br>
-    <!-- creating game board with 9 spaces -->
-    <div class="gameboard justify-content-center align-items-center x" id="gameboard" style="transform: translate(0px);">
-        <div class="box" data-box=""></div>
-        <div class="box" data-box=""></div>
-        <div class="box" data-box=""></div>
-        <div class="box" data-box=""></div>
-        <div class="box" data-box=""></div>
-        <div class="box" data-box=""></div>
-        <div class="box" data-box=""></div>
-        <div class="box" data-box=""></div>
-        <div class="box" data-box=""></div>
+    <!-- adding class and id to separate JS and CSS -->
+    <!-- adding class circle and x for CSS hover to show who's turn it is, will use in JS -->
+    <div class="board" id="board">
+        <!-- adding x to use for CSS, will add x class in JS -->
+        <div class="cell" data-cell></div>
+        <!-- adding temporary "circle" to use in CSS, will add circle class in JS -->
+        <div class="cell" data-cell></div>
+        <!-- adding data-cell to access in JS -->
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
     </div>
+    <!-- creating win message page -->
     <div class="winning-message" id="winningMessage">
-        <div data-winning-message-text=""></div>
-        <button class="btn btn-dark" id="restartBtn">Play Again</button>
+        <!-- div that contains winning message -->
+        <div data-winning-message-text></div>
+        <!-- button to restart game -->
+        <button class="btn btn-light" id="restartButton">Play Again</button>
     </div>
-    
+    <!-- displaying whose turn it is -->
+    <div class="col-md">
+        <span class="turn">It is X's Turn</span>
+    </div>
 
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="../sample/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <script src="index.js"></script>
-    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../sample/node_modules/jquery/dist/jquery.js"></script>
 </body>
+
 </html>
