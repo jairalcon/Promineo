@@ -37,7 +37,7 @@ let circleTurn;
 startGame();
 
 // adding event listener with click and calling startGame() function
-restart.addEventListener('click', startGame) // top button
+restart.addEventListener('click', startGame);  // top button
 restartButton.addEventListener('click', startGame); // button when game ends
 
 // function starts the game by clearing out the board
@@ -85,10 +85,12 @@ function handleClick(e) {
 function endGame(draw) {
     if (draw) {
         winningMessageTextElement.innerText = 'Draw!';
+        console.log(`Game ended in a ${winningMessageElement.innerText}!`)
     } else {
         // checks to see whose current turn it is when game is won
         winningMessageTextElement.innerText = `${circleTurn ? "O's" : "X's"} Win!`;
     }
+    console.log(`${winningMessageElement.innerText} won!`);
     // code that actually shows the text
     winningMessageElement.classList.add('show');
 }
