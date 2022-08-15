@@ -4,13 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Full CRUD App</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="">
+    <title>Full CRUD - House App</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
 </head>
-<body>
-    
 
+<h1 class="text-center">House CRUD App</h1>
+<body class="container mt-3 pt-4">
+
+    <div id="new-house" class="p-3 bg-light border rounded-3">
+        <h2>New House</h2>
+        <input type="text" id="new-house-name" class="form-control">
+        <button id="create-new-house" class="btn btn-primary form-control">Create</button>
+    </div>
+    <!-- where we'll store all the houses we create via the API -->
+    <div id="app">
+
+    </div>
+
+    <!-- accessing JQuery -->
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <!-- accessing JS files -->
     <script src="script.js"></script>
+    <!-- accessing bootstrap JS -->
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 </body>
-</html>
+</html> 
