@@ -2,41 +2,41 @@
 // DATA
 
 // IF YOU'RE USING AN API: have the data start out empty
-let movieList = [];
+// let movieList = [];
 
 // IF NOT: just hardcode some test data
-// const movieList = [
-//     {
-//         id: 0,
-//         name: "Star Wars"
-//     },
-//     {
-//         id: 1,
-//         name: "Star Trek"
-//     }
-// ]
+const movieList = [
+    {
+        id: 0,
+        name: "Star Wars"
+    },
+    {
+        id: 1,
+        name: "Star Trek"
+    }
+];
 
 // API STUFF
 
-const fetchAllMovies = async () => {
-    // make a GET request and get a response
-    const response = await fetch("http://localhost:3001/products")
-    // parse out the data from the response
-    const data = await response.json();
-    // save the data in the movieList variable
-    movieList = data;
-    // render the list of movies
-    renderMovieList()
-}
+// const fetchAllMovies = async () => {
+//     // make a GET request and get a response
+//     const response = await fetch("http://localhost:3001/products")
+//     // parse out the data from the response
+//     const data = await response.json();
+//     // save the data in the movieList variable
+//     movieList = data;
+//     // render the list of movies
+//     renderMovieList()
+// }
 
 // RENDERING
 
 $(() => {
     // IF YOU'RE USING AN API: get the data from the server and save it in our variable
-    fetchAllMovies()
+    // fetchAllMovies()
 
     // IF NOT: just render the array
-    // renderMovieList()
+    renderMovieList()
 })
 
 const $moviesContainer = $("#movies-container")
@@ -56,15 +56,15 @@ function renderMovie(movie) {
     )
 }
 
-// function renderMovie(movie) {
-//     return $("<div/>").addClass("card m-3").append(
-//         $("<div/>").addClass("card-body").append(
-//             $("<h5/>").addClass("card-title").text(movie.name),
-//             $("<button/>").addClass("btn btn-danger me-2").text("Delete").on("click", () => onDeleteButtonClick(movie.id)),
-//             $("<button>").addClass("btn btn-primary").text("Edit").on("click", () => onStartEditMovie(movie.id))
-//         )
-//     )
-// }
+function renderMovie(movie) {
+    return $("<div/>").addClass("card m-3").append(
+        $("<div/>").addClass("card-body").append(
+            $("<h5/>").addClass("card-title").text(movie.name),
+            $("<button/>").addClass("btn btn-danger me-2").text("Delete").on("click", () => onDeleteButtonClick(movie.id)),
+            $("<button>").addClass("btn btn-primary").text("Edit").on("click", () => onStartEditMovie(movie.id))
+        )
+    )
+}
 
 // EVENT LISTENERS
 
@@ -126,5 +126,5 @@ function onDeleteButtonClick(movieId) {
     movieList.splice(indexToDelete, 1);
     renderMovieList();
     // IF YOU'RE USING AN API: also let the backend know
-    fetch("http://localhost:3001/products/" + movieId, { method: "DELETE" })
+    // fetch("http://localhost:3001/products/" + movieId, { method: "DELETE" })
 }
