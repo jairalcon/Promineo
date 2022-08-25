@@ -50,11 +50,12 @@ function renderCar(carParam) {
 	// console.log(carParam.model);
 	// console.log(carParam.year);
 	return $("<tr/>").append(
+		$("<td/>").text(carParam.id + 1).attr("id", `${carParam.id}`),
 		$("<td/>").text(carParam.make),
 		$("<td/>").text(carParam.model),
 		$("<td/>").text(carParam.year),
 		$("<td/>").append(
-			$("<button/>").addClass("btn btn-danger me-2").attr("id", `${carParam.id}`).text("Delete").on("click", () => onDeleteButtonClick(carParam.id)),
+			$("<button/>").addClass("btn btn-danger me-2")/*.attr("id", `${carParam.id}`)*/.text("Delete").on("click", () => onDeleteButtonClick(carParam.id)),
 			$("<button>").addClass("btn btn-primary").text("Edit").on("click", () => onStartVehicleEdit(carParam.id))
 		)
 	)
@@ -72,6 +73,8 @@ const $formYearInput = $("#form-year-input");
 const $modalMakeInput = $("#modal-make-input");
 const $modalModelInput = $("#modal-model-input");
 const $modalYearInput = $("#modal-year-input");
+
+const $addCarId = $("#id")
 
 let editCarId = null;
 
@@ -94,7 +97,6 @@ function onSaveVehicle() {
 		// console logging the data that was just added
 		let index = -1;
 		console.log('Added this vehicle to table:', carList.at(index));
-
 	}
 	else {
 		// Find the movie we're editing
