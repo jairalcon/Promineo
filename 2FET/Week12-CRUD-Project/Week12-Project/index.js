@@ -102,7 +102,7 @@ function onSaveVehicle() {
 		// get the name of the new vehicle
 		// create a new vehicle and add it to the list
 		carList.push({
-			id: carList[carList.length - 1].id + 1, // hack
+			id: carList.length ? carList[carList.length - 1].id + 1 : 0,
 			make: $formMakeInput.val(),
 			model: $formModelInput.val(),
 			year: $formYearInput.val()
