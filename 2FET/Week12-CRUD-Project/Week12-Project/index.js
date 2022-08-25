@@ -24,6 +24,11 @@ const carList = [
 
 // console.log('This is the current array of Car Objects:', carList);
 
+//This moves the cursor to the first input text browser is selected
+$(document).ready(function () {
+	$("#form-make-input").focus();
+});
+
 // RENDERING
 $(() => {
 	// render the array
@@ -137,6 +142,34 @@ function onDeleteButtonClick(carId) {
 	// IF YOU'RE USING AN API: also let the backend know
 	// fetch("http://localhost:3001/products/" + carId, { method: "DELETE" })
 }
+
+// This moves the cursor back to form-vehicle-make text input for the next entry
+$("#add").click(function () {
+	$formMakeInput.focus();
+});
+
+// Wait for document to load
+$(document).ready(() => {
+	$('.vehicle-form').on('submit', () => {
+
+		// prevents default behaviour
+		// Prevents event propagation
+		return false;
+	});
+});
+$('.vehicle-form').keypress((e) => {
+
+	// Enter key corresponds to number 13
+	if (e.which === 13) {
+		onSaveVehicle();
+		console.log('Form Successfully Submitted');
+	}
+	$("#form-make-input").focus();
+})
+
+
+
+
 
 // // will delete line in which ID resides in
 // function onDeleteButtonClick(carIdToDelete) {

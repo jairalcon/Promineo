@@ -16,7 +16,7 @@
     <h1 class="text-center">Add To Vehicle Inventory</h1>
     <div class="card">
         <div class="card-body">
-            <div class="row">
+            <form class="row vehicle-form">
                 <div class="col-sm">
                     <div id="vehicle-input-form" class="form-group"></div>
                     <label for="new-vehicle-make">Vehicle Make</label>
@@ -44,9 +44,9 @@
                     <label for="new-vehicle-year">Vehicle Year</label>
                     <input type="text" class="form-control" id="form-year-input" placeholder="Year">
                 </div>
-            </div>
+            </form>
             <br>
-            <button id="add" class="btn btn-primary form-control" onclick="onSaveVehicle()">Add</button>
+            <button id="add" type="submit" class="btn btn-primary form-control" onclick="onSaveVehicle()">Add</button>
         </div>
         <h2 class="container text-center">Current Vehicle Inventory</h2>
     </div>
