@@ -14,7 +14,7 @@ https://www.codecademy.com/article/react-virtual-dom
 
 -What is Webpack and what problem does it solve?
 
-Webpack bundles modules into manageable output files, which especially helps with Single Page Applications. SPAs are today's standard, which is why Webpack is so helpful. By converting dependecies into modules and bundling them, there will be a tighter and safer scope. Webpack will also be able to manage our dependencies for us. Otherwise, developers would have to manage all the dependencies, which creates too much room for error.
+Webpack bundles modules into manageable output files, which especially helps with Single Page Applications. SPAs are today's standard, which is why Webpack is so helpful. By converting dependencies into modules and bundling them, there will be a tighter and safer scope. Webpack will also be able to manage our dependencies for us. Otherwise, developers would have to manage all the dependencies, which creates too much room for error.
 
 https://webpack.js.org/concepts/
 
