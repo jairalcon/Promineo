@@ -102,11 +102,18 @@ function onSaveVehicle() {
 		// get the name of the new vehicle
 		// create a new vehicle and add it to the list
 		carList.push({
+			//* https://stackoverflow.com/questions/64926946/add-an-autoincrementing-number-in-an-object-to-the-push
+			//* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining#examples
+			//  using optional chaining operator (?)
 			id: carList.length ? carList[carList.length - 1].id + 1 : 0,
 			make: $formMakeInput.val(),
 			model: $formModelInput.val(),
 			year: $formYearInput.val()
 		});
+		console.log('This is the added ID:', carList.length ? carList[carList.length - 1].id + 1 : 0);
+		console.log('This is the added Make:', $formMakeInput.val());
+		console.log('This is the added Model:', $formModelInput.val());
+		console.log('This is the added Year:', $formYearInput.val());
 		$formMakeInput.val('');
 		$formModelInput.val('');
 		$formYearInput.val('');
@@ -171,7 +178,7 @@ $("#add").click(function () {
 $(document).ready(() => {
 	$('.vehicle-form').on('submit', () => {
 
-		// prevents default behaviour
+		// prevents default behavior
 		// Prevents event propagation
 		return false;
 	});
