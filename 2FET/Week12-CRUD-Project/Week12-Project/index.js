@@ -2,24 +2,24 @@
 // Jair Alcon
 
 const carList = [
-	{
-		id: 0,
-		make: "Ford",
-		model: "Fiesta",
-		year: "2015"
-	},
-	{
-		id: 1,
-		make: "Geo",
-		model: "Metro",
-		year: "1992"
-	},
-	{
-		id: 2,
-		make: "Toyota",
-		model: "Celica All-Trac Turbo",
-		year: "1993"
-	}
+	// {
+	// 	id: 0,
+	// 	make: "Ford",
+	// 	model: "Fiesta",
+	// 	year: "2015"
+	// },
+	// {
+	// 	id: 1,
+	// 	make: "Geo",
+	// 	model: "Metro",
+	// 	year: "1992"
+	// },
+	// {
+	// 	id: 2,
+	// 	make: "Toyota",
+	// 	model: "Celica All-Trac Turbo",
+	// 	year: "1993"
+	// }
 ];
 
 // console.log('This is the current array of Car Objects:', carList);
@@ -103,7 +103,7 @@ function onSaveVehicle() {
 		// create a new vehicle and add it to the list
 		carList.push({
 			//* https://stackoverflow.com/questions/64926946/add-an-autoincrementing-number-in-an-object-to-the-push
-			//* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining#examples
+			//* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
 			//  using optional chaining operator (?)
 			id: carList.length ? carList[carList.length - 1].id + 1 : 0,
 			make: $formMakeInput.val(),
@@ -162,6 +162,7 @@ function onDeleteButtonClick(carId) {
 	// console logging the delete vehicle
 	let index = 1;
 	console.log('Deleting this vehicle from table:', carList.at(index));
+	// alert('Deleting this vehicle from table:', carList.at(index));
 	// removing from table
 	carList.splice(indexToDelete, 1);
 	renderInventoryList();
