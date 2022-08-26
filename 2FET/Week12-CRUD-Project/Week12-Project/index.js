@@ -2,24 +2,24 @@
 // Jair Alcon
 
 const carList = [
-	// {
-	// 	id: 0,
-	// 	make: "Ford",
-	// 	model: "Fiesta",
-	// 	year: "2015"
-	// },
-	// {
-	// 	id: 1,
-	// 	make: "Geo",
-	// 	model: "Metro",
-	// 	year: "1992"
-	// },
-	// {
-	// 	id: 2,
-	// 	make: "Toyota",
-	// 	model: "Celica All-Trac Turbo",
-	// 	year: "1993"
-	// }
+	{
+		id: 0,
+		make: "Ford",
+		model: "Fiesta",
+		year: "2015"
+	},
+	{
+		id: 1,
+		make: "Geo",
+		model: "Metro",
+		year: "1992"
+	},
+	{
+		id: 2,
+		make: "Toyota",
+		model: "Celica All-Trac Turbo",
+		year: "1993"
+	}
 ];
 
 // console.log('This is the current array of Car Objects:', carList);
