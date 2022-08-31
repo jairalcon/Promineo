@@ -6,13 +6,13 @@ import React, { Component } from 'react'
 import MovieList from './components/movie-list'
 
 export default class MovieApp extends Component {
-  render() {
-    return (
-      <div className='container'>
-        <h1>Rate these movies!</h1>
-        <MovieList />
-      </div>
-    )
-  }
+    render() {
+        return (
+            <div className='container'>
+                <h1>Rate these movies!</h1>
+                <MovieList />
+            </div>
+        )
+    }
 }
 
