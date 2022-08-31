@@ -5,7 +5,7 @@ import React, { Component } from 'react'
 export class Stars extends Component {
     render() {
         return (
-            <>STARS</>
+            <>STARS Rating component</>
         )
     }
 }

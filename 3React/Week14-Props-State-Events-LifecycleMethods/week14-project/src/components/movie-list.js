@@ -7,7 +7,7 @@ import Stars from './stars'
 export default class MovieList extends Component {
     render() {
         return (
-            <div className='container'>
+            <div className=''>
                 <Movie />
             </div>
         )
