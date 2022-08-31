@@ -9,7 +9,6 @@ export default class MovieApp extends Component {
     render() {
         return (
             <div className='container'>
-                <h1>Rate these movies!</h1>
                 <MovieList />
             </div>
         )

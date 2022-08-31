@@ -1,11 +1,30 @@
 // todo this components will represent movie data (image, plot, rating, director, year)
 
-import React, { Component } from 'react'
-import ReviewList from './review-list'
-import Stars from './stars'
+import React, { Component } from 'react';
+import ReviewList from './review-list';
 
 export class Movie extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            reviews: props.reviews,
+            review: props.review
+        };
+    }
+
     render() {
+        let reviews;
+
+        if (this.state.reviews) {
+            reviews = this.state.reviews.map((review, id) => {
+            {console.log('what is a review?', review)};
+             <ReviewList key={id} {...review} />
+            });
+            console.log('these are the reviews:', reviews);
+        }
+
+
+        console.log('these are the reviews via props:', this.state.reviews)
         return (
             <>
                 <div className='ul mt-4 row'>
