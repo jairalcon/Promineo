@@ -11,13 +11,14 @@ export default class Post extends React.Component {
         //* always call super constructor and pass props first thing
         super(props);
         //* add props to state which will be the "source of truth" regarding data being displayed
-        this.state = {
-            comments: props.comments,
-            content: props.content,
+        this.state = { //!updated after each iteration
+            comments: props.comments, //!news-feed.comments
+            content: props.content, //!news-feed.content
             // count: 0
         };
     }
     render() {
+        console.log(props); //todo check this out
         // we'll use previous state as argument in a function, wrapped in a Timeout
         // avoid this.state
         // setTimeout(() => this.setState((state, props) => ({count: props.count + 1}), () => console.log(this.state.count)), 2000)
@@ -33,7 +34,7 @@ export default class Post extends React.Component {
         let comments;
         //* check state, are there comments?
         if (this.state.comments) {
-            // * UNIQUE KEY PROPR
+            // * UNIQUE KEY PROP
             // * map method will take each comment, create JSX components and push to comments array
             // * helps React keep track of what has changed and what's needs to be re-rendered
             comments = this.state.comments.map((comment, index) => <Comment key={index} {...comment} />);
