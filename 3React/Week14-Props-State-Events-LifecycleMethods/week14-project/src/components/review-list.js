@@ -21,10 +21,10 @@ export class ReviewList extends Component {
                 <h4>Reviews:</h4>
                 <div className="card w-75">
                     <div className="card-header bg-secondary text-white">
-                        {/* {this.props.author} {this.props.date} */}
+                        {this.props.author} {this.props.date}
                     </div>
                     <div className="card-body">
-                        {/* {this.props.reviews.text} */}
+                        {this.props.text}
                     </div>
                 </div>
             </>

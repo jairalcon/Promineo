@@ -8,10 +8,10 @@ export class Movie extends Component {
         super(props);
         this.state = {
             reviews: props.reviews,
-            id: props.id,
-            username: props.username,
-            text: props.text,
-            date: props.text
+            // id: props.id,
+            // username: props.username,
+            // text: props.text,
+            // date: props.text
         };
     }
 
@@ -47,8 +47,9 @@ export class Movie extends Component {
                         <p>Writer: George Lucas</p>
                         <p>Stars: Mark Hamill, Harrison Ford, Carrie Fisher</p>
                     </div>
+                    
                 </div>
-                <ReviewList />                
+                <ReviewList /> 
             </>
         );
     }
