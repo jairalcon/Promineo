@@ -3,28 +3,29 @@
 import React, { Component } from 'react';
 import { Movie } from './movie';
 import ReviewList from './review-list';
-import Stars from './stars';
 
 export default class MovieList extends Component {
     render() {
         let reviews = [
             {
                 id: 0,
-                user: 'User#1',
-                review: 'This is a fantastic movie!'
+                username: 'User#1',
+                text: 'This is a fantastic movie!',
+                date: '7-4-2022'
             },
             {
                 id: 1,
-                user: 'User#2',
-                review: 'It was okay.'
+                username: 'User#2',
+                text: 'It was okay.',
+                date: '9-1-2022'
             }
         ];
         return(
             <div className='container'>
                 <h1>Rate this movie!</h1>
                 {/* passing in as prop of two objects */}
-                <Movie {...{reviews: reviews, review: 'This is my review'}}/>
-                <ReviewList />
+                <Movie {...{reviews: reviews }}/>
+                {/* {console.log({...{reviews: reviews}})} */}
             </div>
         )
     }
