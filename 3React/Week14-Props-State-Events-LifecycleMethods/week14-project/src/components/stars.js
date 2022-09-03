@@ -7,7 +7,7 @@ export class Stars extends Component {
     render() {
         return (
             <>
-                <h5>What's your rating?</h5>
+                <h4>What's your rating?</h4>
                 <Rating />
             </>
         )

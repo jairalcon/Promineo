@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
+  position: relative;
 }
 
 code {
@@ -13,11 +13,91 @@ code {
     monospace;
 }
 
-/* #root {
-    background-color: black;
-} */
+* {
+  margin: 0px;
+  padding: 0;
+  color: rgb(60, 60, 60);
+}
 
-img {
-  float: right;
-  margin-right: 25%;
+#movie-image {
+  width: auto;
+  max-height: 1000px;
+  min-height: 500px;
+  /* margin-top: 50px; */
+  /* margin-bottom: 35px; */
+}
+
+/* I'm not exactly sure what this is doing, I think it's setting a rule if the display is up to a certain resolution */
+@media only screen and (max-width : 2880px) and (max-height : 5120px) {
+
+  /* adding  */
+  /* Styles here */
+  #movie-image {
+    width: auto;
+    max-height: 850px;
+    min-height: 500px;
+  }
+}
+
+/* I think this is making a rule that if an image is on a screen that's as small as 390px then the media should be 300px wide */
+@media only screen and (max-width : 390px) {
+
+  /* Styles here */
+  #movie-image {
+      max-height: 550px;
+      width: auto;
+    }
+}
+
+#title {
+  font-weight: bold;
+  font-size: 35px;
+  text-transform: uppercase;
+}
+
+#about {
+  margin-top: 16px;
+}
+
+#data {
+  border-top: 1px dotted rgb(60, 60, 60);;
+  color: black;
+  font-style: italic;
+}
+
+#leave-review-head {
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+#reviews-head {
+  margin-left: 30px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 28px;
+}
+
+#rating-head {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#review-box {
+  border: lightgray solid 2px;
+  padding: 20px;
+  background-color: whitesmoke;
+  border-radius: 4px;
+}
+
+#page-heading {
+  font-size: 55px;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+
+#review-form {
+  padding-top: 10px;
+  border-top: 1px dotted black;
 }

@@ -4,29 +4,24 @@ todo review form for user to submit
 */
 
 import React, { Component } from 'react'
-import Stars from './stars'
 
 export class ReviewList extends Component {
-    render() {
+    render() {         
         return (
             <>
-                <Stars />
-                <form className='row'>
-                    <h4>Leave a Review:</h4>
-                    {/* <textarea className='form-control w-25' id='name' rows='1'></textarea> */}
-                    <textarea type='text' className='form-control w-75' id='review-form' rows='3'></textarea>
-                    <button className="col-5 mt-2 btn btn-primary">Submit</button>
-                </form>
-                <br></br>
-                <h4>Reviews:</h4>
-                <div className="card w-75">
-                    <div className="card-header bg-secondary text-white">
-                        {this.props.author} {this.props.date}
-                    </div>
-                    <div className="card-body">
-                        {this.props.text}
-                    </div>
-                </div>
+                <h4 className='mt-2'>Reviews:</h4>
+                <ul>
+                    {this.props.reviewList.map(review =>
+                        <div className="card w-75">
+                            <div className="card-header bg-secondary text-white">
+                                {review.nickname}
+                            </div>
+                            <div className="card-body">
+                                {review.review}
+                            </div>
+                        </div>
+                    )}
+                </ul>
             </>
         )
     }
