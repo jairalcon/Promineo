@@ -1,10 +1,11 @@
 import React from "react";
 import Post from "./post";
 
-let e = React.createElement;
+// let e = React.createElement;
 
 export default class NewsFeed extends React.Component {
     render() {
+        // * array of comments to be placed on first post
         let comments = [
             {            
                 content: 'This is my comment',
@@ -22,13 +23,15 @@ export default class NewsFeed extends React.Component {
                 date: '12-19-2022'
             }
         ];
+        console.log('array of objects in comments array:', comments)
         return (
             <div className="container mt-4">
                 <h1>News Feed</h1>
                 {/*//* spread operator inside comments array */}
                 <Post {...{comments: comments, content: 'This is my post content!'}} />
                 <Post {...{content: 'Here is another post!!!'}}/>
-                <Post />
+                
+                <Post {...{content:'Hello, World post'}}/>
             </div>
         );
         // return e('div',

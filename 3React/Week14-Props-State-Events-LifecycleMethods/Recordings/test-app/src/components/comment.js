@@ -2,7 +2,7 @@ import React from 'react';
 import ReplyButton from './reply-button';
 import LikeButton from './like-button';
 
-let e = React.createElement;
+// let e = React.createElement;
 
 export default class Comment extends React.Component {
     render() {

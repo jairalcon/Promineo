@@ -3,7 +3,7 @@ import ReplyButton from "./reply-button";
 import LikeButton from "./like-button";
 import Comment from "./comment";
 
-let e = React.createElement;
+// let e = React.createElement;
 
 export default class Post extends React.Component {
     //* adding constructor with props / must have
@@ -18,7 +18,7 @@ export default class Post extends React.Component {
         };
     }
     render() {
-        console.log(props); //todo check this out
+        console.log('this is the current state:',this.state); //todo check this out
         // we'll use previous state as argument in a function, wrapped in a Timeout
         // avoid this.state
         // setTimeout(() => this.setState((state, props) => ({count: props.count + 1}), () => console.log(this.state.count)), 2000)
@@ -38,6 +38,7 @@ export default class Post extends React.Component {
             // * map method will take each comment, create JSX components and push to comments array
             // * helps React keep track of what has changed and what's needs to be re-rendered
             comments = this.state.comments.map((comment, index) => <Comment key={index} {...comment} />);
+            console.log('this is the comments variable passing props:', comments);
             // ! Not using for unique key prop
             //* if so, iterate through them
             // for (let comment of this.state.comments) {
@@ -48,17 +49,18 @@ export default class Post extends React.Component {
         // changing to JSX
         return (
             <div className="card w-75">
-                <div className="card-header bg-primary text-white">
+                <div className="card-header bg-secondary text-white">
                     Username and Time
                 </div>
                 <div className="card-body">
                     {/*  */}
                     {this.state.content}
+                    {console.log('state.content =', this.state.content)};
                 </div>
                 <div className="card-footer">
                     <LikeButton />
                     <ReplyButton />
-                    {/*//* translates into comment for each comment */}
+                    {/* translates into comment for each post */}
                     {comments}
 
                     {/* //! Not used for state */}
