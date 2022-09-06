@@ -14,10 +14,10 @@ export class ReviewList extends Component {
                     {this.props.reviewList.map(review =>
                         <div className="card w-75">
                             <div className="card-header bg-secondary text-white">
-                                {review.nickname}
+                                {review.nicknameValue}
                             </div>
                             <div className="card-body">
-                                {review.review}
+                                {review.reviewValue}
                             </div>
                         </div>
                     )}
