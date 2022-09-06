@@ -1,0 +1,23 @@
+HTTP - HyperText Transfer Protocol
+apps can be created many different ways
+
+Roy Fielding wrote an essay:
+REST
+Representational State Transfer
+
+It's not a protocol of HTTP, but can be thought of the way we should use HTTP to create web services and applications.
+Handles the state of a resource from one machine to another.
+A resource is a noun: user...
+
+Can be transferred with text..JSON (JavaScript Object Notation) = preferred way to transfer state of resource
+
+Key paired entities.
+
+JSON
+representation of the account at a specific time
+user can send a new state to the backend.
+REST is more than just below but transferring of state between machines.
+    accountNumber: "0998667",
+    balance: 670.35,
+    accountType: "checking"
+}

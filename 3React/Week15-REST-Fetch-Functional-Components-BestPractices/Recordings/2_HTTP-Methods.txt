@@ -1,0 +1,19 @@
+HTTP Verb Methods
+contains different types of requests
+
+Create - POST, should expect a resource to be created
+Read - GET, will read a resource of group of resources to display to client
+Update - UPDATE, update resource and changes to existing resource
+Delete - DELETE, should delete a resource.
+
+When we send a network request from our computer to a server
+
+POST & UPDATE request to create a new user   
+    payload would contain username, password, ...
+
+GET request with request data without payload, JSON request
+    Give me user data with ID of 021.
+
+DELETE, will be similar to GET and typically not include a payload
+
+All these will help regarding REST resources.
