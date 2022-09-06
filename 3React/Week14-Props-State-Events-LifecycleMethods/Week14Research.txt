@@ -3,7 +3,7 @@ Week 14 Research
 
 -Considering React, what is one-way, or unidirectional data flow? Why is it important?
 
-Unidirectional data flow is React's one-way data flow from parent to child, which is know as "props." Since the flow of data is only from parent to child, this allows a developed to manage data flow more efficiently.  The state of data is owned by one component. Therefore, the changes made tot he state of the component will only change the children. The three main advantages of unidirectional flow are debugging, better control, and efficiency. When a developer knows where the data is coming from and where it is going, that makes debugging much more efficient.
+Unidirectional data flow is React's one-way data flow from parent to child, which is known as "props." Since the flow of data is only from parent to child, this allows a developed to manage data flow more efficiently.  The state of data is owned by one component. Therefore, the changes made to the state of the component will only change the children. The three main advantages of unidirectional flow are debugging, better control, and efficiency. When a developer knows where the data is coming from and where it is going, that makes debugging much more efficient.
 
 https://www.educative.io/edpresso/what-is-unidirectional-data-flow-in-react
 https://coderpad.io/blog/development/master-react-unidirectional-data-flow/
