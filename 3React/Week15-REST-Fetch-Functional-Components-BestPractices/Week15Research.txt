@@ -1,0 +1,20 @@
+Jair Alcon
+Week 15 Research
+
+What are some React best practices not covered in this week's videos? List at least 3 and describe why they are important.
+
+Another best practice is to avoid using STATE if possible because the more a developer utilizes STATE the more data needs to be tracked across the app. One way to do this is when fetching user data, store the whole user object in the state instead of storing the individual properties.
+
+Another best practice is to opt for FRAGMENTS instead of DIVS where possible. React components need to return code wrapped usually in a <div>. However, the more <divs> that are used for single elements the more memory will be utilized when loading the website, which in turn will cause the loading time to take longer since there's more data to load. Therefore, it's best to use fragments when returning single elements.
+
+Another best practice is to use map() to "dynamically render repeated HTML block." An example of this is to render a list of items in <li> tags as opposed to returning a typed out list of items, which can be really repetitive.
+
+https://www.makeuseof.com/must-follow-react-practices/
+
+
+
+What are some other features the REST entails that we didn't cover this week?
+
+Some other features of REST are Statelessness, Cache, and Uniform Interface. Cache, for example, can be utilized for resources on the client/server-side because it "helps mitigate constraints of statelessness." If a response is "cacheable," it can be reused by the client to reuse data for later.
+
+https://hevodata.com/learn/react-rest-apis/#i1
