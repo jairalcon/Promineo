@@ -1,30 +1,36 @@
 import React, { Component } from 'react'
 // import ReviewList from './review-list';
 
+
 export class ReviewForm extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            nicknameValue: '',
-            reviewValue: ''
+            nickname: '',
+            review: '',
+            starRating: ''
         }
+        console.log(this.state);
         // this.handleChange = this.handleChange.bind(this);
     }
 
-    onChange = e => {
+    onChange = (e) => {
         // Sets our piece of state to whatever is currently in the textbox
-        console.log('handleChange:', e.target.value);
+        console.log('onChange:', e.target.value);
+        console.log('this is event', e.target.placeholder);
+        e.preventDefault()
         this.setState({ [e.target.name] : e.target.value });
     }
 
-    onSubmit = e => {
+    onSubmit = (e) => {
         e.preventDefault();
         console.log('onSubmit event being fired');
-        this.props.addReview(this.state.nickname)
-        this.props.addReview(this.state.review)
-        this.setState({ nicknameValue: '',
-                        reviewValue: ''});   
+        //! passing 2 separate parameters instead of 2 separate functions
+        this.props.addReview(this.state.nickname, this.state.review)
+        this.setState({ 
+            nicknameValue: '',
+            reviewValue: ''});
     }
 
   render() {

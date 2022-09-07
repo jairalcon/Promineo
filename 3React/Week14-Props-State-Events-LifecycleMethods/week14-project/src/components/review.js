@@ -24,6 +24,7 @@ export class Review extends Component {
             nickname: newNickname,
             review: newReview
         }
+        console.log(postReview);
         this.setState({reviewList: this.state.reviewList.concat(postReview)})
     }
 
@@ -34,9 +35,12 @@ export class Review extends Component {
                 <div className='col-sm mt-2'>
                     <Stars />
                     <br></br>
-                    <ReviewForm addReview={this.addReview} />
+                    <ReviewForm addReview={this.addReview} reviewList={this.state.reviewList} />
+                    {console.log(this.addReview)}
+                    {console.log(this.state.reviewList)}
                     {/* <br></br> */}
                     <ReviewList reviewList={this.state.reviewList}/>
+                    {console.log(this.state.reviewList)}
                 </div>                
             </>
         )
