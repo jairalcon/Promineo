@@ -3,8 +3,6 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App2 from './App2';
 import reportWebVitals from './reportWebVitals';
-// import FunctionalComponent from './5App-FunctionalComponents';
-// import Hooks from './8-Hooks';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

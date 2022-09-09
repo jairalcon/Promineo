@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 export const NewRoomForm = (props) => {
+    // using hooks
     const [name, setName] = useState('');
     const [area, setArea] = useState(undefined);
 
@@ -21,6 +22,7 @@ export const NewRoomForm = (props) => {
         }
     }
 
+
     return (
         <div>
             <h4>Add a new Room</h4>
@@ -29,6 +31,7 @@ export const NewRoomForm = (props) => {
                     type='text'
                     placeholder='name'
                     onChange={(e) => setName(e.target.value)}
+                    value={name}
                 />
                 <input
                     type='text'

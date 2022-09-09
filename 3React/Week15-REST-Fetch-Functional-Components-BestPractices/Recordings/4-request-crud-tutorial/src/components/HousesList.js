@@ -1,7 +1,6 @@
 import React from "react";
 import { House } from './House';
 import { housesApi } from "../rest/HousesApi.js";
-
 // import { NewHouseForm } from "./NewHouseForm";
 
 export class HousesList extends React.Component {
