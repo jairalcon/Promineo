@@ -10,9 +10,10 @@ export class ReviewList extends Component {
         super(props);
         this.state = {
             nickname: props.nickname,
-            review: props.review
+            review: props.review,
+            rating: props.rating
         }
-        console.log(this.state);
+        console.log('state of review-list:', this.state);
     }
     render() {
         let reviews = [];
@@ -36,7 +37,7 @@ export class ReviewList extends Component {
                                 {review.nickname}
                             </div>
                             <div className="card-body">
-                                {review.review} 
+                                {review.review} {review.rating}
                                 {/* {this.props.starRating} */}
                             </div>
                         </div>

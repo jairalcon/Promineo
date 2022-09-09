@@ -9,7 +9,7 @@ export class ReviewForm extends Component {
         this.state = {
             nickname: '',
             review: '',
-            starRating: ''
+            rating: ''
         }
         console.log(this.state);
         // this.handleChange = this.handleChange.bind(this);
@@ -27,10 +27,11 @@ export class ReviewForm extends Component {
         e.preventDefault();
         console.log('onSubmit event being fired');
         //! passing 2 separate parameters instead of 2 separate functions
-        this.props.addReview(this.state.nickname, this.state.review)
+        this.props.addReview(this.state.nickname, this.state.review, this.state.rating)
         this.setState({ 
             nicknameValue: '',
-            reviewValue: ''});
+            reviewValue: '',
+            ratingValue: ''});
     }
 
   render() {

@@ -12,19 +12,21 @@ export class Review extends Component {
                 {
                     id: 0,
                     nickname: 'John',
-                    review: 'Amazing!'
+                    review: 'Amazing!',
+                    rating: '⭐️⭐️⭐️⭐️⭐️'
                 }
             ]
-        }
+        };
     }
 
-    addReview = (newNickname, newReview) => {
+    addReview = (newNickname, newReview, newRating) => {
         const postReview = {
             id: this.state.reviewList[this.state.reviewList.length - 1].id + 1, //todo need to update
             nickname: newNickname,
-            review: newReview
+            review: newReview,
+            rating: newRating
         }
-        console.log(postReview);
+        console.log('this is postReview', postReview);
         this.setState({reviewList: this.state.reviewList.concat(postReview)})
     }
 
