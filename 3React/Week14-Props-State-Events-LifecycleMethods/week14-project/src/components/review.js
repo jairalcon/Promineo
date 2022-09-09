@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import ReviewForm from './review-form'
-import Stars from './stars';
+// import Stars from './stars';
 import ReviewList from './review-list';
+// import { Star } from '@mui/icons-material';
 
 export class Review extends Component {
     constructor(props) {
@@ -13,7 +14,7 @@ export class Review extends Component {
                     id: 0,
                     nickname: 'John',
                     review: 'Amazing!',
-                    rating: '⭐️⭐️⭐️⭐️⭐️'
+                    rating: 'image.png'
                 }
             ]
         };
@@ -35,7 +36,7 @@ export class Review extends Component {
     return (
             <>
                 <div className='col-sm mt-2'>
-                    <Stars />
+                    {/* <Stars /> */}
                     <br></br>
                     <ReviewForm addReview={this.addReview} reviewList={this.state.reviewList} />
                     {console.log(this.addReview)}

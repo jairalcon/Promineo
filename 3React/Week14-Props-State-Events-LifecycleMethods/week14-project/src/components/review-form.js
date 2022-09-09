@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Stars from './stars';
 // import ReviewList from './review-list';
 
 
@@ -37,6 +38,10 @@ export class ReviewForm extends Component {
   render() {
     return (
         <div>
+            <Stars {...this.props.rating}
+                name='rating' 
+                onChange={this.onChange}
+                value={this.state.ratingValue}/>
             <form onSubmit={this.onSubmit}className='row mt-2' id='review-form'>
                 <input type='text' 
                     value={this.state.nicknameValue}

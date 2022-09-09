@@ -2,23 +2,25 @@
 
 import React, { Component } from 'react';
 import { Rating } from '@mui/material';
+import { Star } from '@mui/icons-material';
 
-export class Stars extends Component {
+export default class Stars extends Component {
     render() {
         return (
             <>
                 <h4>What's your rating?</h4>
-                <Rating 
-                    id='rating'
-                    initialRating={2.5}
-                    readonly
+                <Rating
+                    name="hover-feedback"
+                    precision={0.5}
+                    emptyIcon={<Star style={{ opacity: 0.55 }} fontSize="inherit" />}
                 />
+                {/* {value !== null && (
+                    <Box sx={{ ml: 2 }}>{labels[hover !== -1 ? hover : value]}</Box>
+                )} */}
             </>
         )
     }
 }
-
-export default Stars
 
 // import React, { useState } from "react";
 

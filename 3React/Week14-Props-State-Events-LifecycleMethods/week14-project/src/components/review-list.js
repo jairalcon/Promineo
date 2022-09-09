@@ -17,13 +17,13 @@ export class ReviewList extends Component {
     }
     render() {
         let reviews = [];
-        let counter = 0;
+        let index = 0;
         // console.log('got inside render');
         if (this.state.reviews) {
             // console.log('got inside if statement');
             for (let review of this.state.reviews) {
-                counter++
-                reviews.push(<ReviewList key={counter} {...review} />);
+                index++
+                reviews.push(<ReviewList key={index} {...review} />);
             }
         }         
         return (
@@ -38,7 +38,7 @@ export class ReviewList extends Component {
                             </div>
                             <div className="card-body">
                                 {review.review} {review.rating}
-                                {/* {this.props.starRating} */}
+
                             </div>
                         </div>
                     )}

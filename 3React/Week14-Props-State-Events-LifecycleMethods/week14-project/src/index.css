@@ -16,7 +16,6 @@ code {
 * {
   margin: 0px;
   padding: 0;
-  color: rgb(60, 60, 60);
 }
 
 #movie-image {
@@ -34,7 +33,7 @@ code {
   /* Styles here */
   #movie-image {
     width: auto;
-    max-height: 850px;
+    max-height: 650px;
     min-height: 500px;
   }
 }
@@ -100,4 +99,9 @@ code {
 #review-form {
   padding-top: 10px;
   border-top: 1px dotted black;
+}
+
+svg {
+  color: #faaf00;
+  font-size: 2rem;
 }
