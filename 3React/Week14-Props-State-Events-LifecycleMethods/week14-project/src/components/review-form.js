@@ -21,7 +21,7 @@ export class ReviewForm extends Component {
     onChange = (e) => {
         // Sets our piece of state to whatever is currently in the textbox
         console.log('onChange:', e.target.value);
-        console.log('this is event', e.target.placeholder);
+        // console.log('this is event', e.target.placeholder);
         e.preventDefault()
         this.setState({ [e.target.name] : e.target.value });
     }
@@ -34,7 +34,8 @@ export class ReviewForm extends Component {
         this.setState({ 
             nicknameValue: '',
             reviewValue: '',
-            ratingValue: ''});
+            ratingValue: (null)
+        });
     }
 
   render() {
@@ -47,8 +48,11 @@ export class ReviewForm extends Component {
                     onSubmit={this.props.onSubmit}
                     value={this.state.ratingValue}
                 /> */}
-                <div name='review' onChange={this.onChange}>
-                    <StarRating />
+                <div name='rating' onChange={this.onChange} >
+                    <StarRating 
+                        onSubmit={this.onSubmit}
+                        value={this.state.ratingValue}
+                     />
                 </div>
                 <input type='text' 
                     value={this.state.nicknameValue}

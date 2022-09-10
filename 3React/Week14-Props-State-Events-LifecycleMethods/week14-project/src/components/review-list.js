@@ -38,7 +38,6 @@ export class ReviewList extends Component {
                             </div>
                             <div className="card-body">
                                 {review.review} {review.rating}
-
                             </div>
                         </div>
                     )}
