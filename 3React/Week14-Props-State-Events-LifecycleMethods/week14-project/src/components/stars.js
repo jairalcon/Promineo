@@ -6,16 +6,25 @@ import { Rating } from '@mui/material';
 import { Star } from '@mui/icons-material';
 
 export default class Stars extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            onChange: props.onChange,
+            onSubmit: props.onSubmit
+        }
+    }
     render() {
         return (
             <>
                 <h4>What's your rating?</h4>
                 <Rating
+                    onChange={this.state.onChange}
+                    onSubmit={this.state.onSubmit}
                     name="hover-feedback"
                     precision={0.5}
-                    emptyIcon={<Star style={{ opacity: 0.55 }} fontSize="inherit" />}
-                />
-                
+                    emptyIcon={<Star style={{ opacity: 0.55 }}  />}
+                />                
             </>
         )
     }

@@ -98,7 +98,7 @@ code {
 
 #review-form {
   padding-top: 10px;
-  border-top: 1px dotted black;
+  border-top: 1px black;
 }
 
 svg {
@@ -116,4 +116,13 @@ svg {
 svg:hover {
   -webkit-transform: scale(1.05);
   transform: scale(1.05);
+}
+
+input[type='radio'] {
+  display: none;
+}
+
+.star {
+  cursor: pointer;
+  transition: color 200ms;
 }

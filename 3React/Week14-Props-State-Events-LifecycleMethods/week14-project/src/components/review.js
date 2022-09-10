@@ -26,7 +26,7 @@ export class Review extends Component {
             review: newReview,
             rating: newRating
         }
-        console.log('this is postReview', postReview);
+        // console.log('this is postReview', postReview);
         this.setState({reviewList: this.state.reviewList.concat(postReview)})
     }
 
@@ -38,8 +38,8 @@ export class Review extends Component {
                     {/* <Stars /> */}
                     <br></br>
                     <ReviewForm addReview={this.addReview} reviewList={this.state.reviewList} />
-                    {console.log(this.addReview)}
-                    {console.log(this.state.reviewList)}
+                    {/* {console.log(this.addReview)} */}
+                    {/* {console.log(this.state.reviewList)} */}
                     {/* <br></br> */}
                     <ReviewList reviewList={this.state.reviewList}/>
                     {console.log(this.state.reviewList)}

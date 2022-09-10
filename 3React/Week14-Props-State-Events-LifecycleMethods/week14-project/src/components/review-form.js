@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import Stars from './stars';
+import StarRating from './star-rating';
+// import Stars from './stars';
 // import ReviewList from './review-list';
 
 
@@ -11,7 +12,7 @@ export class ReviewForm extends Component {
         this.state = {
             nickname: '',
             review: '',
-            rating: ''
+            rating: (null)
         }
         console.log(this.state);
         // this.handleChange = this.handleChange.bind(this);
@@ -40,16 +41,22 @@ export class ReviewForm extends Component {
     return (
         <div>
             <form onSubmit={this.onSubmit}className='row mt-2' id='review-form'>
-                <Stars
+                {/* <Stars
                     name='rating'
-                    onChange={this.onChange}
-                    value={this.state.ratingValue} />
+                    onChange={this.props.onChange}
+                    onSubmit={this.props.onSubmit}
+                    value={this.state.ratingValue}
+                /> */}
+                <div name='review' onChange={this.onChange}>
+                    <StarRating />
+                </div>
                 <input type='text' 
                     value={this.state.nicknameValue}
                     onChange={this.onChange}
                     name='nickname' 
                     placeholder='Nickname...' 
-                    className='w-75' />
+                    className='w-75' 
+                />
                 <textarea type='text'
                     value={this.state.reviewValue}
                     onChange={this.onChange}
@@ -61,7 +68,7 @@ export class ReviewForm extends Component {
                 </textarea>
                 <button type='submit' 
                     className="col-5 mt-2 btn btn-primary" 
-                    onClick={this.onSubmit}>Submit </button>
+                    onClick={this.onSubmit}>Submit</button>
             </form>
         </div>
     )
