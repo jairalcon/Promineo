@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import ReviewForm from './review-form'
-// import Stars from './stars';
 import ReviewList from './review-list';
-// import { Star } from '@mui/icons-material';
+import { Rating } from 'react-simple-star-rating';
 
 export class Review extends Component {
     constructor(props) {
@@ -14,7 +13,7 @@ export class Review extends Component {
                     id: 0,
                     nickname: 'John',
                     review: 'Amazing!',
-                    rating: 'image.png'
+                    rating: <Rating size='25' />
                 }
             ]
         };

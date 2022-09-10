@@ -3,6 +3,7 @@ import Stars from './stars';
 // import ReviewList from './review-list';
 
 
+
 export class ReviewForm extends Component {
     constructor(props) {
         super(props);
@@ -38,11 +39,11 @@ export class ReviewForm extends Component {
   render() {
     return (
         <div>
-            <Stars {...this.props.rating}
-                name='rating' 
-                onChange={this.onChange}
-                value={this.state.ratingValue}/>
             <form onSubmit={this.onSubmit}className='row mt-2' id='review-form'>
+                <Stars
+                    name='rating'
+                    onChange={this.onChange}
+                    value={this.state.ratingValue} />
                 <input type='text' 
                     value={this.state.nicknameValue}
                     onChange={this.onChange}

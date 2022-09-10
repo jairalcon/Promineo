@@ -105,3 +105,15 @@ svg {
   color: #faaf00;
   font-size: 2rem;
 }
+
+/* !!!!!!! */
+
+svg {
+  -webkit-transition: transform 0.2s ease;
+  transition: transform 0.1s ease;
+}
+
+svg:hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}

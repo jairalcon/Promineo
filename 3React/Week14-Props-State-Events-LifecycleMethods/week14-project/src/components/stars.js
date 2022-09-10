@@ -1,6 +1,7 @@
 //todo This component will be for the star rating
 
 import React, { Component } from 'react';
+// import { Rating } from 'react-simple-star-rating'
 import { Rating } from '@mui/material';
 import { Star } from '@mui/icons-material';
 
@@ -14,9 +15,7 @@ export default class Stars extends Component {
                     precision={0.5}
                     emptyIcon={<Star style={{ opacity: 0.55 }} fontSize="inherit" />}
                 />
-                {/* {value !== null && (
-                    <Box sx={{ ml: 2 }}>{labels[hover !== -1 ? hover : value]}</Box>
-                )} */}
+                
             </>
         )
     }
