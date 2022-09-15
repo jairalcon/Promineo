@@ -51,7 +51,7 @@ export default function Update() {
                 <Form.Group className="mb-3" controlId="checkbox">
                     <Form.Check 
                         type="checkbox"
-                        
+                        checkbox={checkbox}
                         label="I agree to the Terms and Conditions"
                         onChange={(e) => setCheckbox(!checkbox)} />
                 </Form.Group>
