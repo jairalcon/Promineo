@@ -20,6 +20,22 @@ export default function Read() {
         localStorage.setItem('Checkbox Value', checkbox);
         console.log(data);
     }
+
+    const getData = () => {
+        axios.get(`https://631cbcad1b470e0e120961c6.mockapi.io/PromineoTechApi/fakeData`)
+            .then((getData) => {
+                setAPIData(getData.data);
+            })
+    }
+    
+
+    const onDelete = (id) => {
+        axios.delete(`https://631cbcad1b470e0e120961c6.mockapi.io/PromineoTechApi/fakeData/${id}`)
+        .then(() => {
+            getData();
+        })
+    }
+
   return (
     <>
         <Table striped bordered hover variant="light">
@@ -29,6 +45,7 @@ export default function Read() {
                     <th>Last Name</th>
                     <th>Checked</th>
                     <th>Update</th>
+                    <th>Delete</th>
                 </tr>
             </thead>
 
@@ -41,11 +58,16 @@ export default function Read() {
                         <td>{data.checkbox ? 'Checked' : 'Unchecked'}</td>
                         <td>
                             <Link to='/update'>
-                                <Button onClick={() => setData(data)}>Update</Button>
+                                <Button variant='caution' onClick={() => setData(data)}>Update</Button>
+                            </Link>
+                        </td>
+                        <td>
+                            <Link to='/read'>
+                                <Button variant='danger' onClick={() => onDelete(data.id)}>Delete</Button>
                             </Link>
                         </td>
                     </tr>
-                )})}              
+                )})}          
             </tbody>
         </Table>
     </>

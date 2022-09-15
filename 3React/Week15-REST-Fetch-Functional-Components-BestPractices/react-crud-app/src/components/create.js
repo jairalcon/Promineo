@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 export default function Create() {
     // initializing states
     const[ firstName, setFirstName ] = useState('');
     const[ lastName, setLastName ] = useState('');
     const[ checkbox, setCheckbox ] = useState(false);
+    const navigate = useNavigate();
 
     // we'll use this function to send data to the API
     const postData = (e) => {
@@ -17,10 +19,7 @@ export default function Create() {
             lastName,
             checkbox
         })
-        setFirstName('');
-        setLastName('');
-        setCheckbox(false);
-        
+        navigate("/read/")
         console.log(firstName, lastName, checkbox);
     }
 
