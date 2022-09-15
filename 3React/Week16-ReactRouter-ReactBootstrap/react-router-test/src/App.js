@@ -88,7 +88,7 @@ function Friends(props) {
 function Posts({ posts }) {
   const match = useRouteMatch();
   const findPostById = (id) =>
-    posts.filter((post) => post.id == id)[0];
+    posts.filter((post) => post.id === id)[0];
   return (
     <>
       <h2>Posts</h2>
@@ -123,7 +123,7 @@ function Posts({ posts }) {
 
 function Post(props) {
   const { data } = props;
-  return data == undefined ? <h1>404 Not Found</h1> : (
+  return data === undefined ? <h1>404 Not Found</h1> : (
     <>
     <Card>
       <Card.Header>{data.title}</Card.Header>
