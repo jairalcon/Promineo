@@ -13,7 +13,7 @@ export default function App() {
       <Routes>
         <Route path='/' element={<Create />} />
         <Route path='/read' element={<Read />} />
-        <Route path='/update' element={<Update />} /> 
+        <Route path='/update' element={<Update />} />
       </Routes>
     </div>
   );

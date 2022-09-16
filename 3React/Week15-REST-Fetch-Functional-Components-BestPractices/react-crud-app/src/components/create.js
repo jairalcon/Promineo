@@ -1,31 +1,36 @@
 import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 
 export default function Create() {
     // initializing states
     const[ firstName, setFirstName ] = useState('');
     const[ lastName, setLastName ] = useState('');
     const[ checkbox, setCheckbox ] = useState(false);
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
     // we'll use this function to send data to the API
-    const postData = (e) => {
+    const postData = (event) => {
+        console.log(event)
         console.log(`Post data ran on submit button`);
-        e.preventDefault();
         axios.post(`https://631cbcad1b470e0e120961c6.mockapi.io/PromineoTechApi/fakeData`, {
             firstName,
             lastName,
             checkbox
-        })
-        navigate("/read/")
+        })        
         console.log(firstName, lastName, checkbox);
+        // navigate('/read');
+    }
+
+    function handleSubmit(e) {
+        e.preventDefault();
+        console.log('you clicked submit')
     }
 
     return(
         <>
-            <Form className='create-form'>
+            <Form onSubmit={handleSubmit} className='create-form'>
                 <Form.Group className="mb-3" controlId="firstName">
                     <Form.Label>First Name</Form.Label>
                     <Form.Control type="firstName" placeholder="First Name"

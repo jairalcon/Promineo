@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Table, Button } from 'react-bootstrap';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+// import Update from './update';
 
 export default function Read() {
     const [ APIData, setAPIData ] = useState([])
@@ -9,8 +10,9 @@ export default function Read() {
         axios.get(`https://631cbcad1b470e0e120961c6.mockapi.io/PromineoTechApi/fakeData`)
             .then((response) => {
                 setAPIData(response.data)
+                console.log('Here is APIData', response.data)
             })
-    }, [])
+    }, []) 
 
     const setData = (data) => {
         let { id, firstName, lastName, checkbox } = data;
@@ -21,20 +23,29 @@ export default function Read() {
         console.log(data);
     }
 
-    const getData = () => {
-        axios.get(`https://631cbcad1b470e0e120961c6.mockapi.io/PromineoTechApi/fakeData`)
-            .then((getData) => {
-                setAPIData(getData.data);
-            })
-    }
-    
+    let navigate = useNavigate();
 
-    const onDelete = (id) => {
-        axios.delete(`https://631cbcad1b470e0e120961c6.mockapi.io/PromineoTechApi/fakeData/${id}`)
-        .then(() => {
-            getData();
-        })
+    const handleClick = (data) => {
+        setData(data)
+        navigate('/update');
     }
+
+    const onDelete = async (id) => {
+        try {
+            const resp = await fetch(`https://631cbcad1b470e0e120961c6.mockapi.io/PromineoTechApi/fakeData/${id}`, {
+                method: "DELETE",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            });
+            console.log('Delete resp:', resp)
+            return await resp.json();
+        } catch (err) {
+            console.log(
+                "Oops, looks like onDelete had an issue.", err);
+        }
+    };
+    
 
   return (
     <>
@@ -50,21 +61,17 @@ export default function Read() {
             </thead>
 
             <tbody>
-                {APIData.map((data) => {
+                {APIData.map((data, index) => {
                     return(
-                    <tr>
+                    <tr key={index}>
                         <td>{data.firstName}</td>
                         <td>{data.lastName}</td>
                         <td>{data.checkbox ? 'Checked' : 'Unchecked'}</td>
                         <td>
-                            <Link to='/update'>
-                                <Button variant='warning' onClick={() => setData(data)}>Update</Button>
-                            </Link>
+                            <Button variant='warning' onClick={() => handleClick(data)}>Update</Button>
                         </td>
                         <td>
-                            <Link to='/read'>
-                                <Button variant='danger' onClick={() => onDelete(data.id)}>Delete</Button>
-                            </Link>
+                            <Button variant='danger' onClick={() => onDelete(data.id)}>Delete</Button>
                         </td>
                     </tr>
                 )})}          
@@ -73,3 +80,24 @@ export default function Read() {
     </>
   )
 }
+
+    // const getData = async () => {
+    //     try {
+    //         const resp = await axios.get(`https://631cbcad1b470e0e120961c6.mockapi.io/PromineoTechApi/fakeData`);
+    //         console.log('resp in getData:', resp.data);
+    //         // const data = await resp.json();
+    //         // return data;
+    //     } catch (err) {
+    //         console.log('Oops, looks like getData had an issue.', err)
+    //     }
+    // }
+
+    // const onDelete = async (id) => {
+    //     try {
+    //         const resp = await axios.delete(`https://631cbcad1b470e0e120961c6.mockapi.io/PromineoTechApi/fakeData/${id}`)
+    //         console.log(resp.data)
+    //         await getData();
+    //     } catch (err) {
+    //         console.log('Oops, looks like onDelete had an issue.', err);
+    //     }
+    // }
