@@ -58,7 +58,7 @@ export default function Read() {
                         <td>{data.checkbox ? 'Checked' : 'Unchecked'}</td>
                         <td>
                             <Link to='/update'>
-                                <Button variant='caution' onClick={() => setData(data)}>Update</Button>
+                                <Button variant='warning' onClick={() => setData(data)}>Update</Button>
                             </Link>
                         </td>
                         <td>
