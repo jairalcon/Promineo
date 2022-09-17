@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 export default function Update() {
     const [ firstName, setFirstName ] = useState('');
     const [ lastName, setLastName ] = useState('');
-    const [ checkbox, setCheckbox ] = useState();
+    const [ checkbox, setCheckbox ] = useState(false);
     
     const [ id, setID ] = useState(null);
 
@@ -40,26 +40,31 @@ export default function Update() {
                 },
                 body: JSON.stringify(data),
             });
+            navigate('/read');
             console.log('resp:', resp)
             return await resp.json();
-        } catch (error) {
+        } catch (err) {
             console.log(
                 "Oh no! There was an error with updating your review.",
-                error
+                err
             );
         }
-        navigate('/read');
     };
 
-    const handleOnChange = () => {
-        return !checkbox;
+    const handleChange = event => {
+        if (event.target.checked) {
+            console.log('✅ Checkbox is checked');
+        } else {
+            console.log('⛔️ Checkbox is NOT checked');
+        }
+        setCheckbox(current => !current);
     };
 
-    const stringToBooleanCheck = (box) => {
-        if(box === 'false') {
-            return false;
-        } else if (box === 'true') {
+    const stringToBooleanCheck = (check) => {
+        if(check === 'true') {
             return true;
+        } else if (check === 'false') {
+            return false;
         }
     }
 
@@ -81,12 +86,14 @@ export default function Update() {
                         onChange={(e) => setLastName(e.target.value)} />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="checkbox">
-                    <Form.Check type="checkbox" 
+                    <Form.Check type="checkbox"
+                        value="checkbox"
+                        id="checkbox"
+                        name="checkbox"
                         defaultChecked={() => stringToBooleanCheck(checkbox)}
                         // checked={stringToBooleanCheck(checkbox)}
-                        // checked={!checkbox}
                         label="I agree to the Terms and Conditions"
-                        onChange={() => setCheckbox(handleOnChange)}>
+                        onChange={(setCheckbox) => handleChange(setCheckbox)}>
                     </Form.Check>
                 </Form.Group>
                 {/* added {postData} function to run every time submit is clicked */}

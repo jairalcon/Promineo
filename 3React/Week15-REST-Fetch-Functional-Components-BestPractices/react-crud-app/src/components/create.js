@@ -55,7 +55,7 @@ export default function Create() {
                             onChange={(e) => setCheckbox(!checkbox)}/>
                 </Form.Group>
                 {/* added {postData} function to run every time submit is clicked */}
-                <Button onClick={postData} variant="primary" type="submit">
+                <Button onClick={postData} variant="primary" type="button">
                     Submit
                 </Button>
             </Form>

@@ -35,6 +35,8 @@ export default function Read() {
         axios.get(`https://631cbcad1b470e0e120961c6.mockapi.io/PromineoTechApi/fakeData`)
             .then((getData) => {
                 setAPIData(getData.data);
+            }).then(() => {
+                navigate('/read')
             })
     }
 
@@ -47,9 +49,9 @@ export default function Read() {
                     "Content-Type": "application/json",
                 },
             });
+            navigate('/')
             console.log('Delete resp:', resp)
-            return await resp.json();
-            
+            return await resp.json();            
         } catch (err) {
             console.log(
                 "Oops, looks like onDelete had an issue.", err);
