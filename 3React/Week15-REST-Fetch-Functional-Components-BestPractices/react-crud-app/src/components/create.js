@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 // import { useNavigate } from 'react-router-dom';
 
 export default function Create() {
@@ -10,6 +11,8 @@ export default function Create() {
     const[ checkbox, setCheckbox ] = useState(false);
     // const navigate = useNavigate();
 
+
+    let navigate = useNavigate();
     // we'll use this function to send data to the API
     const postData = (event) => {
         console.log(event)
@@ -17,9 +20,10 @@ export default function Create() {
         axios.post(`https://631cbcad1b470e0e120961c6.mockapi.io/PromineoTechApi/fakeData`, {
             firstName,
             lastName,
-            checkbox
+            checkbox,
         })        
         console.log(firstName, lastName, checkbox);
+        navigate('/read')
         // navigate('/read');
     }
 

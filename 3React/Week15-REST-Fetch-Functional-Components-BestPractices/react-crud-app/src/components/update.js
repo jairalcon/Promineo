@@ -1,6 +1,7 @@
 // ! https://www.npmjs.com/package/react-checkbox-group
 import React, { useState, useEffect } from 'react';
 import { Form, Button } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 // import axios from 'axios';
 
 export default function Update() {
@@ -9,6 +10,8 @@ export default function Update() {
     const [ checkbox, setCheckbox ] = useState();
     
     const [ id, setID ] = useState(null);
+
+    let navigate = useNavigate();
 
     useEffect(() => {
         setID(localStorage.getItem('ID'))
@@ -27,15 +30,15 @@ export default function Update() {
     console.log('formData:', formData);
 
     //Update request
-    const updateAPIData = async (event) => {
-        console.log('event:', event)
+    const updateAPIData = async (data) => {
+        console.log('data:', data)
         try {
-            const resp = await fetch(`https://631cbcad1b470e0e120961c6.mockapi.io/PromineoTechApi/fakeData/${event.id}`, {
+            const resp = await fetch(`https://631cbcad1b470e0e120961c6.mockapi.io/PromineoTechApi/fakeData/${data.id}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify(event),
+                body: JSON.stringify(data),
             });
             console.log('resp:', resp)
             return await resp.json();
@@ -45,6 +48,7 @@ export default function Update() {
                 error
             );
         }
+        navigate('/read');
     };
 
     const handleOnChange = () => {
