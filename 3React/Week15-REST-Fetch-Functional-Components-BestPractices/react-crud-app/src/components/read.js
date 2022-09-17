@@ -1,3 +1,4 @@
+// ! https://stackoverflow.com/questions/64566405/react-router-dom-v6-usenavigate-passing-value-to-another-component
 import React, { useEffect, useState } from 'react';
 import { Table, Button } from 'react-bootstrap';
 import axios from 'axios';
@@ -19,7 +20,7 @@ export default function Read() {
         localStorage.setItem('ID', id);
         localStorage.setItem('First Name', firstName);
         localStorage.setItem('Last Name', lastName);
-        localStorage.setItem('Checkbox Value', checkbox);
+        localStorage.setItem('Checkbox Value', checkbox)
         console.log(data);
     }
 
@@ -29,6 +30,14 @@ export default function Read() {
         setData(data)
         navigate('/update');
     }
+
+    const getData = () => {
+        axios.get(`https://631cbcad1b470e0e120961c6.mockapi.io/PromineoTechApi/fakeData`)
+            .then((getData) => {
+                setAPIData(getData.data);
+            })
+    }
+
 
     const onDelete = async (id) => {
         try {
@@ -40,10 +49,12 @@ export default function Read() {
             });
             console.log('Delete resp:', resp)
             return await resp.json();
+            
         } catch (err) {
             console.log(
                 "Oops, looks like onDelete had an issue.", err);
         }
+        getData();
     };
     
 
@@ -81,6 +92,7 @@ export default function Read() {
   )
 }
 
+
     // const getData = async () => {
     //     try {
     //         const resp = await axios.get(`https://631cbcad1b470e0e120961c6.mockapi.io/PromineoTechApi/fakeData`);
@@ -91,6 +103,7 @@ export default function Read() {
     //         console.log('Oops, looks like getData had an issue.', err)
     //     }
     // }
+
 
     // const onDelete = async (id) => {
     //     try {

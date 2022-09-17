@@ -1,3 +1,4 @@
+// ! https://www.npmjs.com/package/react-checkbox-group
 import React, { useState, useEffect } from 'react';
 import { Form, Button } from 'react-bootstrap';
 // import axios from 'axios';
@@ -5,7 +6,7 @@ import { Form, Button } from 'react-bootstrap';
 export default function Update() {
     const [ firstName, setFirstName ] = useState('');
     const [ lastName, setLastName ] = useState('');
-    const [ checkbox, setCheckbox ] = useState(false);
+    const [ checkbox, setCheckbox ] = useState();
     
     const [ id, setID ] = useState(null);
 
@@ -46,6 +47,18 @@ export default function Update() {
         }
     };
 
+    const handleOnChange = () => {
+        return !checkbox;
+    };
+
+    const stringToBooleanCheck = (box) => {
+        if(box === 'false') {
+            return false;
+        } else if (box === 'true') {
+            return true;
+        }
+    }
+
     return (
         <>
             <Form className='create-form'>
@@ -64,9 +77,13 @@ export default function Update() {
                         onChange={(e) => setLastName(e.target.value)} />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="checkbox">
-                    <Form.Check type="checkbox"
-                        label="I agree to the Terms and Conditions" value={checkbox}
-                        onChange={(checkbox) => setCheckbox(!checkbox)} />
+                    <Form.Check type="checkbox" 
+                        defaultChecked={() => stringToBooleanCheck(checkbox)}
+                        // checked={stringToBooleanCheck(checkbox)}
+                        // checked={!checkbox}
+                        label="I agree to the Terms and Conditions"
+                        onChange={() => setCheckbox(handleOnChange)}>
+                    </Form.Check>
                 </Form.Group>
                 {/* added {postData} function to run every time submit is clicked */}
                 <Button onClick={() => updateAPIData(formData)} variant="success" type="button">
