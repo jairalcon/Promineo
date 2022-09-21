@@ -154,13 +154,22 @@ console.log(sumOfTwo(a, b));
 Within the function, write a loop that loops as many times as 
 the passed in value, starting at 0. Within the loop, print the 
 number of iterations to the console. Once the loop is done, return true. */
-var x = 10;
+let param = 10;
 //write your code below //! MY ANSWER
-function loopUntilX(x) {
-    for (let i = 0; i < x; i++) {
-    console.log(i);
-    } return true;
-}
+// function loopUntilX(x) {
+//     for (let i = 0; i < x; i++) {
+//     console.log(i);
+//     } return true;
+// }
+//! DO WHILE example
+function loopUntilX(param) {
+    let i = 0;
+    do {
+        console.log(i);
+        i++;
+    } while (i < param);
+    return true;
+} 
 
 //do not change below, used for testing purposes
 //* if string 'testing' were passed instead of number...
