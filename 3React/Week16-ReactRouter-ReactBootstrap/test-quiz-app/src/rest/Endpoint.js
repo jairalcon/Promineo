@@ -1,0 +1,110 @@
+const USERS_ENDPOINT =
+    "https://631cbcad1b470e0e120961c6.mockapi.io/PromineoTechApi/users";
+    console.log('current users:', USERS_ENDPOINT);
+
+class UsersAPI {
+    //Send Request
+    get = async () => {
+        try {
+            const resp = await fetch(USERS_ENDPOINT);
+            const data = await resp.json();
+            console.log('getting data:', data);
+            return data;
+        } catch (error) {
+            console.log("Oh no! There was an error with getting your review.", error);
+        }
+    };
+
+    //Update request
+    put = async (user) => {
+        try {
+            const resp = await fetch(`${USERS_ENDPOINT}/${user._id}`, {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(user),
+            });
+            return await resp.json();
+        } catch (error) {
+            console.log(
+                "Oh no! There was an error with updating your review.",
+                error
+            );
+        }
+    };
+
+    //Update request
+    apiEdit = async (userId, userData) => {
+        let userIdArr = userId;
+        console.log(
+            "mainAPI apiEdit productURL:",
+            `${USERS_ENDPOINT}/${userIdArr[0].slice(5)}`
+        );
+        // console.log("mainAPI apiEdit userId:", userIdArr[0].slice(5));
+        // console.log("mainAPI apiEdit userData:", userData[0].slice(9));
+        try {
+            const resp = await fetch(
+                `${USERS_ENDPOINT}/${userIdArr[0].slice(5)}`,
+                {
+                    method: "PUT",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+
+                    body: JSON.stringify({
+                        user: userData[0],
+                    }),
+                }
+            );
+            await resp.json();
+            return (window.location = "/users");
+        } catch (error) {
+            console.log("Oh no! There was an error with editing your login.", error);
+        }
+    };
+
+    //Post request
+    post = async (user) => {
+        console.log("mainAPI post:", user);
+        try {
+            const response = await fetch(`${USERS_ENDPOINT}`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    name: user[0],
+                    product: user[1],
+                    user: user[2],
+                }),
+            });
+            console.log("mainAPI postResponse:", response);
+            await response.json();
+            // (window.location = "/reviews");
+            return (window.location = "/reviews");
+        } catch (error) {
+            console.log("Oh no! There was an error with adding a review.", error);
+        }
+    };
+
+    //Delete request
+    apiDelete = async (reviewId) => {
+        try {
+            const resp = await fetch(`${USERS_ENDPOINT}/${reviewId}`, {
+                method: "DELETE",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                // body: JSON.stringify(reviewId),
+            });
+            await resp.json();
+            return (window.location = "/reviews");
+        } catch (error) {
+            console.log("Oh no! There was an error with deleting a review.", error);
+        }
+    };
+}
+
+//A new instance must be create and can then import that to other components
+export const usersAPI = new UsersAPI();
