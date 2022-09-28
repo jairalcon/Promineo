@@ -36,19 +36,19 @@ export default function Login({ setToken }) {
 
     return (
         <>
-            <div className='login-wrapper'>
+            <div className='login-wrapper container text-center justify-center mt-3'>
                 <h1>Please Log In</h1>
                 <form onSubmit={onSubmit}>
-                    <label>
-                        <p>Username</p>
-                        <input type='text' onChange={handleChange} />
-                    </label>
-                    <label>
-                        <p>Password</p>
-                        <input type='password' onChange={handleChange2} />
-                    </label>
+                    <div className='mb-3 col-sm'>
+                        <label className='form-label'>Username</label>
+                            <input type='username' className='form-control' onChange={handleChange} />
+                    </div>
+                    <div className='mb-3 col-sm'>
+                        <label className='form-label'>Password</label>
+                            <input type='password' className='form-control' onChange={handleChange2} />
+                    </div>
                     <>
-                    <button type='submit' onClick={goQuiz}>Submit</button>
+                        <button className='btn btn-primary' type='submit' onClick={goQuiz}>Submit</button>
                     </>
                 </form>
             </div>

@@ -1,7 +1,7 @@
 body {
   /* background: linear-gradient(-38deg, purple, teal); */
-  background-size: 200% 200%;
-  animation: verticalBreathing 15s ease infinite;
+  /* background-size: 200% 200%; */
+  /* animation: verticalBreathing 15s ease infinite; */
   height: 100vh;
   overflow: hidden;
 }
@@ -111,8 +111,8 @@ button {
   padding: 20px;
 }
 
-.login-wrapper {
+/* .login-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+} */

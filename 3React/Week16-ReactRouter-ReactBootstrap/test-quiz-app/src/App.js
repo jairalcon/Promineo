@@ -11,8 +11,8 @@ import MusicPlayer from "./components/MusicPlayer";
 export default function App() {
   const [ token, setToken] = useState();
   if(!token) {
-    return <Login setToken={setToken} />
-  }  
+    return <Login className='container' setToken={setToken} />
+  }
 
   return (
     <>      
