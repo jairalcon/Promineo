@@ -41,12 +41,12 @@ export const questions = [
     },
     // 5
     {
-        questionText: "Which Formula 1 team currently hold 1st place in the Constructor's Formula 1 Championship?",
+        questionText: "Which Formula 1 driver has won the most Championship Titles?",
         answerOptions: [
-            { answerText: "Mercedes", isCorrect: false },
-            { answerText: "Red Bull Racing", isCorrect: true },
-            { answerText: "Ferrari", isCorrect: false },
-            { answerText: "McLaren", isCorrect: false }
+            { answerText: "Ayrton Senna", isCorrect: false },
+            { answerText: "Lewis Hamilton", isCorrect: true },
+            { answerText: "Michael Schumacher", isCorrect: true },
+            { answerText: "Sebastian Vettel", isCorrect: false }
         ]
     },
     // 6

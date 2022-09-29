@@ -9,6 +9,7 @@ class UsersAPI {
             const resp = await fetch(USERS_ENDPOINT);
             const data = await resp.json();
             console.log('getting data:', data);
+            window.location = "/home";
             return data;
         } catch (error) {
             console.log("Oh no! There was an error with getting your user data.", error);
@@ -83,7 +84,7 @@ class UsersAPI {
             await response.json();
             // (window.location = "/reviews");
             console.log('response:', response);
-            return (window.location = "/quiz");
+            // return (window.location = "/quiz");
         } catch (error) {
             console.log("Oh no! There was an error with adding a user data.", error);
         }

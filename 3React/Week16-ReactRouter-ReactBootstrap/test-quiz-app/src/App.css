@@ -1,7 +1,7 @@
 body {
-  /* background: linear-gradient(-38deg, purple, teal); */
-  /* background-size: 200% 200%; */
-  /* animation: verticalBreathing 15s ease infinite; */
+  background: linear-gradient(-38deg, blue, rgb(255, 255, 255), #e10600);
+  background-size: 200% 200%;
+  animation: verticalBreathing 15s ease infinite;
   height: 100vh;
   overflow: hidden;
 }
@@ -10,7 +10,7 @@ body {
   background-color: #e10600
 }
 
-/* @keyframes verticalBreathing {
+@keyframes verticalBreathing {
   0% {
     background-position: 0% 0%;
   }
@@ -30,7 +30,7 @@ body {
   100% {
     background-position: 0% 0%;
   }
-} */
+}
 
 .app {
   text-align: center;
@@ -62,25 +62,38 @@ p {
   grid-template-columns: 1fr 1fr;
   position: relative;
   margin: 20px auto;
-  max-width: 300px;
+  /* max-width: 300px; */
   row-gap: 30px;
   padding: 20px 40px;
   column-gap: 15px;
 }
 
 button {
-  position: relative;
-  width: fit-content;
-  font-size: 16px;
-  color: #ffffff;
-  background-color: #e10600;
-  border-radius: 3px;
-  padding: 5px;
-  align-items: center;
-  cursor: pointer;
-  border: none;
-  text-align: center;
+  /* position: relative; */
+  /* width: 200px; */
+  color: white;
+  /* font-size: 16px; */
+  /* color: #ffffff; */
+  /* background-color: #e10600; */
+  /* border-radius: 3px; */
+  /* padding: 5px; */
+  /* align-items: center; */
+  /* cursor: pointer; */
+  /* border: none; */
+  /* text-align: center; */
 }
+
+.btn-answer {
+  color: white;
+  background-color: #e10600;
+  max-width: 200px;
+}
+
+/* .btn-answer:hover {
+  color: white;
+  background-color: black;
+  border: solid 1px black;
+} */
 
 .showScore-section {
   font-size: 35px;
@@ -97,18 +110,18 @@ button {
     width: 90%;
   }
 
-  h1 {
+  /* h1 {
     font-size: 30px;
-  }
+  } */
 
-  p {
+  /* p {
     font-size: 26px;
-  }
+  } */
 
-  button {
+  /* button {
     width: 100%;
     min-width: 60px;
-  }
+  } */
 }
 
 .wrapper {

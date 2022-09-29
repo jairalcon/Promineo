@@ -1,38 +1,32 @@
 import React from 'react';
-import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
-import './assets/F1-LOGO.png';
+import { Container, Nav, Navbar } from 'react-bootstrap';
+// import F1Logo from './assets/F1LOGO.png';
+import F1Logo2 from './assets/f1_logo.svg';
 
 export const NavBar = () => {
     return (
         <>
-            <Navbar className='color-nav' expand="lg">
+            <Navbar className='color-nav rounded' variant='dark' expand="sm">
                 <Container>
-                    <Navbar.Brand href="#home">
+                    <Navbar.Brand href="/">
                         <img
-                            alt="formula 1 logo"
-                            src="./assets/F1-LOGO.png"
-                            width="30"
-                            height="30"
-                            className="d-inline-block align-top"
+                            alt="formula 1"
+                            src={F1Logo2}
+                            width="50"
+                            height="50"
+                            className=""
                         />{' '}
-                        F 1</Navbar.Brand>
+                    </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
-                            <Nav.Link href="#home">Home</Nav.Link>
-                            <Nav.Link href="#link">Link</Nav.Link>
-                            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.2">
-                                    Another action
-                                </NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                                <NavDropdown.Divider />
-                                <NavDropdown.Item href="#action/3.4">
-                                    Separated link
-                                </NavDropdown.Item>
-                            </NavDropdown>
+                            <Nav.Link href="/">Home</Nav.Link>
+                            <Nav.Link href="/leaderboard">Leaderboard</Nav.Link>
                         </Nav>
+                        <Navbar.Text>
+                            {/* //todo import props to display username */}
+                            Taking quiz as: <a href="#login">Mark Otto</a>
+                        </Navbar.Text>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>

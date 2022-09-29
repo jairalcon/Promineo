@@ -36,7 +36,7 @@ export default function Quiz() {
 
                     <section className="answer-section">
                         {questions[currentQuestion].answerOptions.map((item, index) => (
-                            <button key={index} onClick={() => handleClick(item.isCorrect)}>
+                            <button className='btn btn-answer' key={index} onClick={() => handleClick(item.isCorrect)}>
                                 {item.answerText}
                             </button>
                         ))}
