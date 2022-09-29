@@ -74,9 +74,9 @@ class UsersAPI {
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
-                    name: user[0],
-                    product: user[1],
-                    user: user[2],
+                    username: user[0],
+                    // product: user[1],
+                    // user: user[2],
                 }),
             });
             console.log("mainAPI postResponse:", response);

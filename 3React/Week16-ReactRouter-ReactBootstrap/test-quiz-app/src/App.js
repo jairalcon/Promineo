@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import Dashboard from "./components/Dashboard";
-import Preferences from "./components/Preferences";
+import LeaderBoard from "./components/LeaderBoard";
 import Quiz from "./components/Quiz";
 import Login from "./components/Login";
 import MusicPlayer from "./components/MusicPlayer";
@@ -21,7 +21,7 @@ export default function App() {
         <MusicPlayer />
         <Routes>
           <Route path='/dashboard' element={<Dashboard />}/>
-          <Route path='/preferences' element={<Preferences />} />
+          <Route path='/leaderboard' element={<LeaderBoard />} />
           <Route path='/quiz' element={<Quiz />} />
         </Routes>
       </div>
