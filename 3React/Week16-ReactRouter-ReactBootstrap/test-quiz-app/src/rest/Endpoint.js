@@ -11,7 +11,7 @@ class UsersAPI {
             console.log('getting data:', data);
             return data;
         } catch (error) {
-            console.log("Oh no! There was an error with getting your review.", error);
+            console.log("Oh no! There was an error with getting your user data.", error);
         }
     };
 
@@ -28,7 +28,7 @@ class UsersAPI {
             return await resp.json();
         } catch (error) {
             console.log(
-                "Oh no! There was an error with updating your review.",
+                "Oh no! There was an error with updating your user data.",
                 error
             );
         }
@@ -58,7 +58,7 @@ class UsersAPI {
                 }
             );
             await resp.json();
-            return (window.location = "/users");
+            return (window.location = "/");
         } catch (error) {
             console.log("Oh no! There was an error with editing your login.", error);
         }
@@ -74,7 +74,7 @@ class UsersAPI {
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
-                    username: user[0],
+                    username: user[0]
                     // product: user[1],
                     // user: user[2],
                 }),
@@ -82,9 +82,10 @@ class UsersAPI {
             console.log("mainAPI postResponse:", response);
             await response.json();
             // (window.location = "/reviews");
-            return (window.location = "/reviews");
+            console.log('response:', response);
+            return (window.location = "/quiz");
         } catch (error) {
-            console.log("Oh no! There was an error with adding a review.", error);
+            console.log("Oh no! There was an error with adding a user data.", error);
         }
     };
 
@@ -99,9 +100,9 @@ class UsersAPI {
                 // body: JSON.stringify(reviewId),
             });
             await resp.json();
-            return (window.location = "/reviews");
+            return (window.location = "/");
         } catch (error) {
-            console.log("Oh no! There was an error with deleting a review.", error);
+            console.log("Oh no! There was an error with deleting user data.", error);
         }
     };
 }

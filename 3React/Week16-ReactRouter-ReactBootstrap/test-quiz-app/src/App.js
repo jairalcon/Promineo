@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import Dashboard from "./components/Dashboard";
@@ -6,24 +6,22 @@ import LeaderBoard from "./components/LeaderBoard";
 import Quiz from "./components/Quiz";
 import Login from "./components/Login";
 import MusicPlayer from "./components/MusicPlayer";
+import { NavBar } from "./components/NavBar";
 // import { questions } from "./components/Questions";
 
 export default function App() {
-  const [ token, setToken] = useState();
-  if(!token) {
-    return <Login className='container' setToken={setToken} />
-  }
 
   return (
     <>      
       <div className="wrapper">
-        <h1>Application</h1>
-        <MusicPlayer />
+        <NavBar />
         <Routes>
+          <Route path='/home' element={<Login />}/>
           <Route path='/dashboard' element={<Dashboard />}/>
           <Route path='/leaderboard' element={<LeaderBoard />} />
           <Route path='/quiz' element={<Quiz />} />
         </Routes>
+        <MusicPlayer />
       </div>
     </>
   );

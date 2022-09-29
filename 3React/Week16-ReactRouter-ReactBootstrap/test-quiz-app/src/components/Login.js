@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 import { usersAPI } from '../rest/Endpoint';
-// import { useNavigate } from 'react-router-dom';
-import Quiz from './Quiz';
+import { useNavigate } from 'react-router-dom';
+// import Quiz from './Quiz';
 
-export default function Login({ setToken }) {
+export default function Login({ navigation }) {
     const [ username, setUserName] = useState('');
     // const [ password, setPassword] = useState('');
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
 
     const onSubmit = (event) => {
         event.preventDefault();
@@ -17,20 +17,13 @@ export default function Login({ setToken }) {
         usersAPI.post([username, /*password*/]);
         setUserName("");
         // setPassword("");
+        navigate('/quiz');
     };
-
-    // const goQuiz = () => {
-    //     navigate(<Quiz />)
-    // }
-
-    function startQuiz() {
-        <Quiz />;
-    }
 
     function handleChange(event) {
         console.log(" handleChange name", event.target.name);
         console.log("userName handleChange value", event.target.value);
-        setUserName(`${event.target.name}: ${event.target.value}`);
+        setUserName(`${event.target.name}${event.target.value}`);
     }
     
     // function handleChange2(event) {
@@ -49,7 +42,7 @@ export default function Login({ setToken }) {
                             <input type='username' className='form-control' onChange={handleChange} />
                     </div>
                     <>
-                        <button className='btn btn-primary' type='submit' onClick={startQuiz}>Submit</button>
+                        <button className='btn btn-primary' type='submit' onClick={() => navigation.navigate('quiz')}>Submit</button>
                     </>
                 </form>
             </div>
@@ -57,6 +50,20 @@ export default function Login({ setToken }) {
     )
 }
 
-Login.propTypes = {
-    setToken: PropTypes.func.isRequired
-}
+// Login.propTypes = {
+//     setToken: PropTypes.func.isRequired
+// }
+
+    // const goQuiz = () => {
+    //     navigate(<Quiz />)
+    // }
+
+    // function startQuiz() {
+    //     <Quiz />;
+    // }
+
+
+      // const [ token, setToken] = useState();
+  // if(!token) {
+  //   return <Login setToken={setToken} />
+  // }

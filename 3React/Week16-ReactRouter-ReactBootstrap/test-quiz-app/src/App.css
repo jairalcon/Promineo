@@ -6,6 +6,10 @@ body {
   overflow: hidden;
 }
 
+.color-nav {
+  background-color: #e10600
+}
+
 /* @keyframes verticalBreathing {
   0% {
     background-position: 0% 0%;
@@ -30,10 +34,10 @@ body {
 
 .app {
   text-align: center;
-  width: 450px;
+  width: auto;
   min-height: 200px;
   height: min-content;
-  transform: translate(-50%, 50%);
+  transform: translate(-50%, 20%);
   border-radius: 15px;
   padding: 20px;
   box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
@@ -66,10 +70,10 @@ p {
 
 button {
   position: relative;
-  width: 100px;
+  width: fit-content;
   font-size: 16px;
   color: #ffffff;
-  background-color: #2b3868;
+  background-color: #e10600;
   border-radius: 3px;
   padding: 5px;
   align-items: center;
