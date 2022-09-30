@@ -9,7 +9,7 @@ class UsersAPI {
             const resp = await fetch(USERS_ENDPOINT);
             const data = await resp.json();
             console.log('getting data:', data);
-            window.location = "/leaderboard";
+            // window.location = "/leaderboard";
             return data;
         } catch (error) {
             console.log("Oh no! There was an error with getting your user data.", error);

@@ -20,7 +20,7 @@ return (
           </tr>
         </thead>
         <tbody>
-          {/* {usersAPI.get((data, index) => {
+          {usersAPI.get((data, index) => {
             return (
               <tr key={index}>
                 <td>{data.id}</td>
@@ -31,7 +31,7 @@ return (
                 </td>
               </tr>
             )
-          }, [])} */}
+          }, [])}
         </tbody>
       </Table>
     </div>
