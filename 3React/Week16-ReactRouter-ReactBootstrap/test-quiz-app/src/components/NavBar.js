@@ -6,7 +6,7 @@ import F1Logo2 from './assets/f1_logo.svg';
 export const NavBar = () => {
     return (
         <>
-            <Navbar className='color-nav rounded navbar' variant='dark' expand="sm">
+            <Navbar className='color-nav rounded navbar font-face-f1r' variant='dark' expand="sm">
                 <Container>
                     <Navbar.Brand href="/">
                         <img

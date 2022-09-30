@@ -21,25 +21,25 @@ export default function Quiz() {
     };
 
     return (
-        <div className="quiz-app">
+        <div className="quiz-app justify-content-center">
             {showScore ? (
-                <section className="showScore-section">
+                <section className="showScore-section font-face-f1b">
                     Your score is {score} out of {questions.length}<br/>
                     {/* passing results to SubmitResults */}
                     <SubmitResults score={score}/>
                 </section>
             ) : (
                 <>
-                    <section className="question-section">
+                    <section className="question-section font-face-f1b">
                         <h1>
                             Question {currentQuestion + 1}/{questions.length}
                         </h1>
                         <p>{questions[currentQuestion].questionText}</p>
                     </section>
 
-                    <section className="answer-section">
+                    <section className="answer-section ">
                         {questions[currentQuestion].answerOptions.map((item, index) => (
-                            <button className='btn btn-answer' key={index} onClick={() => handleClick(item.isCorrect)}>
+                            <button className='btn btn-answer font-face-f1r' key={index} onClick={() => handleClick(item.isCorrect)}>
                                 {item.answerText}
                             </button>
                         ))}
