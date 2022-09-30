@@ -124,3 +124,16 @@ button {
   flex-direction: column;
   align-items: center;
 } */
+
+/* https: //blog.greenroots.info/3-quick-ways-to-add-fonts-to-your-react-app */
+.font-face-f1r {
+  font-family: "Formula1Regular";
+}
+
+.font-face-f1b {
+  font-family: "Formula1Bold";
+}
+
+.font-face-f1w {
+  font-family: "Formula1Wide";
+}

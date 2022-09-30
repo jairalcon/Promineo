@@ -37,7 +37,7 @@ export default function Login({ navigation }) {
         <>
             <div className='container row d-flex aligns-items-center justify-content-center'>
                 <div className='mt-3 text-center'>
-                    <h1>Welcome to my F1 quiz.<br></br>Press below to begin:</h1>
+                    <h1 className='font-face-f1r'>Welcome to my F1 quiz.<br></br>Press below to begin:</h1>
                     <form onSubmit={onSubmit}>
                         {/* <div className='mb-3 col-sm'>
                             <label className='form-label'></label>
@@ -48,22 +48,22 @@ export default function Login({ navigation }) {
                                     onChange={handleChange} />
                         </div> */}
                         <>
-                            <button className='btn btn-success' type='submit' onClick={() => navigation.navigate('quiz')}>"It's lights out and away we go!" (Begin Quiz)</button>
+                            <button className='btn btn-success' type='submit' onClick={() => navigation.navigate('quiz')}>Begin Quiz</button>
                         </>
                     </form>
                 </div>
             </div>
-            <div className="container row mt-3 align-center m-3 p-3">
-                <img className='col-sm team-logo rounded' src={redbull} alt="red bull" />
-                <img className='col-sm team-logo rounded' src={ferrari} alt="ferrari" />
-                <img className='col-sm team-logo rounded' src={mercedes} alt="mercedes" />
-                <img className='col-sm team-logo rounded' src={alpine} alt="alpine" />
-                <img className='col-sm team-logo rounded' src={mclaren} alt="mclaren" />
-                <img className='col-sm team-logo rounded' src={alfaromeo} alt="alfaromeo" />
-                <img className='col-sm team-logo rounded' src={haas} alt="haas" />
-                <img className='col-sm team-logo rounded' src={alphatauri} alt="alpha tauri" />
-                <img className='col-sm team-logo rounded' src={astonmartin} alt="aston martin" />
-                <img className='col-sm team-logo rounded' src={williams} alt="williams" />
+            <div className="container-fluid row mt-3 align-center g-3 justify-content-center">
+                <img className='col-sm team-logo rounded img-fluid' src={redbull} alt="red bull" />
+                <img className='col-sm team-logo rounded img-fluid' src={ferrari} alt="ferrari" />
+                <img className='col-sm team-logo rounded img-fluid' src={mercedes} alt="mercedes" />
+                <img className='col-sm team-logo rounded img-fluid' src={alpine} alt="alpine" />
+                <img className='col-sm team-logo rounded img-fluid' src={mclaren} alt="mclaren" />
+                <img className='col-sm team-logo rounded img-fluid' src={alfaromeo} alt="alfaromeo" />
+                <img className='col-sm team-logo rounded img-fluid' src={haas} alt="haas" />
+                <img className='col-sm team-logo rounded img-fluid' src={alphatauri} alt="alpha tauri" />
+                <img className='col-sm team-logo rounded img-fluid' src={astonmartin} alt="aston martin" />
+                <img className='col-sm team-logo rounded img-fluid' src={williams} alt="williams" />
             </div>
         </>
     )
