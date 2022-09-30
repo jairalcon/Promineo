@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { questions } from './Questions';
+import SubmitResults from './SubmitResults';
 
 export default function Quiz() {
     const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -24,7 +25,8 @@ export default function Quiz() {
             {showScore ? (
                 <section className="showScore-section">
                     Your score is {score} out of {questions.length}<br/>
-                    <button className='btn btn-success'>Submit Score</button>
+                    {/* passing results to SubmitResults */}
+                    <SubmitResults score={score}/>
                 </section>
             ) : (
                 <>
