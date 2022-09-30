@@ -13,7 +13,7 @@ export default function App() {
 
   return (
     <>      
-      <div className="wrapper">
+      <div className="wrapper container">
         <NavBar />
         <Routes>
           <Route path='/' element={<Login />}/>
@@ -21,6 +21,9 @@ export default function App() {
           <Route path='/leaderboard' element={<LeaderBoard />} />
           <Route path='/quiz' element={<Quiz />} />
         </Routes>
+        <br/>
+      </div>
+      <div className="fixed-bottom container">
         <MusicPlayer />
       </div>
     </>

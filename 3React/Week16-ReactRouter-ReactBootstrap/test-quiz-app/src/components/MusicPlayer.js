@@ -6,9 +6,11 @@ const MusicPlayer = () => {
     
     return (
         <>
-            <ReactAudioPlayer src={BackgroundMusic} autoPlay controls/>
+            <ReactAudioPlayer src={BackgroundMusic} controls/>
         </>
     )
 }
 
 export default MusicPlayer;
+
+// https://www.npmjs.com/package/react-audio-player

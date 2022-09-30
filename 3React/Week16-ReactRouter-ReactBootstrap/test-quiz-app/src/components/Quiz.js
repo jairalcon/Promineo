@@ -20,10 +20,11 @@ export default function Quiz() {
     };
 
     return (
-        <div className="app">
+        <div className="quiz-app">
             {showScore ? (
                 <section className="showScore-section">
-                    Your score is {score} out of {questions.length}
+                    Your score is {score} out of {questions.length}<br/>
+                    <button className='btn btn-success'>Submit Score</button>
                 </section>
             ) : (
                 <>

@@ -6,14 +6,14 @@ import F1Logo2 from './assets/f1_logo.svg';
 export const NavBar = () => {
     return (
         <>
-            <Navbar className='color-nav rounded' variant='dark' expand="sm">
+            <Navbar className='color-nav rounded navbar' variant='dark' expand="sm">
                 <Container>
                     <Navbar.Brand href="/">
                         <img
                             alt="formula 1"
                             src={F1Logo2}
-                            width="50"
-                            height="50"
+                            width="100"
+                            height="25"
                             className=""
                         />{' '}
                     </Navbar.Brand>
@@ -23,10 +23,6 @@ export const NavBar = () => {
                             <Nav.Link href="/">Home</Nav.Link>
                             <Nav.Link href="/leaderboard">Leaderboard</Nav.Link>
                         </Nav>
-                        <Navbar.Text>
-                            {/* //todo import props to display username */}
-                            Taking quiz as: <a href="#login">Mark Otto</a>
-                        </Navbar.Text>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>

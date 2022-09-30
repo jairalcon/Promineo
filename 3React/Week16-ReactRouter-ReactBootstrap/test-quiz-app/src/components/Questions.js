@@ -31,7 +31,7 @@ export const questions = [
     },
     // 4
     {
-        questionText: "Which Formula 1 team currently hold 1st place in the Constructor's Formula 1 Championship?",
+        questionText: "Which Formula 1 team currently holds 1st place in the Constructor's Formula 1 Championship?",
         answerOptions: [
             { answerText: "Mercedes", isCorrect: false },
             { answerText: "Ferrari", isCorrect: false },
@@ -53,15 +53,15 @@ export const questions = [
     {
         questionText: "Which racing track has hosted the most Formula 1 races?",
         answerOptions: [
-            { answerText: "Autodrome Nazionale Monza (Italian Grand Prix", isCorrect: true },
+            { answerText: "Autodrome Nazionale Monza (Italian Grand Prix)", isCorrect: true },
             { answerText: "Monaco (Monaco Grand Prix)", isCorrect: false },
             { answerText: "Circuit of the Americas (United States Grand Prix)", isCorrect: false },
-            { answerText: "Silverstone (British Grand Prix", isCorrect: false }
+            { answerText: "Silverstone (British Grand Prix)", isCorrect: false }
         ]
     },
     // 7
     {
-        questionText: "How much gravitational force can a Formula 1 driver experience in ONE corner?",
+        questionText: "How much gravitational force can a Formula 1 driver experience in a high-speed corner or applying the brakes of their race car?",
         answerOptions: [
             { answerText: "3.5 g", isCorrect: false },
             { answerText: "4.5 g", isCorrect: false },

@@ -6,6 +6,10 @@ body {
   overflow: hidden;
 }
 
+.navbar {
+  min-height: 50px;
+}
+
 .color-nav {
   background-color: #e10600
 }
@@ -32,11 +36,11 @@ body {
   }
 }
 
-.app {
+.quiz-app {
   text-align: center;
   width: auto;
-  min-height: 200px;
-  height: min-content;
+  min-height: 400px;
+  height: auto;
   transform: translate(-50%, 20%);
   border-radius: 15px;
   padding: 20px;
@@ -86,14 +90,8 @@ button {
 .btn-answer {
   color: white;
   background-color: #e10600;
-  max-width: 200px;
+  max-width: 400px;
 }
-
-/* .btn-answer:hover {
-  color: white;
-  background-color: black;
-  border: solid 1px black;
-} */
 
 .showScore-section {
   font-size: 35px;
@@ -105,7 +103,7 @@ button {
 }
 
 @media all and (max-width: 700px) {
-  .app {
+  .quiz-app {
     padding: 5px;
     width: 90%;
   }
@@ -124,9 +122,9 @@ button {
   } */
 }
 
-.wrapper {
+/* .wrapper {
   padding: 20px;
-}
+} */
 
 /* .login-wrapper {
   display: flex;

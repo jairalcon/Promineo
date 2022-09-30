@@ -25,17 +25,23 @@ export default function Login({ navigation }) {
 
     return (
         <>
-            <div className='login-wrapper container text-center justify-center mt-3 row'>
-                <h1>Enter Your Username:</h1>
-                <form onSubmit={onSubmit}>
-                    <div className='mb-3 col-sm'>
-                        <label className='form-label'></label>
-                            <input type='username' className='form-control' onChange={handleChange} />
-                    </div>
-                    <>
-                        <button className='btn btn-primary' type='submit' onClick={() => navigation.navigate('quiz')}>Submit</button>
-                    </>
-                </form>
+            <div className='container row d-flex aligns-items-center justify-content-center'>
+                <div className='mt-3 text-center'>
+                    <h1>Enter Your Username To Begin Quiz:</h1>
+                    <form onSubmit={onSubmit}>
+                        <div className='mb-3 col-sm'>
+                            <label className='form-label'></label>
+                                <input
+                                    placeholder='Username...' 
+                                    type='username' 
+                                    className='form-control' 
+                                    onChange={handleChange} />
+                        </div>
+                        <>
+                            <button className='btn btn-success' type='submit' onClick={() => navigation.navigate('quiz')}>"It's lights out and away we go!"</button>
+                        </>
+                    </form>
+                </div>
             </div>
         </>
     )
