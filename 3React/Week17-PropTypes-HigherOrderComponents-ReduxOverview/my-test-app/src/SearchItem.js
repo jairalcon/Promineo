@@ -9,7 +9,9 @@ const SearchItem = ({ search, setSearch }) => {
                 type='text'
                 role='searchbox'
                 placeholder='Search Items'
+                // setting value to state
                 value={search}
+                // updating State
                 onChange={(e) => setSearch(e.target.value)}
             />
         </form>

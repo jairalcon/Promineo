@@ -14,13 +14,15 @@ const AddItem = ({ newItem, setNewItem, handleSubmit }) => {
         type='text'
         placeholder='Add Item'
         required
+        // adding state
         value={newItem}
-        // linking to OST (one source of truth)
+        // linking to OST (one source of truth) - setting State
         onChange={(e) => setNewItem(e.target.value)}
       />
       <button
         type='submit'
         aria-label='Add Item'
+        // using anonF to use inputRef
         onClick={() => inputRef.current.focus()}
       >
         <FaPlus />

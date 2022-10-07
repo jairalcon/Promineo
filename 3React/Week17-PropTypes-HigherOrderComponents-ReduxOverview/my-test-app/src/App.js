@@ -7,14 +7,14 @@ import { useState } from 'react';
 
 function App() {
   // moved from Content.js and drilled down
-  const [items, setItems] = useState(JSON.parse(localStorage.getItem('shoppinglist')));
+  const [items, setItems] = useState(JSON.parse(localStorage.getItem('shoppingList')));
   const [newItem, setNewItem] = useState('');
-  const [search, setSearch] = useState('');
+  const [ search, setSearch ] = useState('')
 
   const setAndSaveItems = (newItems) => {
     setItems(newItems);
     // saving to local storage when changes are made
-    localStorage.setItem('shoppinglist', JSON.stringify(newItems));
+    localStorage.setItem('shoppingList', JSON.stringify(newItems));
   }
 
   const addItem = (item) => {
@@ -41,7 +41,7 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!newItem) return;
-    console.log('added newItem', newItem);
+    console.log('added newItem:', newItem);
     // call addItem
     addItem(newItem);
     setNewItem('');
@@ -51,15 +51,18 @@ function App() {
     <div className="App">
       <Header title="Grocery List" />
       <AddItem
+      // passing props
         newItem={newItem}
         setNewItem={setNewItem}
         handleSubmit={handleSubmit}
       />
       <SearchItem
+      // passing props
         search={search}
         setSearch={setSearch}
       />
       <Content
+      // passing props
         items={items.filter(item => ((item.item).toLowerCase()).includes(search.toLowerCase()))}
         handleCheck={handleCheck}
         handleDelete={handleDelete}
