@@ -3,7 +3,7 @@ import ItemList from './ItemList';
 
 const Content = ({ items, handleCheck, handleDelete }) => {
     return (
-        <main>
+        <>
             {/* adding message to show that list is empty */}
             {items.length ? (
                 // passing down props to ItemList
@@ -15,7 +15,7 @@ const Content = ({ items, handleCheck, handleDelete }) => {
             ) : (
                 <p style={{ marginTop: '2rem' }}>Your list is empty</p>
             )}
-        </main>
+        </>
     );
 }
 

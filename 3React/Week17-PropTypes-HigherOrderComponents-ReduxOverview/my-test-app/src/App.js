@@ -6,19 +6,41 @@ import Footer from './Footer';
 import { useState, useEffect } from 'react';
 
 function App() {
+  const API_URL = 'http://localhost:3500/items';
+
+
+  const [items, setItems] = useState([]);
   // moved from Content.js and drilled down
-  const [items, setItems] = useState(JSON.parse(localStorage.getItem('shoppingList')) || []);
   const [newItem, setNewItem] = useState('');
-  const [ search, setSearch ] = useState('');
+  const [search, setSearch] = useState('');
+  const [fetchError, setFetchError] = useState(null);
+  const [ isLoading, setIsLoading ] = useState(true);
 
   // console.log('before useEffect')
   // runs at every render
   useEffect(() => {
     // console.log('inside useEffect');
     // looking at state of items and then setting them as state
-    localStorage.setItem('shoppingList', JSON.stringify(items));
+    const fetchItems = async () => {
+      try {
+        const response = await fetch(API_URL);
+        if (!response.ok) throw Error('Did not receive expected data');
+        const listItems = await response.json();
+        // console.log('listItems = ', listItems)
+        setItems(listItems);
+        setFetchError(null);
+      } catch (err) {
+        setFetchError(err.message);
+      } finally {
+        setIsLoading(false);
+      }
+    }
+    // simulating loading time
+    setTimeout(() => {
+      fetchItems();
+    }, 2000)    
     // runs only at load time when array dependency changes
-  }, [items])
+  }, [])
   // console.log('after useEffect')
 
   const addItem = (item) => {
@@ -55,22 +77,26 @@ function App() {
     <div className="App">
       <Header title="Grocery List" />
       <AddItem
-      // passing props
+        // passing props
         newItem={newItem}
         setNewItem={setNewItem}
         handleSubmit={handleSubmit}
       />
       <SearchItem
-      // passing props
+        // passing props
         search={search}
         setSearch={setSearch}
       />
-      <Content
-      // passing props
-        items={items.filter(item => ((item.item).toLowerCase()).includes(search.toLowerCase()))}
-        handleCheck={handleCheck}
-        handleDelete={handleDelete}
-      />
+      <main>
+        {isLoading && <p>Loading Items...</p>}
+        {fetchError && <p style={{ color: "red" }}>{`Error: ${fetchError}`}</p>}
+        {!fetchError && !isLoading && <Content
+          // passing props
+          items={items.filter(item => ((item.item).toLowerCase()).includes(search.toLowerCase()))}
+          handleCheck={handleCheck}
+          handleDelete={handleDelete}
+        />}
+      </main>
       <Footer length={items.length} />
     </div>
   );
