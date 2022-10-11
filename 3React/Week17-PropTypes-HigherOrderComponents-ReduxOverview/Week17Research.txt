@@ -1,0 +1,15 @@
+Jair Alcon
+Week 17 Research Assignment
+
+What is TypeScript and why do some companies use it?
+TypeScript has been built on JavaScript to add better tools to assist programmers with TypeScript's type system. TypeScript can pinpoint values that might have typos or incorrect variables usage, thus minimizing the occurrences of bugs.
+For example, in JavaScript, a variable is assigned a variable type such as string, number. TypeScript will use the variable value as it's associated type. 
+
+https://www.typescriptlang.org/
+https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html
+https://www.w3schools.com/typescript/typescript_intro.php
+
+When should you use Redux?
+We should use Redux when there are large amounts fo app state that are needed many places within the app, the state is updated regularly, when the app becomes more large-scale with many developers working on app, or when you need to see how the state is updated throughout using the app.
+
+https://redux.js.org/faq/general#:~:text=Redux%20is%20most%20useful%20in,worked%20on%20by%20many%20people
