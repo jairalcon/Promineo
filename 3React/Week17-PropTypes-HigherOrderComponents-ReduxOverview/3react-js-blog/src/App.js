@@ -8,9 +8,10 @@ import About from './About';
 import Missing from './Missing';
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { format } from 'date-fns';
 
 function App() {
-  const [ posts, setPosts ] = useState([
+  const [posts, setPosts] = useState([
     {
       id: 1,
       title: "My First Post",
@@ -36,17 +37,52 @@ function App() {
       body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis consequatur expedita, assumenda similique non optio! Modi nesciunt excepturi corrupti atque blanditiis quo nobis, non optio quae possimus illum exercitationem ipsa!"
     }
   ])
-  const [ search, setSearch ] = useState('');
-  const [ searchResults, setSearchResults ] = useState([]);
+  const [search, setSearch] = useState('');
+  const [searchResults, setSearchResults] = useState([]);
+  const [postTitle, setPostTitle] = useState('');
+  const [postBody, setPostBody] = useState('');
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const filteredResults = posts.filter(post =>
+      ((post.body).toLowerCase()).includes(search.toLocaleLowerCase())
+      || ((post.title).toLowerCase()).includes(search.toLocaleLowerCase()));
+
+    setSearchResults(filteredResults.reverse());
+  }, [posts, search])
+
+  const handleDelete = (id) => {
+    const postsList = posts.filter(post => post.id !== id);
+    setPosts(postsList);
+    navigate('/');
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const id = posts.length ? posts[posts.length - 1].id + 1 : 1;
+    const datetime = format(new Date(), 'MMMM dd, yyyy pp');
+    const newPost = { id, title: postTitle, datetime, body: postBody };
+    const allPosts = [...posts, newPost];
+    setPosts(allPosts);
+    setPostTitle('');
+    setPostBody('');
+    navigate('/');
+  }
 
   return (
     <div className="App">
-      <Header title="React JS Blog"/>
+      <Header title="React JS Blog" />
       <Nav search={search} setSearch={setSearch} />
       <Routes>
-        <Route path='/' element={<Home post={posts} />} />
-        <Route path='/post' element={<NewPost />} />
-        <Route path='/post/:id' element={<PostPage />} />
+        <Route path='/' element={<Home posts={searchResults} />} />
+        <Route path='/post' element={<NewPost
+          handleSubmit={handleSubmit}
+          postTitle={postTitle}
+          setPostTitle={setPostTitle}
+          postBody={postBody}
+          setPostBody={setPostBody}
+        />} />
+        <Route path='/post/:id' element={<PostPage posts={posts} handleDelete={handleDelete} />} />
         <Route path='/about' element={<About />} />
         <Route path='*' element={<Missing />} />
       </Routes>
