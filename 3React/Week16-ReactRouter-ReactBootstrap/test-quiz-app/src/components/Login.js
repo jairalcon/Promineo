@@ -12,26 +12,14 @@ import alphatauri from './assets/alphatauri.jpg';
 import astonmartin from './assets/astonmartin.jpg';
 import williams from './assets/williams.jpg';
 
-export default function Login({ navigation }) {
-    // const [ username, setUserName] = useState('');
-    // const [ password, setPassword] = useState('');
+export default function Login() {
     const navigate = useNavigate();
 
     const onSubmit = (event) => {
         event.preventDefault();
-        console.log("onSubmit event", event);
-
-        // usersAPI.post([username, /*password*/]);
-        // setUserName("");
-        // setPassword("");
+        // console.log("onSubmit event", event);
         navigate('/quiz');
     };
-
-    // function handleChange(event) {
-    //     console.log(" handleChange name", event.target.name);
-    //     console.log("userName handleChange value", event.target.value);
-    //     setUserName(`${event.target.name}${event.target.value}`);
-    // }
 
     return (
         <>
@@ -39,16 +27,8 @@ export default function Login({ navigation }) {
                 <div className='mt-3 text-center'>
                     <h1 className='font-face-f1r'>Welcome to my F1 quiz.<br></br>Press below to begin:</h1>
                     <form onSubmit={onSubmit}>
-                        {/* <div className='mb-3 col-sm'>
-                            <label className='form-label'></label>
-                                <input
-                                    placeholder='Username...' 
-                                    type='username' 
-                                    className='form-control' 
-                                    onChange={handleChange} />
-                        </div> */}
                         <>
-                            <button className='btn btn-success' type='submit' onClick={() => navigation.navigate('quiz')}>Begin Quiz</button>
+                            <button className='btn btn-success btn-lg' type='submit'>Begin Quiz</button>
                         </>
                     </form>
                 </div>

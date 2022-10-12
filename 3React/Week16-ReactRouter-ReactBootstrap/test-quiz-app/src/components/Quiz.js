@@ -18,6 +18,7 @@ export default function Quiz() {
         } else {
             setShowScore(true);
         }
+        console.log('was answer correct?', isCorrect)
     };
 
     return (
@@ -26,7 +27,7 @@ export default function Quiz() {
                 <section className="showScore-section font-face-f1b">
                     Your score is {score} out of {questions.length}<br/>
                     {/* passing results to SubmitResults */}
-                    <SubmitResults score={score}/>
+                    <SubmitResults score={score} setScore={setScore}/>
                 </section>
             ) : (
                 <>
@@ -39,7 +40,10 @@ export default function Quiz() {
 
                     <section className="answer-section ">
                         {questions[currentQuestion].answerOptions.map((item, index) => (
-                            <button className='btn btn-answer font-face-f1r' key={index} onClick={() => handleClick(item.isCorrect)}>
+                            <button 
+                                className='btn btn-answer font-face-f1r' 
+                                key={index} 
+                                onClick={() => handleClick(item.isCorrect)}>
                                 {item.answerText}
                             </button>
                         ))}

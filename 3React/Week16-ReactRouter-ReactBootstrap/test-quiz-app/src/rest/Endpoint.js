@@ -66,8 +66,8 @@ class UsersAPI {
     };
 
     //Post request
-    post = async (user) => {
-        console.log("mainAPI post:", user);
+    post = async (username) => {
+        console.log("mainAPI post:", username);
         try {
             const response = await fetch(`${USERS_ENDPOINT}`, {
                 method: "POST",
@@ -75,7 +75,8 @@ class UsersAPI {
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
-                    username: user[0]
+                    username: username[0],
+                    score: username[1]
                     // product: user[1],
                     // user: user[2],
                 }),
@@ -91,9 +92,9 @@ class UsersAPI {
     };
 
     //Delete request
-    apiDelete = async (reviewId) => {
+    apiDelete = async (usernameId) => {
         try {
-            const resp = await fetch(`${USERS_ENDPOINT}/${reviewId}`, {
+            const resp = await fetch(`${USERS_ENDPOINT}/${usernameId}`, {
                 method: "DELETE",
                 headers: {
                     "Content-Type": "application/json",

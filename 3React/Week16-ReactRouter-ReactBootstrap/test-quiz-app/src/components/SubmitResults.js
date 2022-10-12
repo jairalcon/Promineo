@@ -2,18 +2,18 @@ import React, { useState } from 'react';
 import { usersAPI } from '../rest/Endpoint';
 import { useNavigate } from 'react-router-dom';
 
-export default function SubmitResults({ navigation }) {
+export default function SubmitResults({ score, setScore }) {
     const [ username, setUserName ] = useState('');
-    const [ result, setResult ] = useState('');
+    // const [ result, setResult ] = useState('');
     const navigate = useNavigate();
 
     const onSubmit = (event) => {
         event.preventDefault();
         console.log("onSubmit event", event);
 
-        usersAPI.post([username, result]);
+        usersAPI.post([username, score]);
         setUserName("");
-        setResult("");
+        setScore("");
         navigate('/leaderboard');
     };
 
@@ -38,7 +38,9 @@ export default function SubmitResults({ navigation }) {
                                 onChange={handleChange} />
                         </div>
                         <>
-                            <button className='btn btn-success font-face-f1r' type='submit' onClick={() => navigation.navigate('quiz')}>Submit</button>
+                            <button 
+                                className='btn btn-success font-face-f1r' 
+                                type='submit'>Submit</button>
                         </>
                     </form>
                 </div>
