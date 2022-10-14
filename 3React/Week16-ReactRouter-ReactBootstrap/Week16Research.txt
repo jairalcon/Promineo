@@ -2,8 +2,11 @@ Jair Alcon
 Week 16 Research
 
 What are 3 other features of React Router that we did not cover this week?
+Three other features of React Router are ...
 
-
-
+https://reactrouter.com/en/main/start/overview
 
 Choose 3 React Bootstrap components and describe how they are used. You can use code examples.
+
+
+https://react-bootstrap.github.io/components/alerts
