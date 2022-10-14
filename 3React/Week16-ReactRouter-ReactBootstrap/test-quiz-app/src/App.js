@@ -24,7 +24,7 @@ export default function App() {
           </Routes>
         <br/>
       </div>
-      <div className="fixed-bottom container">
+      <div className="fixed-bottom container mb-5">
         <MusicPlayer />
       </div>
       <div>

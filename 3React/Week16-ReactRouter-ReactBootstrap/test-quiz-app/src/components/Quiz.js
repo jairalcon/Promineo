@@ -21,6 +21,9 @@ export default function Quiz() {
         console.log('was answer correct?', isCorrect)
     };
 
+    // create conditional function to determine if user's quiz exists
+    // https://stackoverflow.com/questions/45109872/passing-data-using-react-native-navigation
+
     return (
         <div className="quiz-app justify-content-center">
             {showScore ? (

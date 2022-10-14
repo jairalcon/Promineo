@@ -9,6 +9,7 @@ export default function LeaderBoard() {
   let navigate = useNavigate();
 
   useEffect(() => {
+    console.log('inside useEffect');
     axios.get(`https://631cbcad1b470e0e120961c6.mockapi.io/PromineoTechApi/users`)
       .then((response) => {
         setAPIData(response.data)
@@ -21,11 +22,24 @@ export default function LeaderBoard() {
       .then((getData) => {
         setAPIData(getData.data);
       }).then(() => {
-        navigate('/quiz')
+        navigate('/leaderboard');
       })
   }
 
+  const onEdit = () => {
+    axios.get(`https://631cbcad1b470e0e120961c6.mockapi.io/PromineoTechApi/users`)
+      .then((getData) => {
+        setAPIData(getData.data);
+      }).then(() => {
+        navigate('/quiz');
+      })
+      // render component, pass in user data
+      // condition to determine if instance of quiz component exists
+      // user.id === quiz => render existing quiz
+  }
+
   const onDelete = async (id) => {
+    console.log('in delete function');
     try {
       const resp = await fetch(`https://631cbcad1b470e0e120961c6.mockapi.io/PromineoTechApi/users/${id}`, {
         method: "DELETE",
@@ -34,12 +48,13 @@ export default function LeaderBoard() {
         },
       });
       console.log('Delete resp:', resp)
-      navigate('/leaderboard')
-      return await resp.json();
+      // return await resp.json();
     } catch (err) {
       console.log(
         "Oops, looks like onDelete had an issue.", err);
     }
+    console.log('before navigate');
+    getData();
   };
 
 
@@ -64,7 +79,7 @@ export default function LeaderBoard() {
                   <td>{data.username}</td>
                   <td>{data.score}</td>
                   <td>
-                    <Button variant='warning' onClick={() => getData(data.id)}>Retake</Button>
+                    <Button variant='warning' onClick={() => onEdit(data.id)}>Retake</Button>
                     <Button variant='danger' onClick={() => onDelete(data.id)}>Delete</Button>
                   </td>
                 </tr>

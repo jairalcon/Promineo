@@ -113,7 +113,35 @@ button {
 .team-logo {
   max-width: 200px;
   height: auto;
+  border-radius: 15px;
 }
+
+@media all and (max-width: 800px) {
+  .team-logo {
+    max-width: 100px;
+    height: auto;
+    border-radius: 15px;
+  }
+
+  .quiz-app {
+    min-height: 550px;
+    padding: 5px;
+    width: 100%;
+  }
+
+  .question-section h1 {
+    font-size: xx-large;
+  }
+
+  .question-section p {
+    font-size: large;
+  }
+
+  .showScore-section {
+    font-size: 30px;
+  }
+}
+
 
 /* .wrapper {
   padding: 20px;
