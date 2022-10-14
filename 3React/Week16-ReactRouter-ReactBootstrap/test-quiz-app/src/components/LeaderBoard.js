@@ -2,10 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { Button, Table } from 'react-bootstrap';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+// import { usersAPI } from '../rest/Endpoint';
 // import { Navigate, useNavigate } from 'react-router-dom';
 
 export default function LeaderBoard() {
   const [APIData, setAPIData] = useState([]);
+  const [retaking, setRetaking] = useState(null);
+
   let navigate = useNavigate();
 
   useEffect(() => {
@@ -57,6 +60,17 @@ export default function LeaderBoard() {
     getData();
   };
 
+  // const onDelete2 = (event) => {
+  //   event.preventDefault();
+  //   console.log("onSubmit event", event);
+  //   let id = usersAPI.id;
+  //   usersAPI.apiDelete(id);
+  // };
+
+  const retakingQuiz = (id) => {
+    setRetaking(id);
+  }
+
 
   return (
     <>
@@ -79,8 +93,11 @@ export default function LeaderBoard() {
                   <td>{data.username}</td>
                   <td>{data.score}</td>
                   <td>
-                    <Button variant='warning' onClick={() => onEdit(data.id)}>Retake</Button>
-                    <Button variant='danger' onClick={() => onDelete(data.id)}>Delete</Button>
+                    { retaking === !data.id ? (
+                      <Button variant='warning' onClick={() => onEdit(retakingQuiz)}>Retake</Button>
+                      ) : (
+                      <Button variant='danger' onClick={() => onDelete(data.id)}>Delete</Button>
+                    )}
                   </td>
                 </tr>
               )

@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
-import Dashboard from "./components/Dashboard";
+// import Dashboard from "./components/Dashboard";
 import LeaderBoard from "./components/LeaderBoard";
 import Quiz from "./components/Quiz";
 import Login from "./components/Login";
@@ -11,7 +11,6 @@ import Footer from "./components/Footer";
 // import axios from "axios";
 
 export default function App() {
-
   return (
     <>      
       <div className="wrapper container">
@@ -19,7 +18,7 @@ export default function App() {
           <Routes>
             <Route path='/' element={<Login />}/>
             <Route path='/quiz' element={<Quiz />} />
-            <Route path='/dashboard' element={<Dashboard />}/>
+            {/* <Route path='/dashboard' element={<Dashboard />}/> */}
             <Route path='/leaderboard' element={<LeaderBoard />} />          
           </Routes>
         <br/>
