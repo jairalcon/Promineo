@@ -14,21 +14,9 @@
     },
     {
       "id": 3,
-      "title": "Number Three",
-      "datetime": "October 11, 2022 5:52:28 PM",
-      "body": "Third post... "
-    },
-    {
-      "id": 4,
-      "title": "Testing App",
-      "datetime": "October 12, 2022 8:21:05 AM",
-      "body": "changing this post!!!!!"
-    },
-    {
-      "id": 5,
-      "title": "Another new post",
-      "datetime": "October 12, 2022 8:20:42 AM",
-      "body": "\"today is today\" \n- unknown"
+      "title": "Number 3",
+      "datetime": "October 12, 2022 10:52:01 AM",
+      "body": "Third post... more testing"
     }
   ]
 }
