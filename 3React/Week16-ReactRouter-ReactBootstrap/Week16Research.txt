@@ -2,11 +2,15 @@ Jair Alcon
 Week 16 Research
 
 What are 3 other features of React Router that we did not cover this week?
-Three other features of React Router are ...
+
+Three other features of React Router are Dynamic Segments, Ranked Route Matching, and Active Links. Dynamic Segments of the URL can be reused placeholders that can be provided to APIs. For example, using a colon and then a placeholder makes its dynamic. <Route path="projects/:projectId/items/:itemId" /> is an example. Ranked Route Matching is an algorithm in React that intuitively knows which route is being called without being in any specific order. Active Links is used to style the active navigation items so the user knows where they are in the app or where they're going.
 
 https://reactrouter.com/en/main/start/overview
 
 Choose 3 React Bootstrap components and describe how they are used. You can use code examples.
 
+The Navbar component is used to create a navigation header present on all parts of the app or off-canvas. The Accordion component is used to create a vertically collapsing section in an app and is customizable to stay open, collapsed, or flush. The Card component is used to create a flexible container for content with a wide range of customization.
 
-https://react-bootstrap.github.io/components/alerts
+https://react-bootstrap.github.io/components/navbar/
+https://react-bootstrap.github.io/components/accordion/
+https://react-bootstrap.github.io/components/cards/
